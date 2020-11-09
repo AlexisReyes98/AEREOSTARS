@@ -14,7 +14,7 @@ public class Cuenta_usuario {
     private int edad;
     private String nombreUsuario;
     private String contraseña;
-    private boolean administrador; /*hola*/
+    private boolean administrador;
 
     public Cuenta_usuario(String nombre, int edad, String nombreUsuario, String contraseña) {
         this.nombre = nombre;
