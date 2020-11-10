@@ -5,10 +5,21 @@
  */
 package Controller;
 
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
 /**
  *
  * @author giova
  */
-public class OInformacion {
+public class OInformacion implements ActionListener{
+
+    public OInformacion() {
+    }
+
+    @Override
+    public void actionPerformed(ActionEvent ae) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
 }
