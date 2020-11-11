@@ -27,7 +27,7 @@ public class Relacion_eventos {
             Connection conexion = conn.getCon();
             PreparedStatement sql;
             String consulta;
-            consulta = "INSERT INTO eventos (nombre,detalles,fecha,numReferencia) VALUES (?,?,?,?)";
+            consulta = "INSERT INTO eventos (nombre,detalles,fecha,costo,numReferencia) VALUES (?,?,?,?,?)";
             sql = conexion.prepareStatement(consulta);
             sql.setString(1, evento.getNombre());
             sql.setString(2, evento.getDetalles());
@@ -109,7 +109,7 @@ public class Relacion_eventos {
         }
         conn.close();
         } catch (SQLException ex) {
-            System.out.println("Error al obtener el vuelo "+ex);
+            System.out.println("Error al obtener el evento "+ex);
         }
         detallesEvento(listaRequisitos);
     }
@@ -124,7 +124,6 @@ public class Relacion_eventos {
         Evento evento = new Evento();
         /*boolean encontrar = false;
         int i = 0;
-        System.out.println(listaEventos.size());
         while(i<listaEventos.size() && encontrar == false){
             if(numreferencia == listaEventos.get(i).getNumReferencia()){
                 encontrar = true;
@@ -150,7 +149,7 @@ public class Relacion_eventos {
         }
         conn.close();
         } catch (SQLException ex) {
-            System.out.println("Error al obtener el vuelo "+ex);
+            System.out.println("Error al obtener el evento "+ex);
         }
         return evento;   
     }
