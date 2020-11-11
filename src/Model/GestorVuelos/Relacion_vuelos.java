@@ -26,22 +26,6 @@ public class Relacion_vuelos {
             ConexionBD conn = new ConexionBD(); 
             Connection conexion = conn.getCon();
             PreparedStatement sql;
-            /*sql = conexion.prepareStatement("INSERT INTO `aereostars`.`vuelos` "
-                        + "VALUES (`destino`,"
-                        + "`origen`,"
-                        + "`tipo`,"
-                        + "`fechaSalida`,"
-                        + "'horaSalida',"
-                        + "''costo,"
-                        + "'numReferencia')"
-                        + "VALUES "
-                        + "(?, "
-                        + " ?, "
-                        + " ?, "
-                        + " ?, "
-                        + " ?, "
-                        + " ?, "
-                        + " ?);");*/
             String consulta;
             consulta = "INSERT INTO vuelos (destino,origen,tipo,fechaSalida,horaSalida,costo,numReferencia) VALUES (?,?,?,?,?,?,?)";
             sql = conexion.prepareStatement(consulta);
@@ -110,7 +94,7 @@ public class Relacion_vuelos {
             vuelo.setDestino(rs.getString(1));
             vuelo.setOrigen(rs.getString(2));
             vuelo.setTipo(rs.getString(3));
-            vuelo.setFechaSalida(rs.getString(4));
+            vuelo.setFechaSalida(rs.getDate(4).toString());
             vuelo.setHoraSalida(rs.getString(5));
             vuelo.setCosto(rs.getDouble(6));
             vuelo.setNumReferencia(rs.getShort(7));
@@ -156,7 +140,7 @@ public class Relacion_vuelos {
             vuelo.setDestino(rs.getString(1));
             vuelo.setOrigen(rs.getString(2));
             vuelo.setTipo(rs.getString(3));
-            vuelo.setFechaSalida(rs.getString(4));
+            vuelo.setFechaSalida(rs.getDate(4).toString());
             vuelo.setHoraSalida(rs.getString(5));
             vuelo.setCosto(rs.getDouble(6));
             vuelo.setNumReferencia(rs.getShort(7));

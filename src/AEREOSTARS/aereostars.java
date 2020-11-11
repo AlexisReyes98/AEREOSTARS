@@ -22,5 +22,5 @@ public class aereostars {
         f.inicializarOyentes();
         f.setLocationRelativeTo(null);
         f.setVisible(true);
-    }/*hola*/
+    }
 }
