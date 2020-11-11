@@ -28,11 +28,6 @@ public class GUIAgregarVuelo extends javax.swing.JFrame {
         btn_agregarVuelo.addActionListener(new OVuelos(txt_inputDestino.getText(),txt_inputOrigen.getText(),txt_inputTipo.getText(),txt_inputFecha.getText(),txt_inputHoraSalida.getText(),txt_inputCosto.getText(),txt_inputReferencia.getText()));
         btn_cancelarAgregarVuelo.addActionListener(new OVuelos());
     }
-    
-    public void actionPerformed(ActionEvent e) {
-        btn_agregarVuelo.addActionListener(new OVuelos(txt_inputDestino.getText(),txt_inputOrigen.getText(),txt_inputTipo.getText(),txt_inputFecha.getText(),txt_inputHoraSalida.getText(),txt_inputCosto.getText(),txt_inputReferencia.getText()));
-        btn_cancelarAgregarVuelo.addActionListener(new OVuelos());
-    }
 
     /**
      * This method is called from within the constructor to initialize the form.
