@@ -11,6 +11,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.sql.ResultSet;
+import java.text.SimpleDateFormat;
 
 /**
  *
@@ -25,7 +26,7 @@ public class Relacion_vuelos {
             ConexionBD conn = new ConexionBD(); 
             Connection conexion = conn.getCon();
             PreparedStatement sql;
-            sql = conexion.prepareStatement("INSERT INTO `aereostars`.`vuelos` "
+            /*sql = conexion.prepareStatement("INSERT INTO `aereostars`.`vuelos` "
                         + "VALUES (`destino`,"
                         + "`origen`,"
                         + "`tipo`,"
@@ -40,15 +41,23 @@ public class Relacion_vuelos {
                         + " ?, "
                         + " ?, "
                         + " ?, "
-                        + " ?);");
+                        + " ?);");*/
+            String consulta;
+            consulta = "INSERT INTO vuelos (destino,origen,tipo,fechaSalida,horaSalida,costo,numReferencia) VALUES (?,?,?,?,?,?,?)";
+            sql = conexion.prepareStatement(consulta);
             sql.setString(1, vuelo.getDestino());
             sql.setString(2, vuelo.getOrigen());
             sql.setString(3, vuelo.getTipo());
-            sql.setString(4, vuelo.getFechaSalida());
+            String date = vuelo.getFechaSalida();
+            SimpleDateFormat formatter = new SimpleDateFormat("dd/mm/yyyy"); // your template here
+            java.util.Date dateStr = formatter.parse(date);
+            java.sql.Date dateDB = new java.sql.Date(dateStr.getTime());
+            sql.setDate(4, dateDB);
             sql.setString(5, vuelo.getHoraSalida());
             sql.setDouble(6, vuelo.getCosto());
             sql.setInt(7, vuelo.getNumReferencia());
-            sql.executeUpdate();
+            //sql.executeUpdate();
+            sql.execute();
             conn.close(); 
         } catch (SQLException e) {
             System.out.println("Error: no se pudo conectar a LA base de datos");

@@ -14,7 +14,8 @@ import Model.GestorVuelos.*;
 public class aereostars {
     public static void main(String[] args) {
         Gestor_vuelos g = new Gestor_vuelos();
-        g.agregarVuelo("cancun", "mexico", "doble", "10/11/2020", "08:18", 1500, 75);
-        g.solicitarVuelo("cancun", "mexico", "doble");
+        //g.agregarVuelo("cancun", "mexico", "doble", "10/11/2020", "08:18", 1500, 75);
+        g.agregarVuelo("querataro", "mexico", "doble", "22/11/2020", "10:20", 1250, 63);
+        //g.solicitarVuelo("cancun", "mexico", "doble");
     }
 }
