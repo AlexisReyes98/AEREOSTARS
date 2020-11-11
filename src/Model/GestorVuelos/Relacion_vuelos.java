@@ -6,6 +6,11 @@
 package Model.GestorVuelos;
 
 import java.util.ArrayList;
+import Conexion.ConexionBD;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+import java.sql.ResultSet;
 
 /**
  *
@@ -14,8 +19,45 @@ import java.util.ArrayList;
 public class Relacion_vuelos {
     private final ArrayList<Vuelo> listaVuelos = new ArrayList<>();
     
-    public void agregarVuelo(Vuelo vuelo){
-        listaVuelos.add(vuelo);
+    public void agregarVuelo(Vuelo vuelo) {
+        //listaVuelos.add(vuelo);
+        try{
+            ConexionBD conn = new ConexionBD(); 
+            Connection conexion = conn.getCon();
+            PreparedStatement sql;
+            sql = conexion.prepareStatement("INSERT INTO `aereostars`.`vuelos` "
+                        + "VALUES (`destino`,"
+                        + "`origen`,"
+                        + "`tipo`,"
+                        + "`fechaSalida`,"
+                        + "'horaSalida',"
+                        + "''costo,"
+                        + "'numReferencia')"
+                        + "VALUES "
+                        + "(?, "
+                        + " ?, "
+                        + " ?, "
+                        + " ?, "
+                        + " ?, "
+                        + " ?, "
+                        + " ?);");
+            sql.setString(1, vuelo.getDestino());
+            sql.setString(2, vuelo.getOrigen());
+            sql.setString(3, vuelo.getTipo());
+            sql.setString(4, vuelo.getFechaSalida());
+            sql.setString(5, vuelo.getHoraSalida());
+            sql.setDouble(6, vuelo.getCosto());
+            sql.setInt(7, vuelo.getNumReferencia());
+            sql.executeUpdate();
+            conn.close(); 
+        } catch (SQLException e) {
+            System.out.println("Error: no se pudo conectar a LA base de datos");
+            e.printStackTrace();
+        } catch (Exception e) {
+            System.out.println("error al ejecutar el comando de BD");
+            e.printStackTrace();
+        }
+
     }
     
     public boolean eliminarVuelo(int numreferencia){
@@ -34,13 +76,42 @@ public class Relacion_vuelos {
         
     }
     
-    public void solicitarVuelo(String origen, String destino, String fecha){
+    public void solicitarVuelo(String origen, String destino, String fechaSalida){
         ArrayList<Vuelo> listaRequisitos = new ArrayList<>();
-        
-        for (int i = 0; i < listaVuelos.size(); i++) {
-            if ((origen == null ? listaVuelos.get(i).getOrigen() == null : origen.equals(listaVuelos.get(i).getOrigen())) && (destino == null ? listaVuelos.get(i).getDestino() == null : destino.equals(listaVuelos.get(i).getDestino())) && (fecha == null ? listaVuelos.get(i).getFechaSalida() == null : fecha.equals(listaVuelos.get(i).getFechaSalida()))) {
+        Vuelo vuelo = new Vuelo();
+        int i=0;
+        /*for (int i = 0; i < listaVuelos.size(); i++) {
+            if ((origen == null ? listaVuelos.get(i).getOrigen() == null : origen.equals(listaVuelos.get(i).getOrigen())) && (destino == null ? listaVuelos.get(i).getDestino() == null : destino.equals(listaVuelos.get(i).getDestino())) && (fechaSalida == null ? listaVuelos.get(i).getFechaSalida() == null : fechaSalida.equals(listaVuelos.get(i).getFechaSalida()))) {
                 listaRequisitos.add(listaVuelos.get(i));
             }
+        }*/
+        try {
+            ConexionBD conn = new ConexionBD(); 
+            Connection conexion = conn.getCon();
+            PreparedStatement ps;
+            ResultSet rs;
+            String sql = "SELECT * FROM `aereostars`.`vuelos` "
+                       + "WHERE vuelos.destino = ? AND vuelos.origen = ? AND vuelos.fechaSalida = ? ;";
+            ps = conexion.prepareStatement(sql);
+            ps.setString(1, origen);
+            ps.setString(2, destino);
+            ps.setString(3, fechaSalida);
+            rs = ps.executeQuery();
+        while( rs.next() ) {
+            vuelo.setDestino(rs.getString(1));
+            vuelo.setOrigen(rs.getString(2));
+            vuelo.setTipo(rs.getString(3));
+            vuelo.setFechaSalida(rs.getString(4));
+            vuelo.setHoraSalida(rs.getString(5));
+            vuelo.setCosto(rs.getDouble(6));
+            vuelo.setNumReferencia(rs.getShort(7));
+            listaVuelos.add(vuelo);
+            listaRequisitos.add(listaVuelos.get(i));
+            i++;
+        }
+        conn.close();
+        } catch (SQLException ex) {
+            System.out.println("Error al obtener el vuelo "+ex);
         }
         detallesVuelo(listaRequisitos);
     }
@@ -53,16 +124,38 @@ public class Relacion_vuelos {
     
     public Vuelo buscarVueloRes(int numreferencia){
         boolean encontrar = false;
-        Vuelo vuelo = null;
-        int i = 0;
-        System.out.println(listaVuelos.size());
+        Vuelo vuelo = new Vuelo();
+        /*int i = 0;
         while(i<listaVuelos.size() && encontrar == false){
             if(numreferencia == listaVuelos.get(i).getNumReferencia()){
                 encontrar = true;
                 vuelo = listaVuelos.get(i);
             }
             i++;
+        }*/
+        try {
+            ConexionBD conn = new ConexionBD(); 
+            Connection conexion = conn.getCon();
+            PreparedStatement ps;
+            ResultSet rs;
+            String sql = "SELECT * FROM `aereostars`.`vuelos` "
+                       + "WHERE vuelos.numReferencia = ? ;";
+            ps = conexion.prepareStatement(sql);
+            ps.setInt(7, numreferencia);
+            rs = ps.executeQuery();
+        while( rs.next() ) {
+            vuelo.setDestino(rs.getString(1));
+            vuelo.setOrigen(rs.getString(2));
+            vuelo.setTipo(rs.getString(3));
+            vuelo.setFechaSalida(rs.getString(4));
+            vuelo.setHoraSalida(rs.getString(5));
+            vuelo.setCosto(rs.getDouble(6));
+            vuelo.setNumReferencia(rs.getShort(7));
         }
-        return vuelo;   
+        conn.close();
+        } catch (SQLException ex) {
+            System.out.println("Error al obtener el vuelo "+ex);
+        }
+        return vuelo;
     }
 }

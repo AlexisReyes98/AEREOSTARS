@@ -15,6 +15,9 @@ public class Evento {
     private String fecha;
     private int numReferencia;
 
+    public Evento() {
+    }
+
     public Evento(String nombre, String detalles, String fecha, int numReferencia) {
         this.nombre = nombre;
         this.detalles = detalles;

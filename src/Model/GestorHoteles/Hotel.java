@@ -16,6 +16,9 @@ public class Hotel {
     private double costo;
     private int numReferencia;
 
+    public Hotel() {
+    }
+
     public Hotel(String nombre, String destino, int numEstrellas, double costo, int numReferencia) {
         this.nombre = nombre;
         this.destino = destino;

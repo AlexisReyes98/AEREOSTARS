@@ -15,6 +15,9 @@ public class Promocion {
     private String vigencia;
     private int numReferencia;
 
+    public Promocion() {
+    }
+
     public Promocion(String nombre, String descripcion, String vigencia, int numReferencia) {
         this.nombre = nombre;
         this.descripcion = descripcion;

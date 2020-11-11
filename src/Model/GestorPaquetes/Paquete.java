@@ -23,6 +23,9 @@ public class Paquete {
     private Evento evento;
     private Hotel hotel;
 
+    public Paquete() {
+    }
+
     public Paquete(String destino, String origen, String tipo, String fechaSalida, String horaSalida, double costo, int numReferencia, Evento evento, Hotel hotel) {
         this.destino = destino;
         this.origen = origen;

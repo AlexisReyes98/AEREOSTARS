@@ -18,6 +18,9 @@ public class Vuelo {
     private double costo;
     private int numReferencia;
 
+    public Vuelo() {
+    }
+
     public Vuelo(String destino, String origen, String tipo, String fechaSalida, String horaSalida, double costo, int numReferencia) {
         this.destino = destino;
         this.origen = origen;
