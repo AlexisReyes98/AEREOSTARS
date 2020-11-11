@@ -54,13 +54,39 @@ public class Relacion_vuelos {
     }
     
     public boolean eliminarVuelo(int numreferencia){
+         Vuelo vuelo = new Vuelo();
         boolean encontrar = false;
-        int i=0;
+        /*int i=0;
         while(i<listaVuelos.size() && encontrar == false){
             if(numreferencia == listaVuelos.get(i).getNumReferencia()){
                listaVuelos.remove(i);
                encontrar = true;
             }
+        }*/
+        try {
+            ConexionBD conn = new ConexionBD(); 
+            Connection conexion = conn.getCon();
+            PreparedStatement ps;
+            String sql = "DELETE FROM vuelos numReferencia WHERE ?";
+            ps = conexion.prepareStatement(sql);
+            ps.setInt(1, numreferencia);
+            encontrar = true;
+            /*rs = ps.executeQuery();
+        while( rs.next() ) {
+            vuelo.setDestino(rs.getString(1));
+            vuelo.setOrigen(rs.getString(2));
+            vuelo.setTipo(rs.getString(3));
+            vuelo.setFechaSalida(rs.getDate(4).toString());
+            vuelo.setHoraSalida(rs.getString(5));
+            vuelo.setCosto(rs.getDouble(6));
+            vuelo.setNumReferencia(rs.getShort(7));
+            listaVuelos.add(vuelo);
+            listaRequisitos.add(listaVuelos.get(i));
+            i++;
+        }*/
+        conn.close();
+        } catch (SQLException ex) {
+            System.out.println("Error al obtener el vuelo "+ex);
         }
         return encontrar;
     }
@@ -116,9 +142,9 @@ public class Relacion_vuelos {
     }
     
     public Vuelo buscarVueloRes(int numreferencia){
-        boolean encontrar = false;
         Vuelo vuelo = new Vuelo();
-        /*int i = 0;
+        /*boolean encontrar = false;
+        int i = 0;
         while(i<listaVuelos.size() && encontrar == false){
             if(numreferencia == listaVuelos.get(i).getNumReferencia()){
                 encontrar = true;
@@ -134,7 +160,7 @@ public class Relacion_vuelos {
             String sql = "SELECT * FROM `aereostars`.`vuelos` "
                        + "WHERE vuelos.numReferencia = ? ;";
             ps = conexion.prepareStatement(sql);
-            ps.setInt(7, numreferencia);
+            ps.setInt(1, numreferencia);
             rs = ps.executeQuery();
         while( rs.next() ) {
             vuelo.setDestino(rs.getString(1));
