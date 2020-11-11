@@ -5,17 +5,33 @@
  */
 package View.GUIVuelos;
 
+import Controller.OVuelos;
+import java.awt.event.ActionEvent;
+
 /**
  *
  * @author giova
  */
 public class GUIAgregarVuelo extends javax.swing.JFrame {
+    
+    OVuelos oyenteVuelos;
 
     /**
      * Creates new form GUIAgregarVuelo
      */
     public GUIAgregarVuelo() {
-        initComponents();
+        initComponents(); 
+        oyenteVuelos = new OVuelos();
+    }
+    
+    public void inicializarOyentes(){
+        btn_agregarVuelo.addActionListener(new OVuelos(txt_inputDestino.getText(),txt_inputOrigen.getText(),txt_inputTipo.getText(),txt_inputFecha.getText(),txt_inputHoraSalida.getText(),txt_inputCosto.getText(),txt_inputReferencia.getText()));
+        btn_cancelarAgregarVuelo.addActionListener(new OVuelos());
+    }
+    
+    public void actionPerformed(ActionEvent e) {
+        btn_agregarVuelo.addActionListener(new OVuelos(txt_inputDestino.getText(),txt_inputOrigen.getText(),txt_inputTipo.getText(),txt_inputFecha.getText(),txt_inputHoraSalida.getText(),txt_inputCosto.getText(),txt_inputReferencia.getText()));
+        btn_cancelarAgregarVuelo.addActionListener(new OVuelos());
     }
 
     /**
@@ -27,17 +43,115 @@ public class GUIAgregarVuelo extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jLabel1 = new javax.swing.JLabel();
+        txt_inputOrigen = new javax.swing.JTextField();
+        txt_inputDestino = new javax.swing.JTextField();
+        jLabel2 = new javax.swing.JLabel();
+        txt_inputTipo = new javax.swing.JTextField();
+        jLabel3 = new javax.swing.JLabel();
+        txt_inputCosto = new javax.swing.JTextField();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        txt_inputHoraSalida = new javax.swing.JTextField();
+        jLabel6 = new javax.swing.JLabel();
+        txt_inputFecha = new javax.swing.JTextField();
+        btn_agregarVuelo = new javax.swing.JButton();
+        btn_cancelarAgregarVuelo = new javax.swing.JButton();
+        txt_inputReferencia = new javax.swing.JLabel();
+        txt_inputFecha1 = new javax.swing.JTextField();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        jLabel1.setText("Ingresa el origen:");
+
+        jLabel2.setText("Ingresa el destino:");
+
+        jLabel3.setText("Ingresa el tipo:");
+
+        jLabel4.setText("Ingresa el costo:");
+
+        jLabel5.setText("Ingresa la hora de salida:");
+
+        jLabel6.setText("Ingresa la fecha:");
+
+        btn_agregarVuelo.setForeground(new java.awt.Color(0, 204, 51));
+        btn_agregarVuelo.setText("Agregar");
+
+        btn_cancelarAgregarVuelo.setForeground(new java.awt.Color(204, 51, 0));
+        btn_cancelarAgregarVuelo.setText("Cancelar");
+
+        txt_inputReferencia.setText("Ingresa núm. referencia:");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(24, 24, 24)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel1)
+                    .addComponent(txt_inputOrigen, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel4)
+                    .addComponent(txt_inputCosto, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel3)
+                    .addComponent(txt_inputTipo, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel2)
+                    .addComponent(txt_inputDestino, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 28, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel5)
+                    .addComponent(jLabel6)
+                    .addComponent(txt_inputFecha, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txt_inputHoraSalida, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(btn_agregarVuelo)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btn_cancelarAgregarVuelo))
+                    .addComponent(txt_inputReferencia)
+                    .addComponent(txt_inputFecha1, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(25, 25, 25))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(23, 23, 23)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(jLabel1)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(txt_inputOrigen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txt_inputHoraSalida, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel2)
+                            .addComponent(jLabel5))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(txt_inputDestino, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txt_inputFecha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(jLabel6)
+                        .addGap(81, 81, 81)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jLabel3)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(txt_inputTipo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(txt_inputReferencia)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(txt_inputFecha1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(8, 8, 8)
+                .addComponent(jLabel4)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(txt_inputCosto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(btn_agregarVuelo)
+                        .addComponent(btn_cancelarAgregarVuelo)))
+                .addContainerGap(41, Short.MAX_VALUE))
         );
 
         pack();
@@ -69,7 +183,7 @@ public class GUIAgregarVuelo extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(GUIAgregarVuelo.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
-
+            
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
@@ -79,5 +193,21 @@ public class GUIAgregarVuelo extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btn_agregarVuelo;
+    private javax.swing.JButton btn_cancelarAgregarVuelo;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JTextField txt_inputCosto;
+    private javax.swing.JTextField txt_inputDestino;
+    private javax.swing.JTextField txt_inputFecha;
+    private javax.swing.JTextField txt_inputFecha1;
+    private javax.swing.JTextField txt_inputHoraSalida;
+    private javax.swing.JTextField txt_inputOrigen;
+    private javax.swing.JLabel txt_inputReferencia;
+    private javax.swing.JTextField txt_inputTipo;
     // End of variables declaration//GEN-END:variables
 }
