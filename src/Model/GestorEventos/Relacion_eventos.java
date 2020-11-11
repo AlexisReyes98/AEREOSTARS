@@ -50,7 +50,6 @@ public class Relacion_eventos {
     }
     
     public boolean eliminarEvento(int numreferencia){
-        Evento evento = new Evento();
         boolean encontrar = false;
         /*int i=0;
         while(i<listaEventos.size() && encontrar == false){

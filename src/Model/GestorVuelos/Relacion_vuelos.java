@@ -53,7 +53,6 @@ public class Relacion_vuelos {
     }
     
     public boolean eliminarVuelo(int numreferencia){
-        Vuelo vuelo = new Vuelo();
         boolean encontrar = false;
         /*int i=0;
         while(i<listaVuelos.size() && encontrar == false){

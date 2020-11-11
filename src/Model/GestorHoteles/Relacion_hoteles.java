@@ -45,7 +45,6 @@ public class Relacion_hoteles {
     }
     
     public boolean eliminarHotel(int numreferencia){
-        Hotel hotel = new Hotel();
         boolean encontrar = false;
         /*int i=0;
         while(i<listaHoteles.size() && encontrar == false){
@@ -88,7 +87,7 @@ public class Relacion_hoteles {
             Connection conexion = conn.getCon();
             PreparedStatement ps;
             ResultSet rs;
-            String sql = "SELECT * FROM eventos WHERE nombre = ?";
+            String sql = "SELECT * FROM hoteles WHERE nombre = ?";
             ps = conexion.prepareStatement(sql);
             ps.setString(1, nombre);
             rs = ps.executeQuery();

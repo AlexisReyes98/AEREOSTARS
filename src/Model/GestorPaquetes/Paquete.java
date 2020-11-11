@@ -26,6 +26,16 @@ public class Paquete {
     public Paquete() {
     }
 
+    public Paquete(String destino, String origen, String tipo, String fechaSalida, String horaSalida, double costo, int numReferencia) {
+        this.destino = destino;
+        this.origen = origen;
+        this.tipo = tipo;
+        this.fechaSalida = fechaSalida;
+        this.horaSalida = horaSalida;
+        this.costo = costo;
+        this.numReferencia = numReferencia;
+    }
+
     public Paquete(String destino, String origen, String tipo, String fechaSalida, String horaSalida, double costo, int numReferencia, Evento evento, Hotel hotel) {
         this.destino = destino;
         this.origen = origen;
