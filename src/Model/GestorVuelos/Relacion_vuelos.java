@@ -40,7 +40,6 @@ public class Relacion_vuelos {
             sql.setString(5, vuelo.getHoraSalida());
             sql.setDouble(6, vuelo.getCosto());
             sql.setInt(7, vuelo.getNumReferencia());
-            //sql.executeUpdate();
             sql.execute();
             conn.close(); 
         } catch (SQLException e) {
@@ -50,7 +49,7 @@ public class Relacion_vuelos {
             System.out.println("error al ejecutar el comando de BD");
             e.printStackTrace();
         }
-
+        
     }
     
     public boolean eliminarVuelo(int numreferencia){
@@ -67,26 +66,14 @@ public class Relacion_vuelos {
             ConexionBD conn = new ConexionBD(); 
             Connection conexion = conn.getCon();
             PreparedStatement ps;
-            String sql = "DELETE FROM vuelos numReferencia WHERE ?";
+            String sql = "DELETE FROM vuelos WHERE numreferencia = ?";
             ps = conexion.prepareStatement(sql);
             ps.setInt(1, numreferencia);
+            ps.execute();
             encontrar = true;
-            /*rs = ps.executeQuery();
-        while( rs.next() ) {
-            vuelo.setDestino(rs.getString(1));
-            vuelo.setOrigen(rs.getString(2));
-            vuelo.setTipo(rs.getString(3));
-            vuelo.setFechaSalida(rs.getDate(4).toString());
-            vuelo.setHoraSalida(rs.getString(5));
-            vuelo.setCosto(rs.getDouble(6));
-            vuelo.setNumReferencia(rs.getShort(7));
-            listaVuelos.add(vuelo);
-            listaRequisitos.add(listaVuelos.get(i));
-            i++;
-        }*/
-        conn.close();
+            conn.close();
         } catch (SQLException ex) {
-            System.out.println("Error al obtener el vuelo "+ex);
+            System.out.println("Error al eliminar el vuelo "+ex);
         }
         return encontrar;
     }
@@ -95,7 +82,7 @@ public class Relacion_vuelos {
         
     }
     
-    public void solicitarVuelo(String origen, String destino, String fechaSalida){
+    public void solicitarVuelo(String origen, String destino/*, String fechaSalida*/){
         ArrayList<Vuelo> listaRequisitos = new ArrayList<>();
         Vuelo vuelo = new Vuelo();
         int i=0;
@@ -109,21 +96,19 @@ public class Relacion_vuelos {
             Connection conexion = conn.getCon();
             PreparedStatement ps;
             ResultSet rs;
-            String sql = "SELECT * FROM `aereostars`.`vuelos` "
-                       + "WHERE vuelos.destino = ? AND vuelos.origen = ? AND vuelos.fechaSalida = ? ;";
+            String sql = "SELECT * FROM vuelos WHERE destino = ? AND origen = ?";
             ps = conexion.prepareStatement(sql);
             ps.setString(1, origen);
             ps.setString(2, destino);
-            ps.setString(3, fechaSalida);
             rs = ps.executeQuery();
         while( rs.next() ) {
-            vuelo.setDestino(rs.getString(1));
-            vuelo.setOrigen(rs.getString(2));
-            vuelo.setTipo(rs.getString(3));
-            vuelo.setFechaSalida(rs.getDate(4).toString());
-            vuelo.setHoraSalida(rs.getString(5));
-            vuelo.setCosto(rs.getDouble(6));
-            vuelo.setNumReferencia(rs.getShort(7));
+            vuelo.setNumReferencia(rs.getInt(1));
+            vuelo.setDestino(rs.getString(2));
+            vuelo.setOrigen(rs.getString(3));
+            vuelo.setTipo(rs.getString(4));
+            vuelo.setFechaSalida(rs.getString(5));
+            vuelo.setHoraSalida(rs.getString(6));
+            vuelo.setCosto(rs.getDouble(7));
             listaVuelos.add(vuelo);
             listaRequisitos.add(listaVuelos.get(i));
             i++;
@@ -157,19 +142,18 @@ public class Relacion_vuelos {
             Connection conexion = conn.getCon();
             PreparedStatement ps;
             ResultSet rs;
-            String sql = "SELECT * FROM `aereostars`.`vuelos` "
-                       + "WHERE vuelos.numReferencia = ? ;";
+            String sql = "SELECT * FROM vuelos WHERE numreferencia = ?";
             ps = conexion.prepareStatement(sql);
             ps.setInt(1, numreferencia);
             rs = ps.executeQuery();
         while( rs.next() ) {
-            vuelo.setDestino(rs.getString(1));
-            vuelo.setOrigen(rs.getString(2));
-            vuelo.setTipo(rs.getString(3));
-            vuelo.setFechaSalida(rs.getDate(4).toString());
-            vuelo.setHoraSalida(rs.getString(5));
-            vuelo.setCosto(rs.getDouble(6));
-            vuelo.setNumReferencia(rs.getShort(7));
+            vuelo.setNumReferencia(rs.getInt(1));
+            vuelo.setDestino(rs.getString(2));
+            vuelo.setOrigen(rs.getString(3));
+            vuelo.setTipo(rs.getString(4));
+            vuelo.setFechaSalida(rs.getString(5));
+            vuelo.setHoraSalida(rs.getString(6));
+            vuelo.setCosto(rs.getDouble(7));
         }
         conn.close();
         } catch (SQLException ex) {

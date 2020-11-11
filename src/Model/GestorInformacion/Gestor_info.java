@@ -23,7 +23,7 @@ public class Gestor_info {
     Gestor_eventos eventos = new Gestor_eventos();
     
     public void solicitarVuelos(String origen, String destino, String fecha_ida){
-        vuelos.solicitarVuelo(origen, destino, fecha_ida);
+        vuelos.solicitarVuelo(origen, destino/*, fecha_ida*/);
     }
     
     public void solicitarHoteles(String origen, String destino){
