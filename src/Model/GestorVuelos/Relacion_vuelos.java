@@ -43,17 +43,17 @@ public class Relacion_vuelos {
             sql.execute();
             conn.close(); 
         } catch (SQLException e) {
-            System.out.println("Error: no se pudo conectar a LA base de datos");
+            System.out.println("Error: no se pudo conectar a la base de datos");
             e.printStackTrace();
         } catch (Exception e) {
-            System.out.println("error al ejecutar el comando de BD");
+            System.out.println("Error al ejecutar el comando de BD");
             e.printStackTrace();
         }
         
     }
     
     public boolean eliminarVuelo(int numreferencia){
-         Vuelo vuelo = new Vuelo();
+        Vuelo vuelo = new Vuelo();
         boolean encontrar = false;
         /*int i=0;
         while(i<listaVuelos.size() && encontrar == false){

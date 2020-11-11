@@ -13,15 +13,17 @@ public class Evento {
     private String nombre;
     private String detalles;
     private String fecha;
+    private double costo;
     private int numReferencia;
 
     public Evento() {
     }
 
-    public Evento(String nombre, String detalles, String fecha, int numReferencia) {
+    public Evento(String nombre, String detalles, String fecha, double costo, int numReferencia) {
         this.nombre = nombre;
         this.detalles = detalles;
         this.fecha = fecha;
+        this.costo = costo;
         this.numReferencia = numReferencia;
     }
 
@@ -49,6 +51,14 @@ public class Evento {
         this.fecha = fecha;
     }
 
+    public double getCosto() {
+        return costo;
+    }
+
+    public void setCosto(double costo) {
+        this.costo = costo;
+    }
+
     public int getNumReferencia() {
         return numReferencia;
     }
@@ -59,7 +69,7 @@ public class Evento {
 
     @Override
     public String toString() {
-        return "Evento{" + "nombre=" + nombre + ", detalles=" + detalles + ", fecha=" + fecha + ", numReferencia=" + numReferencia + '}';
+        return "Evento{" + "nombre=" + nombre + ", detalles=" + detalles + ", fecha=" + fecha + ", costo=" + costo + ", numReferencia=" + numReferencia + '}';
     }
     
 }

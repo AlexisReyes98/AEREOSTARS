@@ -12,8 +12,8 @@ package Model.GestorEventos;
 public class Gestor_eventos {
     public Relacion_eventos listaEventos = new Relacion_eventos();
     
-    public void agregarEvento(String nombre, String detalles, String fecha, int numReferencia){
-        Evento nuevo = new Evento(nombre, detalles, fecha, numReferencia);
+    public void agregarEvento(String nombre, String detalles, String fecha, double costo, int numReferencia){
+        Evento nuevo = new Evento(nombre, detalles, fecha, costo, numReferencia);
         listaEventos.agregarEvento(nuevo);
     }
     
