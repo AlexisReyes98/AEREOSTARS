@@ -28,18 +28,18 @@ public class GUIDetallesVuelo extends javax.swing.JFrame {
     private void initComponents() {
 
         jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
+        lbl_vueloDetNum = new javax.swing.JLabel();
+        btn_vueloDetBack = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
+        lbl_vueloDetOrigen = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
+        lbl_vueloDetDestino = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
-        jLabel10 = new javax.swing.JLabel();
+        lbl_vueloDetHora = new javax.swing.JLabel();
+        lbl_vueloDetFecha = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
-        jLabel12 = new javax.swing.JLabel();
+        lbl_vueloDetTipo = new javax.swing.JLabel();
         jLabel13 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -47,19 +47,19 @@ public class GUIDetallesVuelo extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabel1.setText("NÚMERO VUELO");
 
-        jLabel2.setText("numVuelo");
+        lbl_vueloDetNum.setText("numVuelo");
 
-        jButton1.setText("Regresar");
+        btn_vueloDetBack.setText("Regresar");
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabel3.setText("DETALLES VUELO");
 
-        jLabel4.setText("jLabel4");
+        lbl_vueloDetOrigen.setText("jLabel4");
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabel5.setText("Origen:");
 
-        jLabel6.setText("jLabel4");
+        lbl_vueloDetDestino.setText("jLabel4");
 
         jLabel7.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabel7.setText("Destino:");
@@ -67,14 +67,14 @@ public class GUIDetallesVuelo extends javax.swing.JFrame {
         jLabel8.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabel8.setText("Hora de salida:");
 
-        jLabel9.setText("jLabel4");
+        lbl_vueloDetHora.setText("jLabel4");
 
-        jLabel10.setText("jLabel4");
+        lbl_vueloDetFecha.setText("jLabel4");
 
         jLabel11.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabel11.setText("Fecha de salida:");
 
-        jLabel12.setText("jLabel4");
+        lbl_vueloDetTipo.setText("jLabel4");
 
         jLabel13.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabel13.setText("Tipo:");
@@ -85,7 +85,7 @@ public class GUIDetallesVuelo extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton1)
+                .addComponent(btn_vueloDetBack)
                 .addGap(27, 27, 27))
             .addGroup(layout.createSequentialGroup()
                 .addGap(35, 35, 35)
@@ -93,25 +93,25 @@ public class GUIDetallesVuelo extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabel13)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jLabel12))
+                        .addComponent(lbl_vueloDetTipo))
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabel8)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jLabel9))
+                        .addComponent(lbl_vueloDetHora))
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabel11)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jLabel10))
+                        .addComponent(lbl_vueloDetFecha))
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabel7)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jLabel6))
+                        .addComponent(lbl_vueloDetDestino))
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabel5)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jLabel4))
+                        .addComponent(lbl_vueloDetOrigen))
                     .addComponent(jLabel3)
-                    .addComponent(jLabel2)
+                    .addComponent(lbl_vueloDetNum)
                     .addComponent(jLabel1))
                 .addContainerGap(232, Short.MAX_VALUE))
         );
@@ -121,31 +121,31 @@ public class GUIDetallesVuelo extends javax.swing.JFrame {
                 .addGap(41, 41, 41)
                 .addComponent(jLabel1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel2)
+                .addComponent(lbl_vueloDetNum)
                 .addGap(18, 18, 18)
                 .addComponent(jLabel3)
                 .addGap(21, 21, 21)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel4)
+                    .addComponent(lbl_vueloDetOrigen)
                     .addComponent(jLabel5))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel6)
+                    .addComponent(lbl_vueloDetDestino)
                     .addComponent(jLabel7))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel10)
+                    .addComponent(lbl_vueloDetFecha)
                     .addComponent(jLabel11))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel9)
+                    .addComponent(lbl_vueloDetHora)
                     .addComponent(jLabel8))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel12)
+                    .addComponent(lbl_vueloDetTipo)
                     .addComponent(jLabel13))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 12, Short.MAX_VALUE)
-                .addComponent(jButton1)
+                .addComponent(btn_vueloDetBack)
                 .addGap(23, 23, 23))
         );
 
@@ -188,19 +188,19 @@ public class GUIDetallesVuelo extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
+    public javax.swing.JButton btn_vueloDetBack;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
+    public javax.swing.JLabel lbl_vueloDetDestino;
+    public javax.swing.JLabel lbl_vueloDetFecha;
+    public javax.swing.JLabel lbl_vueloDetHora;
+    public javax.swing.JLabel lbl_vueloDetNum;
+    public javax.swing.JLabel lbl_vueloDetOrigen;
+    public javax.swing.JLabel lbl_vueloDetTipo;
     // End of variables declaration//GEN-END:variables
 }

@@ -11,6 +11,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.sql.ResultSet;
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 
 /**
@@ -76,8 +77,65 @@ public class Relacion_vuelos {
         return encontrar;
     }
     
-    public void modificarVuelo(){
-        
+    public void modificarVuelo(int numReferencia,int campo, String nuevoValor) throws ParseException{
+        ConexionBD conn = new ConexionBD(); 
+        Connection conexion = conn.getCon();
+        PreparedStatement ps;
+        String sql;
+        try{
+            switch(campo){
+                case 4:
+                    sql = "UPDATE vuelos SET origen = ? WHERE numReferencia = ?";
+                    ps = conexion.prepareStatement(sql);
+                    ps.setString(1, nuevoValor);
+                    ps.setInt(2, numReferencia);
+                    ps.executeUpdate();
+                    break;
+                case 1:
+                    sql = "UPDATE vuelos SET destino = ? WHERE numReferencia = ?";
+                    ps = conexion.prepareStatement(sql);
+                    ps.setString(1, nuevoValor);
+                    ps.setInt(2, numReferencia);
+                    ps.execute();
+                    break;
+                case 5:
+                    sql = "UPDATE vuelos SET tipo = ? WHERE numReferencia = ?";
+                    ps = conexion.prepareStatement(sql);
+                    ps.setString(1, nuevoValor);
+                    ps.setInt(2, numReferencia);
+                    ps.execute();
+                    break;
+                case 2:
+                    sql = "UPDATE vuelos SET fechasalida = ? WHERE numReferencia = ?";
+                    SimpleDateFormat formatter = new SimpleDateFormat("dd/mm/yyyy"); // your template here
+                    java.util.Date dateStr = formatter.parse(nuevoValor);
+                    java.sql.Date dateDB = new java.sql.Date(dateStr.getTime());
+                    ps = conexion.prepareStatement(sql);
+                    ps.setDate(1, dateDB);
+                    ps.setInt(2, numReferencia);
+                    ps.execute();
+                    break;
+                case 3:
+                    sql = "UPDATE vuelos SET horaSalida = ? WHERE numReferencia = ?";
+                    ps = conexion.prepareStatement(sql);
+                    ps.setString(1, nuevoValor);
+                    ps.setInt(2, numReferencia);
+                    ps.execute();
+                    break;
+                case 0:
+                    sql = "UPDATE vuelos SET costo = ? WHERE numReferencia = ?";
+                    ps = conexion.prepareStatement(sql);
+                    ps.setDouble(1, Double.parseDouble(nuevoValor));
+                    ps.setInt(2, numReferencia);
+                    ps.execute();
+                    break;    
+                default:
+                    break;
+            }
+            conn.close();
+        }catch (SQLException ex) {
+            System.out.println("Error al modificar el vuelo "+ex);
+        }    
     }
     
     public void solicitarVuelo(String origen, String destino/*, String fechaSalida*/){

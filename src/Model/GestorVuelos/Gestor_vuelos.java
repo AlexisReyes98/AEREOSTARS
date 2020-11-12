@@ -5,6 +5,8 @@
  */
 package Model.GestorVuelos;
 
+import java.text.ParseException;
+
 /**
  *
  * @author equipo aereostars
@@ -17,14 +19,12 @@ public class Gestor_vuelos {
         listaVuelos.agregarVuelo(nuevo);
     }
     
-    public void eliminarVuelo(int numReferencia){
-        if(listaVuelos.eliminarVuelo(numReferencia) == false){
-            System.out.println("No se encontro el vuelo con el número de referencia dado.");
-        }
+    public boolean eliminarVuelo(int numReferencia){
+        return (listaVuelos.eliminarVuelo(numReferencia));
     }
     
-    public void modificarVuelo(){
-        
+    public void modificarVuelo(int numReferencia,int campo, String nuevoValor) throws ParseException{
+        listaVuelos.modificarVuelo(numReferencia, campo, nuevoValor);      
     }
     
     public void solicitarVuelo(String origen, String destino/*, String fecha_ida*/){

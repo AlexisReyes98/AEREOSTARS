@@ -27,27 +27,27 @@
               <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Component id="jLabel1" alignment="0" min="-2" max="-2" attributes="0"/>
-                  <Component id="txt_inputOrigen" alignment="0" min="-2" pref="156" max="-2" attributes="0"/>
+                  <Component id="txt_inputAddOrigen" alignment="0" min="-2" pref="156" max="-2" attributes="0"/>
                   <Component id="jLabel4" alignment="0" min="-2" max="-2" attributes="0"/>
-                  <Component id="txt_inputCosto" alignment="0" min="-2" pref="156" max="-2" attributes="0"/>
+                  <Component id="txt_inputAddCosto" alignment="0" min="-2" pref="156" max="-2" attributes="0"/>
                   <Component id="jLabel3" alignment="0" min="-2" max="-2" attributes="0"/>
-                  <Component id="txt_inputTipo" alignment="0" min="-2" pref="156" max="-2" attributes="0"/>
+                  <Component id="txt_inputAddTipo" alignment="0" min="-2" pref="156" max="-2" attributes="0"/>
                   <Component id="jLabel2" alignment="0" min="-2" max="-2" attributes="0"/>
-                  <Component id="txt_inputDestino" alignment="0" min="-2" pref="156" max="-2" attributes="0"/>
+                  <Component id="txt_inputAddDestino" alignment="0" min="-2" pref="156" max="-2" attributes="0"/>
               </Group>
               <EmptySpace pref="28" max="32767" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Component id="jLabel5" alignment="0" min="-2" max="-2" attributes="0"/>
                   <Component id="jLabel6" alignment="0" min="-2" max="-2" attributes="0"/>
-                  <Component id="txt_inputFecha" min="-2" pref="156" max="-2" attributes="0"/>
-                  <Component id="txt_inputHoraSalida" min="-2" pref="156" max="-2" attributes="0"/>
+                  <Component id="txt_inputAddHoraSalida" min="-2" pref="156" max="-2" attributes="0"/>
+                  <Component id="txt_inputAddFecha" min="-2" pref="156" max="-2" attributes="0"/>
                   <Group type="102" alignment="0" attributes="0">
                       <Component id="btn_agregarVuelo" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="btn_cancelarAgregarVuelo" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <Component id="txt_inputReferencia" alignment="0" min="-2" max="-2" attributes="0"/>
-                  <Component id="txt_inputFecha1" alignment="0" min="-2" pref="156" max="-2" attributes="0"/>
+                  <Component id="txt_inputAddNumRef" alignment="0" min="-2" pref="156" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
           </Group>
@@ -61,12 +61,12 @@
                   <Group type="102" attributes="0">
                       <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="txt_inputOrigen" min="-2" max="-2" attributes="0"/>
+                      <Component id="txt_inputAddOrigen" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="1" attributes="0">
                       <Component id="jLabel6" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="5" max="-2" attributes="0"/>
-                      <Component id="txt_inputHoraSalida" min="-2" max="-2" attributes="0"/>
+                      <Component id="txt_inputAddFecha" min="-2" max="-2" attributes="0"/>
                   </Group>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
@@ -76,26 +76,26 @@
               </Group>
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="txt_inputDestino" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="txt_inputFecha" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txt_inputAddDestino" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txt_inputAddHoraSalida" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <Group type="103" groupAlignment="1" attributes="0">
                   <Group type="102" alignment="1" attributes="0">
                       <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="txt_inputTipo" min="-2" max="-2" attributes="0"/>
+                      <Component id="txt_inputAddTipo" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="1" attributes="0">
                       <Component id="txt_inputReferencia" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="txt_inputFecha1" min="-2" max="-2" attributes="0"/>
+                      <Component id="txt_inputAddNumRef" min="-2" max="-2" attributes="0"/>
                   </Group>
               </Group>
               <EmptySpace min="-2" pref="8" max="-2" attributes="0"/>
               <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="1" attributes="0">
-                  <Component id="txt_inputCosto" alignment="1" min="-2" max="-2" attributes="0"/>
+                  <Component id="txt_inputAddCosto" alignment="1" min="-2" max="-2" attributes="0"/>
                   <Group type="103" alignment="1" groupAlignment="3" attributes="0">
                       <Component id="btn_agregarVuelo" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="btn_cancelarAgregarVuelo" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -112,23 +112,35 @@
         <Property name="text" type="java.lang.String" value="Ingresa el origen:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="txt_inputOrigen">
+    <Component class="javax.swing.JTextField" name="txt_inputAddOrigen">
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+      </AuxValues>
     </Component>
-    <Component class="javax.swing.JTextField" name="txt_inputDestino">
+    <Component class="javax.swing.JTextField" name="txt_inputAddDestino">
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+      </AuxValues>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel2">
       <Properties>
         <Property name="text" type="java.lang.String" value="Ingresa el destino:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="txt_inputTipo">
+    <Component class="javax.swing.JTextField" name="txt_inputAddTipo">
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+      </AuxValues>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel3">
       <Properties>
         <Property name="text" type="java.lang.String" value="Ingresa el tipo:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="txt_inputCosto">
+    <Component class="javax.swing.JTextField" name="txt_inputAddCosto">
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+      </AuxValues>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel4">
       <Properties>
@@ -140,14 +152,20 @@
         <Property name="text" type="java.lang.String" value="Ingresa la hora de salida:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="txt_inputHoraSalida">
+    <Component class="javax.swing.JTextField" name="txt_inputAddFecha">
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+      </AuxValues>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel6">
       <Properties>
         <Property name="text" type="java.lang.String" value="Ingresa la fecha:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="txt_inputFecha">
+    <Component class="javax.swing.JTextField" name="txt_inputAddHoraSalida">
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+      </AuxValues>
     </Component>
     <Component class="javax.swing.JButton" name="btn_agregarVuelo">
       <Properties>
@@ -156,6 +174,9 @@
         </Property>
         <Property name="text" type="java.lang.String" value="Agregar"/>
       </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+      </AuxValues>
     </Component>
     <Component class="javax.swing.JButton" name="btn_cancelarAgregarVuelo">
       <Properties>
@@ -164,13 +185,19 @@
         </Property>
         <Property name="text" type="java.lang.String" value="Cancelar"/>
       </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+      </AuxValues>
     </Component>
     <Component class="javax.swing.JLabel" name="txt_inputReferencia">
       <Properties>
         <Property name="text" type="java.lang.String" value="Ingresa n&#xfa;m. referencia:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="txt_inputFecha1">
+    <Component class="javax.swing.JTextField" name="txt_inputAddNumRef">
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+      </AuxValues>
     </Component>
   </SubComponents>
 </Form>
