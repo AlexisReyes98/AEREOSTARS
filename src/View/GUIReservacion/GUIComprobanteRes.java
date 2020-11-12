@@ -7,7 +7,7 @@ package View.GUIReservacion;
 
 /**
  *
- * @author giova
+ * @author equipo aereostars
  */
 public class GUIComprobanteRes extends javax.swing.JFrame {
 

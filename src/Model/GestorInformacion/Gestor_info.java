@@ -13,7 +13,7 @@ import Model.GestorVuelos.Gestor_vuelos;
 
 /**
  *
- * @author giova
+ * @author equipo aereostars
  */
 public class Gestor_info {
     Gestor_vuelos vuelos = new Gestor_vuelos();

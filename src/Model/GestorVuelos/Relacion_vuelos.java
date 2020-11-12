@@ -15,7 +15,7 @@ import java.text.SimpleDateFormat;
 
 /**
  *
- * @author giova
+ * @author equipo aereostars
  */
 public class Relacion_vuelos {
     private final ArrayList<Vuelo> listaVuelos = new ArrayList<>();
@@ -49,7 +49,6 @@ public class Relacion_vuelos {
             System.out.println("Error al ejecutar el comando de BD");
             e.printStackTrace();
         }
-        
     }
     
     public boolean eliminarVuelo(int numreferencia){

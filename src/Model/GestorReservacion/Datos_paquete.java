@@ -9,7 +9,7 @@ import Model.GestorPaquetes.*;
 
 /**
  *
- * @author giova
+ * @author equipo aereostars
  */
 public class Datos_paquete {
     private Paquete paquete;

@@ -7,7 +7,7 @@ package Model.GestorEventos;
 
 /**
  *
- * @author giova
+ * @author equipo aereostars
  */
 public class Gestor_eventos {
     public Relacion_eventos listaEventos = new Relacion_eventos();

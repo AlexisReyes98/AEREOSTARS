@@ -10,7 +10,7 @@ import Model.GestorHoteles.*;
 
 /**
  *
- * @author giova
+ * @author equipo aereostars
  */
 public class Gestor_paquetes {
     public Relacion_paquetes listaPaquetes = new Relacion_paquetes();

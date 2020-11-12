@@ -7,7 +7,7 @@ package Model.GestorCheck_in;
 
 /**
  *
- * @author giova
+ * @author equipo aereostars
  */
 public class Gestor_check_in {
     Check_in check_in = new Check_in();

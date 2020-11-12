@@ -10,7 +10,7 @@ import Model.GestorEventos.*;
 
 /**
  *
- * @author giova
+ * @author equipo aereostars
  */
 public class Paquete {
     private String destino;

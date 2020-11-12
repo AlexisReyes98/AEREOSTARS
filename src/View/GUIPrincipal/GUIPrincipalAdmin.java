@@ -7,7 +7,7 @@ package View.GUIPrincipal;
 
 /**
  *
- * @author giova
+ * @author equipo aereostars
  */
 public class GUIPrincipalAdmin extends javax.swing.JFrame {
 

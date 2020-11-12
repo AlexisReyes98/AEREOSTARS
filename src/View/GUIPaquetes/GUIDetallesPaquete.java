@@ -7,7 +7,7 @@ package View.GUIPaquetes;
 
 /**
  *
- * @author giova
+ * @author equipo aereostars
  */
 public class GUIDetallesPaquete extends javax.swing.JFrame {
 

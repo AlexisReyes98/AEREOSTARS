@@ -15,7 +15,7 @@ import java.util.ArrayList;
 
 /**
  *
- * @author giova
+ * @author equipo aereostars
  */
 public class Relacion_comprobantes {
     ArrayList<Comprobante_reservacion> tablaComprobante_reservacion = new ArrayList<>();

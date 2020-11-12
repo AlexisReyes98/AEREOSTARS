@@ -10,7 +10,7 @@ import View.GUIVuelos.GUIAgregarVuelo;
 
 /**
  *
- * @author giova
+ * @author equipo aereostars
  */
 public class aereostars {
     public static void main(String[] args) {

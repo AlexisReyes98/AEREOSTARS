@@ -9,7 +9,7 @@ import Model.GestorReservacion.*;
 
 /**
  *
- * @author giova
+ * @author equipo aereostars
  */
 public class Gestor_pago {
     Pago pago = new Pago();

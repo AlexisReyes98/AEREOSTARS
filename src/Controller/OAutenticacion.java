@@ -13,7 +13,7 @@ import javax.swing.JPanel;
 
 /**
  *
- * @author giova
+ * @author equipo aereostars
  */
 public class OAutenticacion implements ActionListener{
     private JPanel panel;

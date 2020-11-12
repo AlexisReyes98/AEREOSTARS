@@ -7,7 +7,7 @@ package Model.GestorPromociones;
 
 /**
  *
- * @author giova
+ * @author equipo aereostars
  */
 public class Promocion {
     private String nombre;

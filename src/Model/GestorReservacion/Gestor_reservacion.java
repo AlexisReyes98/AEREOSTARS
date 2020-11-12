@@ -12,7 +12,7 @@ import java.util.Scanner;
 
 /**
  *
- * @author giova
+ * @author equipo aereostars
  */
 public class Gestor_reservacion {
     Scanner datos = new Scanner(System.in);

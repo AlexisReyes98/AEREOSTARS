@@ -7,7 +7,7 @@ package View.GUIAutenticacion;
 
 /**
  *
- * @author giova
+ * @author equipo aereostars
  */
 public class GUIRegistro extends javax.swing.JFrame {
 

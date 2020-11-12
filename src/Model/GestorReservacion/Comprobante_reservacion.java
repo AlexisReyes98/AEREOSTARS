@@ -7,7 +7,7 @@ package Model.GestorReservacion;
 
 /**
  *
- * @author giova
+ * @author equipo aereostars
  */
 public class Comprobante_reservacion {
     private int idReservacion;

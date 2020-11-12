@@ -7,7 +7,7 @@ package Model.GestorAutenticacion;
 
 /**
  *
- * @author giova
+ * @author equipo aereostars
  */
 public class Cuenta_usuario {
     private String nombre;
@@ -15,6 +15,9 @@ public class Cuenta_usuario {
     private String nombreUsuario;
     private String contraseña;
     private boolean administrador;
+
+    public Cuenta_usuario() {
+    }
 
     public Cuenta_usuario(String nombre, int edad, String nombreUsuario, String contraseña) {
         this.nombre = nombre;
@@ -56,7 +59,7 @@ public class Cuenta_usuario {
         this.contraseña = contraseña;
     }
 
-    public boolean isAdministrador() {
+    public boolean getAdministrador() {
         return administrador;
     }
 
@@ -66,7 +69,7 @@ public class Cuenta_usuario {
 
     @Override
     public String toString() {
-        return "Cuenta_usuario{" + "nombre=" + nombre + ", edad=" + edad + ", nombreUsuario=" + nombreUsuario + ", contrase\u00f1a=" + contraseña + ", administrador=" + administrador + '}';
+        return "Cuenta_usuario{" + "nombre=" + nombre + ", edad=" + edad + ", nombreUsuario=" + nombreUsuario + ", contrase\u00f1a=" + contraseña + '}';
     }
     
 }

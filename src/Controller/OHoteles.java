@@ -10,7 +10,7 @@ import java.awt.event.ActionListener;
 
 /**
  *
- * @author giova
+ * @author equipo aereostars
  */
 public class OHoteles implements ActionListener{
 

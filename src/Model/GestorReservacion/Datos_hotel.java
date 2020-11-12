@@ -9,7 +9,7 @@ import Model.GestorHoteles.*;
 
 /**
  *
- * @author giova
+ * @author equipo aereostars
  */
 public class Datos_hotel {
     private Hotel hotel;

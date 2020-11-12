@@ -7,7 +7,7 @@ package Model.GestorEventos;
 
 /**
  *
- * @author giova
+ * @author equipo aereostars
  */
 public class Evento {
     private String nombre;

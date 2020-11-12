@@ -12,7 +12,7 @@ import javax.swing.JButton;
 
 /**
  *
- * @author giova
+ * @author equipo aereostars
  */
 public class OVuelos implements ActionListener{
     

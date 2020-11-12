@@ -11,7 +11,7 @@ import Model.GestorPaquetes.*;
 
 /**
  *
- * @author giova
+ * @author equipo aereostars
  */
 public class Reservacion {
     private Vuelo vueloRes;

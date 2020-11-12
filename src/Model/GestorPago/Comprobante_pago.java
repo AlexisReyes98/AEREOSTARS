@@ -7,7 +7,7 @@ package Model.GestorPago;
 
 /**
  *
- * @author giova
+ * @author equipo aereostars
  */
 public class Comprobante_pago {
     private double monto_pagado;

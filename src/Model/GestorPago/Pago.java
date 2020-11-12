@@ -9,7 +9,7 @@ import Model.GestorReservacion.*;
 
 /**
  *
- * @author giova
+ * @author equipo aereostars
  */
 public class Pago {
     private double cantidad_pago;

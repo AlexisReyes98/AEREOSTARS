@@ -7,7 +7,7 @@ package Model.GestorPago;
 
 /**
  *
- * @author giova
+ * @author equipo aereostars
  */
 public class Tarjeta_bancaria {
     private String tarjeta_credito;

@@ -7,7 +7,7 @@ package Model.GestorCheck_in;
 
 /**
  *
- * @author giova
+ * @author equipo aereostars
  */
 public class Pase_abordar {
     private String destino;

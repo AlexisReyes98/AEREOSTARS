@@ -7,7 +7,7 @@ package View.GUIReservacion;
 
 /**
  *
- * @author giova
+ * @author equipo aereostars
  */
 public class GUIReservacion extends javax.swing.JFrame {
 

@@ -7,7 +7,7 @@ package Model.GestorReservacion;
 
 /**
  *
- * @author giova
+ * @author equipo aereostars
  */
 public class Datos_pasajero {
     private String nombre;

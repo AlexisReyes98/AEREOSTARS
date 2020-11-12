@@ -7,7 +7,7 @@ package Model.GestorHoteles;
 
 /**
  *
- * @author giova
+ * @author equipo aereostars
  */
 public class Gestor_hoteles {
     public Relacion_hoteles listaHoteles = new Relacion_hoteles();

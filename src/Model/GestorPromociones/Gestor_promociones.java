@@ -7,7 +7,7 @@ package Model.GestorPromociones;
 
 /**
  *
- * @author giova
+ * @author equipo aereostars
  */
 public class Gestor_promociones {
     public Relacion_promociones listaPromos = new Relacion_promociones();

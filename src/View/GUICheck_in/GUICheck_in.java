@@ -7,7 +7,7 @@ package View.GUICheck_in;
 
 /**
  *
- * @author giova
+ * @author equipo aereostars
  */
 public class GUICheck_in extends javax.swing.JFrame {
 

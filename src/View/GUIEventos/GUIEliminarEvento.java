@@ -7,7 +7,7 @@ package View.GUIEventos;
 
 /**
  *
- * @author giova
+ * @author equipo aereostars
  */
 public class GUIEliminarEvento extends javax.swing.JFrame {
 

@@ -7,7 +7,7 @@ package Model.GestorVuelos;
 
 /**
  *
- * @author giova
+ * @author equipo aereostars
  */
 public class Vuelo {
     private String destino;

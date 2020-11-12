@@ -15,7 +15,7 @@ import java.util.ArrayList;
 
 /**
  *
- * @author giova
+ * @author equipo aereostars
  */
 public class Relacion_eventos {
     private final ArrayList<Evento> listaEventos = new ArrayList<>();

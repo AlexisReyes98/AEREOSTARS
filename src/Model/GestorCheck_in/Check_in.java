@@ -9,7 +9,7 @@ import Model.GestorReservacion.*;
 
 /**
  *
- * @author giova
+ * @author equipo aereostars
  */
 public class Check_in {
     Relacion_comprobantes comprobantes = new Relacion_comprobantes();

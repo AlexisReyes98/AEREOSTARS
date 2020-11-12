@@ -11,7 +11,7 @@ import java.sql.SQLException;
 
 /**
  *
- * @author giova
+ * @author equipo aereostars
  */
 public class ConexionBD {
     private static Connection conn = null;

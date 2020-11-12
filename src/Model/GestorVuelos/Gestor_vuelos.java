@@ -7,7 +7,7 @@ package Model.GestorVuelos;
 
 /**
  *
- * @author giova
+ * @author equipo aereostars
  */
 public class Gestor_vuelos {
     public Relacion_vuelos listaVuelos = new Relacion_vuelos();

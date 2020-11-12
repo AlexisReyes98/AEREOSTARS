@@ -7,7 +7,7 @@ package View.GUIVuelos;
 
 /**
  *
- * @author giova
+ * @author equipo aereostars
  */
 public class GUIModificarVuelo extends javax.swing.JFrame {
 

@@ -7,7 +7,7 @@ package Model.GestorAutenticacion;
 
 /**
  *
- * @author giova
+ * @author equipo aereostars
  */
 public class Gestor_autenticacion {
     Autenticacion nuevaSesion = new Autenticacion();
@@ -26,16 +26,16 @@ public class Gestor_autenticacion {
         nuevaSesion.agregarUsuario(nuevo);
     }
     
-    public void eliminarUsuario(String nombreUsuario, String contraseña){
-        if(nuevaSesion.eliminarUsuario(nombreUsuario, contraseña) == false){
-            System.out.println("No se encontro el usuario buscado.");
-        }
-    }
-    
     public void registrarAdmin(String nombre, int edad, String nombreUsuario, String contraseña){
         Cuenta_usuario nuevo = new Cuenta_usuario(nombre, edad, nombreUsuario, contraseña);
         nuevo.setAdministrador(true);
         nuevaSesion.agregarUsuario(nuevo);
+    }
+    
+    public void eliminarUsuario(String nombreUsuario, String contraseña){
+        if(nuevaSesion.eliminarUsuario(nombreUsuario, contraseña) == false){
+            System.out.println("No se encontro el usuario buscado.");
+        }
     }
 
     public String getClaveAdministrador() {

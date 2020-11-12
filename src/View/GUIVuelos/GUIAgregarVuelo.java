@@ -10,7 +10,7 @@ import java.awt.event.ActionEvent;
 
 /**
  *
- * @author giova
+ * @author equipo aereostars
  */
 public class GUIAgregarVuelo extends javax.swing.JFrame {
     

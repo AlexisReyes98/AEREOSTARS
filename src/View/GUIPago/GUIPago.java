@@ -7,7 +7,7 @@ package View.GUIPago;
 
 /**
  *
- * @author giova
+ * @author equipo aereostars
  */
 public class GUIPago extends javax.swing.JFrame {
 

@@ -7,7 +7,7 @@ package View.GUIInformacion;
 
 /**
  *
- * @author giova
+ * @author equipo aereostars
  */
 public class GUIBuscarPromo extends javax.swing.JFrame {
 

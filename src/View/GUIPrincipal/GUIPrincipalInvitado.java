@@ -7,7 +7,7 @@ package View.GUIPrincipal;
 
 /**
  *
- * @author giova
+ * @author equipo aereostars
  */
 public class GUIPrincipalInvitado extends javax.swing.JFrame {
 

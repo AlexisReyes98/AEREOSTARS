@@ -7,7 +7,7 @@ package Model.GestorHoteles;
 
 /**
  *
- * @author giova
+ * @author equipo aereostars
  */
 public class Hotel {
     private String nombre;

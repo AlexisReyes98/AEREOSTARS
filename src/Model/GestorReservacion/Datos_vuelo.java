@@ -9,7 +9,7 @@ import Model.GestorVuelos.*;
 
 /**
  *
- * @author giova
+ * @author equipo aereostars
  */
 public class Datos_vuelo {
     private Vuelo vuelo;

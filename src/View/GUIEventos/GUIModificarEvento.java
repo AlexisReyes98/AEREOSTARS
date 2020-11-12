@@ -7,7 +7,7 @@ package View.GUIEventos;
 
 /**
  *
- * @author giova
+ * @author equipo aereostars
  */
 public class GUIModificarEvento extends javax.swing.JFrame {
 
