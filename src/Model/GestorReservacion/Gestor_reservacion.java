@@ -8,9 +8,7 @@ package Model.GestorReservacion;
 import Model.GestorVuelos.*;
 import Model.GestorHoteles.*;
 import Model.GestorPaquetes.*;
-import java.util.ArrayList;
 import java.util.Scanner;
-import javax.swing.JTextArea;
 
 /**
  *
@@ -22,13 +20,6 @@ public class Gestor_reservacion {
     public Relacion_paquetes seleccion_paquete = new Relacion_paquetes();
     public Relacion_hoteles seleccion_hotel = new Relacion_hoteles();
     public Relacion_comprobantes comprobante = new Relacion_comprobantes();
-    JTextArea jTextArea1;
-    ArrayList<String> listaPuestosSel;
-
-    public Gestor_reservacion(JTextArea jTextArea1, ArrayList<String> listaPuestosSel) {
-        this.jTextArea1 = jTextArea1;
-        this.listaPuestosSel = listaPuestosSel;
-    }
     
     public void generarReservacion(int opcion, int num_ref, String nombre, String telefono, String correo){
         switch(opcion){
