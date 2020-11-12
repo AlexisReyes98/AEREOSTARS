@@ -11,10 +11,10 @@ package Model.GestorReservacion;
  */
 public class Datos_pasajero {
     private String nombre;
-    private int numTelefono;
+    private String numTelefono;
     private String correo;
 
-    public Datos_pasajero(String nombre, int numTelefono, String correo) {
+    public Datos_pasajero(String nombre, String numTelefono, String correo) {
         this.nombre = nombre;
         this.numTelefono = numTelefono;
         this.correo = correo;
@@ -28,11 +28,11 @@ public class Datos_pasajero {
         this.nombre = nombre;
     }
 
-    public int getNumTelefono() {
+    public String getNumTelefono() {
         return numTelefono;
     }
 
-    public void setNumTelefono(int numTelefono) {
+    public void setNumTelefono(String numTelefono) {
         this.numTelefono = numTelefono;
     }
 
