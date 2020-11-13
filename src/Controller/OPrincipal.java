@@ -5,7 +5,7 @@
  */
 package Controller;
 
-import Model.GestorHoteles.Hotel;
+/*import Model.GestorHoteles.Hotel;
 import Model.GestorHoteles.Relacion_hoteles;
 import Model.GestorPromociones.Promocion;
 import Model.GestorPromociones.Relacion_promocion;
@@ -16,12 +16,12 @@ import View.GUIHoteles.GUIAgregarHotel;
 import View.GUIHoteles.GUIBuscarHotel;
 import View.GUIHoteles.GUIEliminarHotel;
 import View.GUIHoteles.GUIHOTEL;
-import View.GUIHoteles.GUIModificarHotel;
+import View.GUIHoteles.GUIModificarHotel;*/
 import View.GUIPrincipal.GUIPrincipalAdmin;
-import View.GUIPromociones.GUIAgregarPromo;
+/*import View.GUIPromociones.GUIAgregarPromo;
 import View.GUIPromociones.GUIBuscarPromo;
 import View.GUIPromociones.GUIEliminarPromo;
-import View.GUIPromociones.GUIModificarPromo;
+import View.GUIPromociones.GUIModificarPromo;*/
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JButton;
@@ -37,10 +37,12 @@ public class OPrincipal implements ActionListener{
     JComboBox<String> jComboBox1;
     JComboBox<String> jComboBox2;
     JComboBox<String> jComboBox3;
-    JButton jButton1, jButton2, jButton3, jButton4, jButton5;
+    JButton jButton1, jButton2, jButton3, jButton4, jButton5, jButton6;
     
     //SOCIO
-    public OPrincipal(JTextField jTextField1, JTextField jTextField2, JComboBox<String> jComboBox1, JComboBox<String> jComboBox2, JButton jButton1, JButton jButton2, JButton jButton3, JButton jButton4) {
+    public OPrincipal(JTextField jTextField1, JTextField jTextField2, JComboBox<String> jComboBox1,
+            JComboBox<String> jComboBox2, JButton jButton1, JButton jButton2, JButton jButton3,
+            JButton jButton4, JButton jButton5) {
         this.jTextField1 = jTextField1;
         this.jTextField2 = jTextField2;
         this.jComboBox1 = jComboBox1;
@@ -49,13 +51,14 @@ public class OPrincipal implements ActionListener{
         this.jButton2 = jButton2;
         this.jButton3 = jButton3;
         this.jButton4 = jButton4;
+        this.jButton5 = jButton5;
     }
     
     //INVITADO
-    public OPrincipal(JTextField jTextField3, JComboBox<String> jComboBox3, JButton jButton5) {
+    public OPrincipal(JTextField jTextField3, JComboBox<String> jComboBox3, JButton jButton6) {
         this.jTextField3 = jTextField3;
         this.jComboBox3 = jComboBox3;
-        this.jButton5 = jButton5;
+        this.jButton6 = jButton6;
     }
     
     //Admin
@@ -87,7 +90,7 @@ public class OPrincipal implements ActionListener{
 
     @Override
     public void actionPerformed(ActionEvent ae) {
-        if(ae.getSource().equals(frm.btn_adminAddEvento)){
+        /*if(ae.getSource().equals(frm.btn_adminAddEvento)){
             GUIAgregarEvento ge = new GUIAgregarEvento ();
             ge.setLocationRelativeTo(null);
             ge.setTitle("Agregar evento");
@@ -188,8 +191,8 @@ public class OPrincipal implements ActionListener{
         }else if(ae.getSource().equals(frm.btn_adminModVuelo)){
             OVuelos ov = new OVuelos();
             ov.iniciar();
-            ov.frm3.setVisible(true);    
-        }    
+            ov.frm3.setVisible(true);   
+        }    */
     }
     
 }

@@ -52,10 +52,7 @@ public class OReservacion implements ActionListener{
         int i=0;
         Gestor_reservacion reserva = new Gestor_reservacion(jTextArea1);
         String seleccion = (String) jComboBox1.getSelectedItem();
-        if(bot==jComboBox1){
-            jTextField5.setText("Efectuando de reservacion de un "+seleccion+"... ");
-        }
-        if(null != seleccion)switch (seleccion) {
+        switch (seleccion) {
                 case "Vuelo":
                     i=1;
                     break;
@@ -68,7 +65,10 @@ public class OReservacion implements ActionListener{
                 default:
                     break;
         }
-        if(bot==jButton1){
+        if(bot==jComboBox1){
+            jTextField5.setText("Efectuando de reservacion de un "+seleccion+"... ");
+        }
+        else if(bot==jButton1){
             Datos_pasajero pasajero;
             pasajero = reserva.ingresaDatosPasajero(jTextField2.getText(), jTextField3.getText(), jTextField4.getText());
             int numRef = Integer.parseInt(jTextField1.getText());
