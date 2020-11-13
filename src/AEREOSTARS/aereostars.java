@@ -31,8 +31,8 @@ public class aereostars {
         //OAutenticacion oa = new OAutenticacion(ga,gr);
         //oa.iniciar();
         //ga.setVisible(true);
-        GUIReservacion gr = new GUIReservacion();
-        gr.setVisible(true);
+        //GUIReservacion gr = new GUIReservacion();
+        //gr.setVisible(true);
         //GUICancelarReservacion r = new GUICancelarReservacion();
         //r.setVisible(true);
     }
