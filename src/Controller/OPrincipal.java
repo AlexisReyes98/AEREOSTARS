@@ -10,6 +10,8 @@ import Model.GestorHoteles.Relacion_hoteles;
 import Model.GestorPromociones.Promocion;
 import Model.GestorPromociones.Relacion_promocion;
 import View.GUIEventos.GUIAgregarEvento;
+import View.GUIEventos.GUIEliminarEvento;
+import View.GUIEventos.GUIModificarEvento;
 import View.GUIHoteles.GUIAgregarHotel;
 import View.GUIHoteles.GUIBuscarHotel;
 import View.GUIHoteles.GUIEliminarHotel;
@@ -91,7 +93,75 @@ public class OPrincipal implements ActionListener{
             OVuelos ov = new OVuelos();
             ov.iniciar();
             ov.frm.setVisible(true);
-        }
+        }else if(ae.getSource().equals(frm.btn_adminDelEvento)){
+            GUIEliminarEvento ge = new GUIEliminarEvento ();
+            ge.setLocationRelativeTo(null);
+            ge.setTitle("Eliminar evento");
+            ge.setVisible(true);
+        }else if(ae.getSource().equals(frm.btn_adminDelHotel)){
+            Hotel h = new Hotel();
+            Relacion_hoteles modC = new Relacion_hoteles();
+            GUIAgregarHotel frm = new GUIAgregarHotel();
+            GUIModificarHotel frm1 = new GUIModificarHotel();
+            GUIEliminarHotel frm2 = new GUIEliminarHotel();
+            GUIBuscarHotel frm3 = new GUIBuscarHotel();
+            GUIHOTEL frm4 = new GUIHOTEL();
+            OyenteHoteles oh = new OyenteHoteles(h,modC,frm,frm1,frm2,frm3,frm4);
+            oh.iniciar();
+            oh.frm2.setVisible(true);
+        }else if(ae.getSource().equals(frm.btn_adminDelPaquete)){
+            OPaquetes op = new OPaquetes();
+            op.iniciar();
+            op.frm2.setVisible(true);
+        }else if(ae.getSource().equals(frm.btn_adminDelPromo)){
+            Promocion h = new Promocion();
+            Relacion_promocion modC = new Relacion_promocion();
+            GUIAgregarPromo frm = new GUIAgregarPromo();
+            GUIBuscarPromo frm3 = new GUIBuscarPromo();
+            GUIModificarPromo frm4 = new GUIModificarPromo();
+            GUIEliminarPromo frm5 = new GUIEliminarPromo();
+            OyentePromo op = new OyentePromo(h,modC,frm,frm3,frm4,frm5);
+            op.iniciar();
+            op.frm5.setVisible(true);  
+        }else if(ae.getSource().equals(frm.btn_adminDelVuelo)){
+            OVuelos ov = new OVuelos();
+            ov.iniciar();
+            ov.frm2.setVisible(true);    
+        }else if(ae.getSource().equals(frm.btn_adminModEvento)){
+            GUIModificarEvento ge = new GUIModificarEvento ();
+            ge.setLocationRelativeTo(null);
+            ge.setTitle("Modificar evento");
+            ge.setVisible(true);
+        }else if(ae.getSource().equals(frm.btn_adminModHotel)){
+            Hotel h = new Hotel();
+            Relacion_hoteles modC = new Relacion_hoteles();
+            GUIAgregarHotel frm = new GUIAgregarHotel();
+            GUIModificarHotel frm1 = new GUIModificarHotel();
+            GUIEliminarHotel frm2 = new GUIEliminarHotel();
+            GUIBuscarHotel frm3 = new GUIBuscarHotel();
+            GUIHOTEL frm4 = new GUIHOTEL();
+            OyenteHoteles oh = new OyenteHoteles(h,modC,frm,frm1,frm2,frm3,frm4);
+            oh.iniciar();
+            oh.frm1.setVisible(true);
+        }else if(ae.getSource().equals(frm.btn_adminModPaquete)){
+            OPaquetes op = new OPaquetes();
+            op.iniciar();
+            op.frm3.setVisible(true);
+        }else if(ae.getSource().equals(frm.btn_adminModPromo)){
+            Promocion h = new Promocion();
+            Relacion_promocion modC = new Relacion_promocion();
+            GUIAgregarPromo frm = new GUIAgregarPromo();
+            GUIBuscarPromo frm3 = new GUIBuscarPromo();
+            GUIModificarPromo frm4 = new GUIModificarPromo();
+            GUIEliminarPromo frm5 = new GUIEliminarPromo();
+            OyentePromo op = new OyentePromo(h,modC,frm,frm3,frm4,frm5);
+            op.iniciar();
+            op.frm4.setVisible(true);  
+        }else if(ae.getSource().equals(frm.btn_adminModVuelo)){
+            OVuelos ov = new OVuelos();
+            ov.iniciar();
+            ov.frm3.setVisible(true);    
+        }    
     }
     
 }
