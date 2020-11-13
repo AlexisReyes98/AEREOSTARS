@@ -29,7 +29,7 @@ public class Gestor_paquetes {
         listaPaquetes.modificarPaquete(numReferencia, campo, nuevoValor);      
     }
     
-    public void solicitarVuelo(String origen, String destino, String fecha_ida){
-        listaPaquetes.solicitarPaquete(origen,destino,fecha_ida);
+    public void solicitarPaquete(/*String origen, String destino, String fecha_ida*/){
+        listaPaquetes.solicitarPaquete(/*origen,destino,fecha_ida*/);
     }
 }

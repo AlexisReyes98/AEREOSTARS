@@ -19,7 +19,7 @@ import java.util.ArrayList;
  * @author equipo aereostars
  */
 public class Relacion_paquetes {
-    private final ArrayList<Paquete> listaPaquetes = new ArrayList<>();
+    public final ArrayList<Paquete> listaPaquetes = new ArrayList<>();
     
     public void agregarPaquete(Paquete paquete){
         //listaPaquetes.add(paquete);
@@ -139,7 +139,7 @@ public class Relacion_paquetes {
         
     }
     
-    public void solicitarPaquete(String origen, String destino, String fecha){
+    public void solicitarPaquete(/*String origen, String destino, String fecha*/){
         ArrayList<Paquete> listaRequisitos = new ArrayList<>();
         Paquete paquete = new Paquete();
         int i=0;
@@ -153,10 +153,10 @@ public class Relacion_paquetes {
             Connection conexion = conn.getCon();
             PreparedStatement ps;
             ResultSet rs;
-            String sql = "SELECT * FROM paquetes WHERE destino = ? AND origen = ?";
+            String sql = "SELECT * FROM paquetes;";
             ps = conexion.prepareStatement(sql);
-            ps.setString(1, origen);
-            ps.setString(2, destino);
+            //ps.setString(1, origen);
+            //ps.setString(2, destino);
             rs = ps.executeQuery();
         while( rs.next() ) {
             paquete.setNumReferencia(rs.getInt(1));
