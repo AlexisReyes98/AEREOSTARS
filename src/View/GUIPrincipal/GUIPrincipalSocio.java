@@ -22,26 +22,26 @@ public class GUIPrincipalSocio extends javax.swing.JFrame {
     OPrincipal op;
     public GUIPrincipalSocio() {
         initComponents();
-        jComboBox1.addItem("Vuelos");
-        jComboBox1.addItem("Paquetes");
-        jComboBox1.addItem("Hoteles");
-        jComboBox1.addItem("Promociones");
-        jComboBox1.addItem("Eventos");
-        jComboBox1.setEditable(false);
+        list_so.addItem("Vuelos");
+        list_so.addItem("Paquetes");
+        list_so.addItem("Hoteles");
+        list_so.addItem("Promociones");
+        list_so.addItem("Eventos");
+        list_so.setEditable(false);
         jTextField1.setEditable(false);
         
-        jComboBox2.addItem("Vuelo");
-        jComboBox2.addItem("Paquete");
-        jComboBox2.addItem("Hotel");
-        jComboBox1.setEditable(false);
+        list2_so.addItem("Vuelo");
+        list2_so.addItem("Paquete");
+        list2_so.addItem("Hotel");
+        list_so.setEditable(false);
         jTextField2.setEditable(false);
         
-        op = new OPrincipal(jTextField1, jTextField2, jComboBox1, jComboBox2, jButton1, jButton2, jButton3, jButton4, jButton5);
-        jButton1.addActionListener(op);
-        jButton2.addActionListener(op);
-        jButton3.addActionListener(op);
+        /*op = new OPrincipal(jTextField1, jTextField2, list_so, list2_so, busca_so, reserva_so, paga_so, jButton4, che_so);
+        busca_so.addActionListener(op);
+        reserva_so.addActionListener(op);
+        paga_so.addActionListener(op);
         jButton4.addActionListener(op);
-        jButton5.addActionListener(op);
+        che_so.addActionListener(op);*/
     }
 
     /**
@@ -58,18 +58,18 @@ public class GUIPrincipalSocio extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        jComboBox1 = new javax.swing.JComboBox<>();
-        jComboBox2 = new javax.swing.JComboBox<>();
+        list_so = new javax.swing.JComboBox<>();
+        list2_so = new javax.swing.JComboBox<>();
         jLabel7 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        busca_so = new javax.swing.JButton();
+        reserva_so = new javax.swing.JButton();
         jTextField1 = new javax.swing.JTextField();
         jTextField2 = new javax.swing.JTextField();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
+        paga_so = new javax.swing.JButton();
+        can_so = new javax.swing.JButton();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
-        jButton5 = new javax.swing.JButton();
+        che_so = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -85,19 +85,19 @@ public class GUIPrincipalSocio extends javax.swing.JFrame {
 
         jLabel7.setText("Cancelar Reservacion:");
 
-        jButton1.setText("Buscar");
+        busca_so.setText("Ir a busqueda");
 
-        jButton2.setText("Reservar");
+        reserva_so.setText("Ir a reservacion");
 
-        jButton3.setText("Pagar");
+        paga_so.setText("Pagar");
 
-        jButton4.setText("Cancelar");
+        can_so.setText("Cancelar");
 
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/Images/aereostars.png"))); // NOI18N
 
         jLabel6.setText("Realizar Check-in");
 
-        jButton5.setText("Check-in");
+        che_so.setText("Check-in");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -106,21 +106,21 @@ public class GUIPrincipalSocio extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel2)
-                    .addComponent(jButton2)
+                    .addComponent(reserva_so)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addContainerGap()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel4)
-                            .addComponent(jButton3))
+                            .addComponent(paga_so))
                         .addGap(94, 94, 94)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel7)
-                            .addComponent(jButton4))
+                            .addComponent(can_so))
                         .addGap(56, 56, 56)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jButton5)
+                            .addComponent(che_so)
                             .addComponent(jLabel6)))
-                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(list_so, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(235, 235, 235)
                         .addComponent(jLabel1)))
@@ -129,9 +129,9 @@ public class GUIPrincipalSocio extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 296, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel3)
-                    .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(list2_so, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 266, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton1))
+                    .addComponent(busca_so))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 233, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(34, 34, 34))
@@ -143,22 +143,22 @@ public class GUIPrincipalSocio extends javax.swing.JFrame {
                 .addGap(20, 20, 20)
                 .addComponent(jLabel2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(list_so, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(24, 24, 24)
-                        .addComponent(jButton1)
+                        .addComponent(busca_so)
                         .addGap(36, 36, 36)
                         .addComponent(jLabel3)
                         .addGap(18, 18, 18)
-                        .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(list2_so, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(18, 18, 18)
-                .addComponent(jButton2)
+                .addComponent(reserva_so)
                 .addGap(36, 36, 36)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4)
@@ -166,9 +166,9 @@ public class GUIPrincipalSocio extends javax.swing.JFrame {
                     .addComponent(jLabel6))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton3)
-                    .addComponent(jButton4)
-                    .addComponent(jButton5))
+                    .addComponent(paga_so)
+                    .addComponent(can_so)
+                    .addComponent(che_so))
                 .addContainerGap(86, Short.MAX_VALUE))
         );
 
@@ -214,13 +214,9 @@ public class GUIPrincipalSocio extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    public javax.swing.JButton jButton1;
-    public javax.swing.JButton jButton2;
-    public javax.swing.JButton jButton3;
-    public javax.swing.JButton jButton4;
-    public javax.swing.JButton jButton5;
-    public javax.swing.JComboBox<String> jComboBox1;
-    public javax.swing.JComboBox<String> jComboBox2;
+    public javax.swing.JButton busca_so;
+    public javax.swing.JButton can_so;
+    public javax.swing.JButton che_so;
     public javax.swing.JLabel jLabel1;
     public javax.swing.JLabel jLabel2;
     public javax.swing.JLabel jLabel3;
@@ -231,5 +227,9 @@ public class GUIPrincipalSocio extends javax.swing.JFrame {
     public javax.swing.JPanel jPanel1;
     public javax.swing.JTextField jTextField1;
     public javax.swing.JTextField jTextField2;
+    public javax.swing.JComboBox<String> list2_so;
+    public javax.swing.JComboBox<String> list_so;
+    public javax.swing.JButton paga_so;
+    public javax.swing.JButton reserva_so;
     // End of variables declaration//GEN-END:variables
 }

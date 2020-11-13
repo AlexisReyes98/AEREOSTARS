@@ -22,12 +22,12 @@ public class GUIPrincipalInvitado extends javax.swing.JFrame {
     OPrincipal op;
     public GUIPrincipalInvitado() {
         initComponents();
-        jComboBox1.addItem("Vuelos");
-        jComboBox1.addItem("Paquetes");
-        jComboBox1.addItem("Hoteles");
-        jComboBox1.addItem("Promociones");
-        jComboBox1.addItem("Eventos");
-        jComboBox1.setEditable(false);
+        lista_serv.addItem("Vuelos");
+        lista_serv.addItem("Paquetes");
+        lista_serv.addItem("Hoteles");
+        lista_serv.addItem("Promociones");
+        lista_serv.addItem("Eventos");
+        lista_serv.setEditable(false);
         jTextField1.setEditable(false);
         
         //op = new OPrincipal(jTextField1, jComboBox1, jButton1,btn_invitadoLogin);
@@ -47,8 +47,8 @@ public class GUIPrincipalInvitado extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jComboBox1 = new javax.swing.JComboBox<>();
+        buscar_serv = new javax.swing.JButton();
+        lista_serv = new javax.swing.JComboBox<>();
         jTextField1 = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
         btn_invitadoLogin = new javax.swing.JButton();
@@ -61,7 +61,7 @@ public class GUIPrincipalInvitado extends javax.swing.JFrame {
 
         jLabel2.setText("Busqueda:");
 
-        jButton1.setText("Busqueda");
+        buscar_serv.setText("Busqueda");
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/Images/aereostars.png"))); // NOI18N
 
@@ -81,10 +81,10 @@ public class GUIPrincipalInvitado extends javax.swing.JFrame {
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel2)
                             .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(jButton1)
+                                .addComponent(buscar_serv)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(btn_invitadoLogin))
-                            .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lista_serv, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 228, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 31, Short.MAX_VALUE)
                 .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -101,12 +101,12 @@ public class GUIPrincipalInvitado extends javax.swing.JFrame {
                         .addGap(18, 18, 18)
                         .addComponent(jLabel2)
                         .addGap(18, 18, 18)
-                        .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(lista_serv, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(20, 20, 20)
                         .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(27, 27, 27)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jButton1)
+                            .addComponent(buscar_serv)
                             .addComponent(btn_invitadoLogin))
                         .addGap(0, 9, Short.MAX_VALUE)))
                 .addContainerGap())
@@ -154,12 +154,12 @@ public class GUIPrincipalInvitado extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JButton btn_invitadoLogin;
-    public javax.swing.JButton jButton1;
-    public javax.swing.JComboBox<String> jComboBox1;
+    public javax.swing.JButton buscar_serv;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
     public javax.swing.JTextField jTextField1;
+    public javax.swing.JComboBox<String> lista_serv;
     // End of variables declaration//GEN-END:variables
 }

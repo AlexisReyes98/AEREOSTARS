@@ -32,7 +32,7 @@ public class OPrincipal implements ActionListener{
     JComboBox<String> jComboBox1;
     JComboBox<String> jComboBox2;
     JComboBox<String> jComboBox3;
-    JButton jButton1, jButton2, jButton3, jButton4, jButton5, jButton6,btn_login;
+    JButton jButton1, jButton2, jButton3, jButton4, jButton5, jButton6, btn_login;
     public GUIPrincipalSocio frm1;
     public GUIPrincipalInvitado frm2;
     
@@ -42,32 +42,38 @@ public class OPrincipal implements ActionListener{
     //SOCIO
     public OPrincipal() {
         frm1 = new GUIPrincipalSocio();
-        jComboBox2 = frm1.jComboBox2;
-        //frm1.jComboBox2.
-        /*frm1.jTextField1
-        this.jTextField1 = jTextField1;
-        this.jTextField2 = jTextField2;
+        frm1.busca_so.addActionListener(this);
+        jButton1 = frm1.busca_so;
+        frm1.list_so.addActionListener(this);
+        jComboBox1 = frm1.list_so;
+        frm1.jTextField1.addActionListener(this);
+        jTextField1 = frm1.jTextField1;
+        frm1.list2_so.addActionListener(this);
+        jComboBox2 = frm1.list2_so;
+        frm1.reserva_so.addActionListener(this);
+        jButton2 = frm1.reserva_so;
+        frm1.jTextField2.addActionListener(this);
+        jTextField2 = frm1.jTextField2;
+        frm1.paga_so.addActionListener(this);
+        jButton3 = frm1.paga_so;
+        frm1.can_so.addActionListener(this);
+        jButton4 = frm1.can_so;
+        frm1.che_so.addActionListener(this);
+        jButton5 = frm1.che_so;
         
-        this.jComboBox2 = jComboBox2;
-        this.jButton1 = jButton1;
-        this.jButton2 = jButton2;
-        this.jButton3 = jButton3;
-        this.jButton4 = jButton4;
-        this.jButton5 = jButton5;*/
-        
-        
+        //Invitado
         frm2 = new GUIPrincipalInvitado();
         frm2.btn_invitadoLogin.addActionListener(this);
         btn_login=frm2.btn_invitadoLogin;
-        frm2.jButton1.addActionListener(this);
-        jComboBox1 = frm2.jComboBox1;
+        frm2.buscar_serv.addActionListener(this);
+        jButton6 = frm2.buscar_serv;
+        frm2.lista_serv.addActionListener(this);
+        jComboBox3 = frm2.lista_serv;
+        frm2.jTextField1.addActionListener(this);
+        jTextField3 = frm2.jTextField1;
         
-        //invitado
-        this.jTextField3 = jTextField3;
-        this.jComboBox3 = jComboBox3;
-        this.jButton6 = jButton6;
         
-        //admin
+        //Admin
         frm = new GUIPrincipalAdmin();
         frm.btn_adminAddEvento.addActionListener(this);
         frm.btn_adminAddHotel.addActionListener(this);
@@ -86,14 +92,6 @@ public class OPrincipal implements ActionListener{
         frm.btn_adminModVuelo.addActionListener(this);
     }
     
-    //INVITADO
-    public OPrincipal(JTextField jTextField3, JComboBox<String> jComboBox3, JButton jButton6,JButton btn_login) {
-        this.jTextField3 = jTextField3;
-        this.jComboBox3 = jComboBox3;
-        this.jButton6 = jButton6;
-        this.btn_login = btn_login;
-    }
-    
     public OPrincipal(JTextField jTextField1, JTextField jTextField2, JComboBox<String> jComboBox1,
             JComboBox<String> jComboBox2, JButton jButton1, JButton jButton2, JButton jButton3,
             JButton jButton4, JButton jButton5) {
@@ -108,8 +106,6 @@ public class OPrincipal implements ActionListener{
         this.jButton5 = jButton5;
     }
 
-   
-    
     public void iniciar(){
         frm.setTitle("Administrador");
         frm.setLocationRelativeTo(null);
@@ -221,7 +217,7 @@ public class OPrincipal implements ActionListener{
             ov.iniciar();
             ov.frm3.setVisible(true);   
         }
-        //Socio
+        
         Object boton = ae.getSource();
         GUIBuscarVuelos vu = new GUIBuscarVuelos();
         GUIBuscarPaquetes pa = new GUIBuscarPaquetes();
@@ -233,15 +229,16 @@ public class OPrincipal implements ActionListener{
         GUICancelarReservacion cr = new GUICancelarReservacion();
         GUICheck_in ch = new GUICheck_in();
         
-        String s1 = (String) jComboBox1.getSelectedItem();
-        if(boton == jComboBox1){
-            jTextField1.setText("Buscando -> "+s1+"... ");
-        }
         if(boton == btn_login){
             OAutenticacion oa = new OAutenticacion();
             oa.iniciar();
             oa.frm.setVisible(true);
             
+        }
+        //Socio
+        String s1 = (String) jComboBox1.getSelectedItem();
+        if(boton == jComboBox1){
+            jTextField1.setText("Buscando -> "+s1+"... ");
         }
         if(boton == jButton1 && "Vuelos".equals(s1)){
             vu.setVisible(true);
@@ -261,7 +258,7 @@ public class OPrincipal implements ActionListener{
         
         String s2 = (String) jComboBox2.getSelectedItem();
         if(boton == jComboBox2){
-            jTextField1.setText("Para reservar -> "+s2+"... ");
+            jTextField2.setText("Reservando -> "+s2+"... ");
         }
         if(boton == jButton2){
             r.setVisible(true);
@@ -269,15 +266,15 @@ public class OPrincipal implements ActionListener{
         if(boton == jButton3){
             pago.setVisible(true);
         }
-        if(boton == jButton3){
+        if(boton == jButton4){
             cr.setVisible(true);
         }
-        if(boton == jButton3){
+        if(boton == jButton5){
             ch.setVisible(true);
         }
         
         //Invitado
-        String s3 = (String) jComboBox1.getSelectedItem();
+        String s3 = (String) jComboBox3.getSelectedItem();
         if(boton == jComboBox3){
             jTextField3.setText("Buscando -> "+s3+"... ");
         }
