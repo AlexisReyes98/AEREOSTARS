@@ -104,7 +104,7 @@ public class OPrincipal implements ActionListener{
             OPaquetes op = new OPaquetes();
             op.iniciar();
             op.frm.setVisible(true);
-        }else if(ae.getSource().equals(frm.btn_adminAddPromo)){
+        }else if(ae.getSource().equals(frm.btn_adminAddPromo)){         //Creo hay info repetida
             /*Promocion h = new Promocion();
             Relacion_promocion modC = new Relacion_promocion();
             GUIAgregarPromo frm = new GUIAgregarPromo();
