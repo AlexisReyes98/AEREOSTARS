@@ -52,7 +52,7 @@ public class OReservacion implements ActionListener{
         int i=0;
         Gestor_reservacion reserva = new Gestor_reservacion(jTextArea1);
         String seleccion = (String) jComboBox1.getSelectedItem();
-        switch (seleccion) {
+        if(null != seleccion) switch (seleccion) {
                 case "Vuelo":
                     i=1;
                     break;
@@ -68,17 +68,17 @@ public class OReservacion implements ActionListener{
         if(bot==jComboBox1){
             jTextField5.setText("Efectuando de reservacion de un "+seleccion+"... ");
         }
-        else if(bot==jButton1){
+        if(bot==jButton1){
             Datos_pasajero pasajero;
             pasajero = reserva.ingresaDatosPasajero(jTextField2.getText(), jTextField3.getText(), jTextField4.getText());
             int numRef = Integer.parseInt(jTextField1.getText());
             reserva.generarReservacion(i, numRef, pasajero);
             new GUIComprobanteRes().setVisible(true);
         }
-        else if(bot==jButton2){
+        if(bot==jButton2){
             new GUIPrincipalSocio().setVisible(true);
         }
-        else if(bot==jButton3){
+        if(bot==jButton3){
             int numr = Integer.parseInt(jTextField6.getText());
             if(reserva.cancelarReservacion(numr) == true){
                 jTextField7.setText("Comprobante encontrado...");
@@ -89,7 +89,7 @@ public class OReservacion implements ActionListener{
                 jTextField8.setText("Comproante no eliminado!!!");
             }
         }
-        else if(bot==jButton4){
+        if(bot==jButton4){
             new GUIPrincipalSocio().setVisible(true);
         }
     }

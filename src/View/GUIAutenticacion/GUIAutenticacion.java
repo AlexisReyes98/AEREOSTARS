@@ -38,7 +38,6 @@ public class GUIAutenticacion extends javax.swing.JFrame {
 
         jLabel1.setText("Usuario:");
 
-        txt_authUser.setText("Ingrese su nombre de usuario:");
         txt_authUser.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txt_authUserActionPerformed(evt);
@@ -46,8 +45,6 @@ public class GUIAutenticacion extends javax.swing.JFrame {
         });
 
         jLabel2.setText("Contraseña:");
-
-        txt_authPwd.setText("Ingrese su contraseña");
 
         btn_authLogin.setText("Loguearse");
         btn_authLogin.addActionListener(new java.awt.event.ActionListener() {

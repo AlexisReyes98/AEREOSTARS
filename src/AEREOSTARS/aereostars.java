@@ -5,19 +5,19 @@
  */
 package AEREOSTARS;
 
-import Controller.OAutenticacion;
+import View.GUIAutenticacion.*;
+/*import Controller.*;
 import Model.GestorVuelos.*;
-import View.GUIAutenticacion.GUIAutenticacion;
-import View.GUIAutenticacion.GUIRegistro;
 import View.GUIPrincipal.*;
-import View.GUIVuelos.GUIAgregarVuelo;
-import View.GUIReservacion.*;
+import View.GUIReservacion.*;*/
 /**
  *
  * @author equipo aereostars
  */
 public class aereostars {
     public static void main(String[] args) {
+        GUIAutenticacion ga = new GUIAutenticacion();
+        ga.setVisible(true);
         //Gestor_vuelos g = new Gestor_vuelos();
         //g.agregarVuelo("querataro", "mexico", "doble", "22/11/2020", "10:20", 1250, 63);
         //g.solicitarVuelo("querataro", "mexico");
@@ -27,7 +27,6 @@ public class aereostars {
         //f.inicializarOyentes();
         //f.setLocationRelativeTo(null);
         //f.setVisible(true);
-        //GUIAutenticacion ga = new GUIAutenticacion();
         //GUIRegistro gr = new GUIRegistro();
         //OAutenticacion oa = new OAutenticacion(ga,gr);
         //oa.iniciar();

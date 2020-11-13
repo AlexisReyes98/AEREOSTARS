@@ -5,7 +5,7 @@
  */
 package Controller;
 
-
+import View.GUIPrincipal.*;
 import Model.GestorAutenticacion.Cuenta_usuario;
 import Model.GestorAutenticacion.Gestor_autenticacion;
 import View.GUIAutenticacion.GUIAutenticacion;
@@ -46,16 +46,21 @@ public class OAutenticacion implements ActionListener{
     
     @Override
     public void actionPerformed (ActionEvent e){
+        GUIPrincipalAdmin admin = new GUIPrincipalAdmin();
+        GUIPrincipalInvitado inv = new GUIPrincipalInvitado();
+        GUIPrincipalSocio so = new GUIPrincipalSocio();
         if(e.getSource().equals(frm.btn_authLogin)){
             Gestor_autenticacion ga = new Gestor_autenticacion();
             if(ga.iniciarSesion(frm.txt_authUser.getText(), frm.txt_authPwd.getText())){
                 JOptionPane.showMessageDialog(null, "Bienvenido "+frm.txt_authUser.getText());
                 frm.dispose();
                 //Aqui abrir GUIPrincipal de Socio 
+                so.setVisible(true);
             }else if(ga.iniciarSesionAdmin(frm.txt_authUser.getText(), frm.txt_authPwd.getText())){
                 JOptionPane.showMessageDialog(null, "Bienvenido admin");
                 frm.dispose();
                 //Aqui abrir GUIPrincipal de Admin
+                admin.setVisible(true);
             }else if(frm.txt_authPwd.getText().isEmpty()||frm.txt_authUser.getText().isEmpty()){
                 JOptionPane.showMessageDialog(null, "No has llenado todos los campos");
             }else{
@@ -74,6 +79,7 @@ public class OAutenticacion implements ActionListener{
                 ga.registrarSocio(frm1.txt_regName.getText(), 0, frm1.txt_regUser.getText(), frm1.txt_regPwd.getText());
                 JOptionPane.showMessageDialog(null, "Te has registrado satisfactoriamente");
                 //Aqui abrir GUIPrincipal de Socio 
+                so.setVisible(true);
             }
         }
     }
