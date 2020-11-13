@@ -32,6 +32,7 @@ public class OAutenticacion implements ActionListener{
         
         frm1.btn_regExit.addActionListener(this);
         frm1.btn_register.addActionListener(this);
+        frm1.btn_registerAdmin.addActionListener(this);
     }
    
     public void iniciar(){
@@ -77,6 +78,16 @@ public class OAutenticacion implements ActionListener{
                 JOptionPane.showMessageDialog(null, "Te has registrado satisfactoriamente");
                 //Aqui abrir GUIPrincipal de Socio 
                 so.setVisible(true);
+            }
+        }if(e.getSource().equals(frm1.btn_registerAdmin)){
+            if(frm1.txt_regEmail.getText().isEmpty()||frm1.txt_regName.getText().isEmpty()||frm1.txt_regPwd.getText().isEmpty()||frm1.txt_regUser.getText().isEmpty()){
+                JOptionPane.showMessageDialog(null, "No has llenado todos los campos");
+            }else{
+                Gestor_autenticacion ga = new Gestor_autenticacion();
+                ga.registrarAdmin(frm1.txt_regName.getText(), 0, frm1.txt_regUser.getText(), frm1.txt_regPwd.getText());
+                JOptionPane.showMessageDialog(null, "Te has registrado satisfactoriamente");
+                //Aqui abrir GUIPrincipal de Socio 
+                admin.setVisible(true);
             }
         }
     }

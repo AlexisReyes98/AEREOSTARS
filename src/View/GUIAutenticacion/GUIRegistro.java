@@ -38,6 +38,7 @@ public class GUIRegistro extends javax.swing.JFrame {
         btn_register = new javax.swing.JButton();
         jLabel5 = new javax.swing.JLabel();
         btn_regExit = new javax.swing.JButton();
+        btn_registerAdmin = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -61,6 +62,8 @@ public class GUIRegistro extends javax.swing.JFrame {
             }
         });
 
+        btn_registerAdmin.setText("Registrarse como administrador");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -70,7 +73,10 @@ public class GUIRegistro extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(29, 29, 29)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(btn_register)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(btn_register)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(btn_registerAdmin))
                             .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                     .addComponent(jLabel2)
@@ -112,7 +118,9 @@ public class GUIRegistro extends javax.swing.JFrame {
                     .addComponent(txt_regUser, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(txt_regPwd, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addComponent(btn_register)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btn_register)
+                    .addComponent(btn_registerAdmin))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel5)
                 .addGap(18, 18, 18)
@@ -165,6 +173,7 @@ public class GUIRegistro extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JButton btn_regExit;
     public javax.swing.JButton btn_register;
+    public javax.swing.JButton btn_registerAdmin;
     public javax.swing.JLabel jLabel1;
     public javax.swing.JLabel jLabel2;
     public javax.swing.JLabel jLabel3;
