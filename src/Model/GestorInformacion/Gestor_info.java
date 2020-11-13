@@ -30,8 +30,8 @@ public class Gestor_info {
         hoteles.solicitarHotel(origen, destino);
     }
     
-    public void solicitarPaquetes(String origen, String destino, String fecha_ida){
-        paquetes.solicitarVuelo(origen, destino, fecha_ida);
+    public void solicitarPaquetes(/*String origen, String destino, String fecha_ida*/){
+        paquetes.solicitarPaquete(/*origen, destino, fecha_ida*/);
     }
     
     public void solicitarPromociones(String nombre){
