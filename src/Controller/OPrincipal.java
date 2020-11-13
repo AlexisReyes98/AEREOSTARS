@@ -5,7 +5,7 @@
  */
 package Controller;
 
-/*import Model.GestorHoteles.Hotel;
+import Model.GestorHoteles.Hotel;
 import Model.GestorHoteles.Relacion_hoteles;
 import Model.GestorPromociones.Promocion;
 import Model.GestorPromociones.Relacion_promocion;
@@ -16,12 +16,12 @@ import View.GUIHoteles.GUIAgregarHotel;
 import View.GUIHoteles.GUIBuscarHotel;
 import View.GUIHoteles.GUIEliminarHotel;
 import View.GUIHoteles.GUIHOTEL;
-import View.GUIHoteles.GUIModificarHotel;*/
+import View.GUIHoteles.GUIModificarHotel;
 import View.GUIPrincipal.GUIPrincipalAdmin;
-/*import View.GUIPromociones.GUIAgregarPromo;
+import View.GUIPromociones.GUIAgregarPromo;
 import View.GUIPromociones.GUIBuscarPromo;
 import View.GUIPromociones.GUIEliminarPromo;
-import View.GUIPromociones.GUIModificarPromo;*/
+import View.GUIPromociones.GUIModificarPromo;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JButton;
@@ -90,7 +90,7 @@ public class OPrincipal implements ActionListener{
 
     @Override
     public void actionPerformed(ActionEvent ae) {
-        /*if(ae.getSource().equals(frm.btn_adminAddEvento)){
+        if(ae.getSource().equals(frm.btn_adminAddEvento)){
             GUIAgregarEvento ge = new GUIAgregarEvento ();
             ge.setLocationRelativeTo(null);
             ge.setTitle("Agregar evento");
@@ -192,7 +192,11 @@ public class OPrincipal implements ActionListener{
             OVuelos ov = new OVuelos();
             ov.iniciar();
             ov.frm3.setVisible(true);   
-        }    */
+        }
+        Object boton = ae.getSource();
+        int i=0;
+        String s1 = (String) jComboBox1.getSelectedItem();
+        jTextField1.setText("Efectuando de reservacion de un "+s1+"... ");
     }
     
 }

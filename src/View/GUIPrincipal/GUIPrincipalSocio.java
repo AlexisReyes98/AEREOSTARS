@@ -89,11 +89,11 @@ public class GUIPrincipalSocio extends javax.swing.JFrame {
 
         jLabel7.setText("Cancelar Reservacion:");
 
-        jButton1.setText("Busqueda");
+        jButton1.setText("Buscar");
 
-        jButton2.setText("Reserva");
+        jButton2.setText("Reservar");
 
-        jButton3.setText("Pago");
+        jButton3.setText("Pagar");
 
         jButton4.setText("Cancelar");
 
