@@ -7,15 +7,17 @@ package View.GUIHoteles;
 
 /**
  *
- * @author equipo aereostars
+ * @author jovan
  */
 public class GUIAgregarHotel extends javax.swing.JFrame {
 
     /**
-     * Creates new form GUIAgregarHotel
+     * Creates new form GUIHoteles
      */
     public GUIAgregarHotel() {
         initComponents();
+        this.setTitle("AGREGAR HOTEL");
+        this.setLocation(400,220);
     }
 
     /**
@@ -27,70 +29,70 @@ public class GUIAgregarHotel extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel7 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
+        label2 = new javax.swing.JLabel();
+        label3 = new javax.swing.JLabel();
+        label4 = new javax.swing.JLabel();
+        label5 = new javax.swing.JLabel();
+        label1 = new javax.swing.JLabel();
+        btn_agregar = new javax.swing.JButton();
+        btn_cancelar = new javax.swing.JButton();
+        txt_hotel = new javax.swing.JLabel();
+        txtnombre = new javax.swing.JTextField();
+        txtnumref = new javax.swing.JTextField();
+        txtdireccion = new javax.swing.JTextField();
+        txtnumestre = new javax.swing.JTextField();
+        txtcosto = new javax.swing.JTextField();
+        txt_id = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
-        jTextField3 = new javax.swing.JTextField();
-        jTextField4 = new javax.swing.JTextField();
-        jTextField5 = new javax.swing.JTextField();
-        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel7.setText("Costo:");
-        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 240, -1, -1));
+        label2.setText("ID");
+        getContentPane().add(label2, new org.netbeans.lib.awtextra.AbsoluteConstraints(56, 53, -1, -1));
 
-        jLabel6.setText("Numero de estrellas");
-        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 190, -1, -1));
+        label3.setText("Direccion");
+        getContentPane().add(label3, new org.netbeans.lib.awtextra.AbsoluteConstraints(56, 96, -1, -1));
 
-        jLabel5.setText("Destino:");
-        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 140, -1, -1));
+        label4.setText("numero de estrellas ");
+        getContentPane().add(label4, new org.netbeans.lib.awtextra.AbsoluteConstraints(56, 148, -1, -1));
 
-        jLabel1.setText("Numero de referencia:");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 50, -1, -1));
+        label5.setText("costo");
+        getContentPane().add(label5, new org.netbeans.lib.awtextra.AbsoluteConstraints(56, 193, -1, -1));
 
-        jLabel4.setText("Nombre:");
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 90, -1, -1));
+        label1.setText("Nombre");
+        getContentPane().add(label1, new org.netbeans.lib.awtextra.AbsoluteConstraints(56, 15, -1, -1));
 
-        jLabel3.setText("Agregar Hotel");
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 10, -1, -1));
+        btn_agregar.setText("AGREGAR");
+        getContentPane().add(btn_agregar, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 260, -1, -1));
 
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+        btn_cancelar.setText("CANCELAR");
+        btn_cancelar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
+                btn_cancelarActionPerformed(evt);
             }
         });
-        getContentPane().add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 50, 160, -1));
+        getContentPane().add(btn_cancelar, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 260, -1, -1));
 
-        jTextField2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField2ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(203, 90, 150, -1));
-        getContentPane().add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 140, 150, -1));
-        getContentPane().add(jTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(203, 190, 150, -1));
-        getContentPane().add(jTextField5, new org.netbeans.lib.awtextra.AbsoluteConstraints(203, 240, 140, -1));
+        txt_hotel.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        txt_hotel.setText("Agregar un hotel");
+        getContentPane().add(txt_hotel, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 10, -1, -1));
+        getContentPane().add(txtnombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 10, 150, -1));
+        getContentPane().add(txtnumref, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 50, 40, -1));
+        getContentPane().add(txtdireccion, new org.netbeans.lib.awtextra.AbsoluteConstraints(117, 93, 105, -1));
+        getContentPane().add(txtnumestre, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 150, 40, -1));
+        getContentPane().add(txtcosto, new org.netbeans.lib.awtextra.AbsoluteConstraints(121, 190, 60, -1));
+        getContentPane().add(txt_id, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 119, 390, 0));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/Images/home_wallpaper_0.png"))); // NOI18N
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 400, 300));
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vista/images/home_wallpaper_0.png"))); // NOI18N
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 550, 340));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
-
-    private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField2ActionPerformed
+    private void btn_cancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_cancelarActionPerformed
+       GUIAgregarHotel.this.dispose();
+    }//GEN-LAST:event_btn_cancelarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -118,6 +120,7 @@ public class GUIAgregarHotel extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(GUIAgregarHotel.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
+        //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -128,17 +131,20 @@ public class GUIAgregarHotel extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    public javax.swing.JButton btn_agregar;
+    private javax.swing.JButton btn_cancelar;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
-    private javax.swing.JTextField jTextField5;
+    public javax.swing.JLabel label1;
+    public javax.swing.JLabel label2;
+    public javax.swing.JLabel label3;
+    public javax.swing.JLabel label4;
+    public javax.swing.JLabel label5;
+    private javax.swing.JLabel txt_hotel;
+    public javax.swing.JTextField txt_id;
+    public javax.swing.JTextField txtcosto;
+    public javax.swing.JTextField txtdireccion;
+    public javax.swing.JTextField txtnombre;
+    public javax.swing.JTextField txtnumestre;
+    public javax.swing.JTextField txtnumref;
     // End of variables declaration//GEN-END:variables
 }

@@ -7,22 +7,40 @@ package Model.GestorPromociones;
 
 /**
  *
- * @author equipo aereostars
+ * @author jovan
  */
 public class Promocion {
+    private int id;
+    private int numreferencia;
     private String nombre;
     private String descripcion;
     private String vigencia;
-    private int numReferencia;
 
     public Promocion() {
     }
 
-    public Promocion(String nombre, String descripcion, String vigencia, int numReferencia) {
+    public Promocion(int id, int numreferencia, String nombre, String descripcion, String vigencia) {
+        this.id = id;
+        this.numreferencia = numreferencia;
         this.nombre = nombre;
         this.descripcion = descripcion;
         this.vigencia = vigencia;
-        this.numReferencia = numReferencia;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public int getNumreferencia() {
+        return numreferencia;
+    }
+
+    public void setNumreferencia(int numreferencia) {
+        this.numreferencia = numreferencia;
     }
 
     public String getNombre() {
@@ -37,8 +55,8 @@ public class Promocion {
         return descripcion;
     }
 
-    public void setDescripcion(String Descripcion) {
-        this.descripcion = Descripcion;
+    public void setDescripcion(String descripcion) {
+        this.descripcion = descripcion;
     }
 
     public String getVigencia() {
@@ -48,18 +66,10 @@ public class Promocion {
     public void setVigencia(String vigencia) {
         this.vigencia = vigencia;
     }
-
-    public int getNumReferencia() {
-        return numReferencia;
-    }
-
-    public void setNumReferencia(int numReferencia) {
-        this.numReferencia = numReferencia;
-    }
-
-    @Override
-    public String toString() {
-        return "Promocion{" + "nombre=" + nombre + ", Descripcion=" + descripcion + ", vigencia=" + vigencia + ", numReferencia=" + numReferencia + '}';
-    }
+    
+    
+    
+    
+    
     
 }

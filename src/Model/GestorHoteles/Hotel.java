@@ -7,69 +7,63 @@ package Model.GestorHoteles;
 
 /**
  *
- * @author equipo aereostars
+ * @author jovan
  */
 public class Hotel {
+     private int numreferencia;
     private String nombre;
     private String destino;
-    private int numEstrellas;
+    private int numestrellas;
     private double costo;
-    private int numReferencia;
+    private int id;
+    
+    public Hotel(int numreferencia, String nombre, String destino, int numestrellas, double costo){
+        this.numreferencia=numreferencia;
+        this.nombre=nombre;
+        this.destino=destino;
+        this.numestrellas=numestrellas;
+        this.costo=costo;
+    }
 
     public Hotel() {
+        
     }
-
-    public Hotel(String nombre, String destino, int numEstrellas, double costo, int numReferencia) {
-        this.nombre = nombre;
-        this.destino = destino;
-        this.numEstrellas = numEstrellas;
-        this.costo = costo;
-        this.numReferencia = numReferencia;
+    public void setNumreferencia (int numreferencia){
+       this.numreferencia=numreferencia;
     }
-
-    public String getNombre() {
-        return nombre;
+    public void setNombre(String nombre){
+        this.nombre=nombre;
     }
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
+    public void setDestino(String destino){
+        this.destino=destino;
     }
-
-    public String getDestino() {
-        return destino;
+    public void setNumestrellas(int numestrellas){
+        this.numestrellas=numestrellas;
     }
-
-    public void setDestino(String destino) {
-        this.destino = destino;
-    }
-
-    public int getNumEstrellas() {
-        return numEstrellas;
-    }
-
-    public void setNumEstrellas(int numEstrellas) {
-        this.numEstrellas = numEstrellas;
-    }
-
-    public double getCosto() {
-        return costo;
-    }
-
     public void setCosto(double costo) {
-        this.costo = costo;
+        this.costo=costo;
     }
-
-    public int getNumReferencia() {
-        return numReferencia;
-    }
-
-    public void setNumReferencia(int numReferencia) {
-        this.numReferencia = numReferencia;
-    }
-
-    @Override
-    public String toString() {
-        return "Hotel{" + "nombre=" + nombre + ", destino=" + destino + ", numEstrellas=" + numEstrellas + ", costo=" + costo + ", numReferencia=" + numReferencia + '}';
+    public void setid(int id){
+        this.id=id;
     }
     
+    public int getNumreferencia(){
+        return numreferencia;
+    }
+    public String getnombre(){
+        return nombre;
+        
+    }
+    public String getdestino(){
+        return destino;
+    }
+    public int getNumestrellas(){
+        return numestrellas;
+    }
+    public double getcosto(){
+        return costo;
+    }
+    public int getid(){
+        return id;
+    }
 }

@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Model.GestorHoteles;
+package Model.GestorPromociones;
 
 import Conexion.ConexionBD;
 import java.sql.Connection;
@@ -11,20 +11,20 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-public class Relacion_hoteles extends ConexionBD  {
-     public boolean registrar(Hotel hotel){
+public class Relacion_promocion extends ConexionBD {
+    public boolean registrar(Promocion promo){
         PreparedStatement ps = null;
         ConexionBD conexion = new ConexionBD(); 
         Connection con = conexion.getCon();
-        String sql = "INSERT INTO hoteles (numReferencia,nombre,destino,numEstrellas,costo)VALUES(?,?,?,?,?)";
+        String sql = "INSERT INTO promociones (numReferencia,nombre,descripcion,vigencia)VALUES(?,?,?,?)";
         
         try/*(PreparedStatement ps = con.prepareStatement(sql))*/{
             ps=con.prepareStatement(sql);
-            ps.setInt(1, hotel.getNumreferencia());
-            ps.setString(2, hotel.getnombre());
-            ps.setString(3, hotel.getdestino());
-            ps.setInt(4,hotel.getNumestrellas());
-            ps.setDouble(5, hotel.getcosto());
+            ps.setInt(1, promo.getNumreferencia());
+            ps.setString(2, promo.getNombre());
+            ps.setString(3, promo.getDescripcion());
+            ps.setString(4,promo.getVigencia());
+   
             ps.execute();
             return true;
         }catch(SQLException e){
@@ -44,20 +44,19 @@ public class Relacion_hoteles extends ConexionBD  {
         
     }
     //MODIFICAR
-       public boolean modificar(Hotel hotel){
+       public boolean modificar(Promocion promo){
         PreparedStatement ps = null;
         ConexionBD conexion = new ConexionBD(); 
         Connection con = conexion.getCon();
-        String sql = "UPDATE hoteles set numReferencia=?, nombre=?,destino=?,numEstrellas=?,costo=?  where id= ?" ;
+        String sql = "UPDATE promociones set numReferencia=?, nombre=?,descripcion=?,vigencia=?  where id= ?" ;
         
         try{
             ps=con.prepareStatement(sql);
-            ps.setInt(1, hotel.getNumreferencia());
-            ps.setString(2, hotel.getnombre());
-            ps.setString(3, hotel.getdestino());
-            ps.setInt(4,hotel.getNumestrellas());
-            ps.setDouble(5, hotel.getcosto());
-            ps.setInt(6, hotel.getid());
+            ps.setInt(1, promo.getNumreferencia());
+            ps.setString(2,promo.getNombre());
+            ps.setString(3, promo.getDescripcion());
+            ps.setString(4,promo.getVigencia());
+            ps.setInt(5, promo.getId());
             
             ps.execute();
             return true;
@@ -79,16 +78,15 @@ public class Relacion_hoteles extends ConexionBD  {
     }
        //eliminar
        
-        public boolean eliminar(Hotel hotel){
+        public boolean eliminar(Promocion promo){
         PreparedStatement ps = null;
         ConexionBD conexion = new ConexionBD(); 
         Connection con = conexion.getCon();
-     
-        String sql = "delete from hoteles where numReferencia=?"; //where id=?
+        String sql = "delete from promociones where numReferencia=?"; //where id=?
         
         try{
             ps=con.prepareStatement(sql);
-            ps.setInt(1,hotel.getNumreferencia()); //ps.setInt(6,hotel.getid());
+            ps.setInt(1,promo.getNumreferencia()); //ps.setInt(6,hotel.getid());
             ps.execute();//executeUpdate
             return true;
         }catch(SQLException e){
@@ -109,24 +107,23 @@ public class Relacion_hoteles extends ConexionBD  {
     }
         //buscar
           
-        public boolean buscar(Hotel hotel){
+        public boolean buscar(Promocion promo){
         PreparedStatement ps = null;
         ConexionBD conexion = new ConexionBD(); 
         Connection con = conexion.getCon();
-        String sql = "SELECT *FROM hoteles where numReferencia=?";
+        String sql = "SELECT *FROM promociones where numReferencia=?";
            ResultSet rs=null;
         try{
             ps=con.prepareStatement(sql);
-            ps.setInt(1,hotel.getNumreferencia());//****
+            ps.setInt(1,promo.getNumreferencia());//****
             rs=ps.executeQuery();
             
             if(rs.next()){
-                hotel.setNumreferencia(Integer.parseInt(rs.getString("numReferencia")));
-                hotel.setNombre(rs.getString("nombre"));
-                hotel.setDestino(rs.getString("destino"));
-                hotel.setNumestrellas(Integer.parseInt(rs.getString("numEstrellas")));
-                hotel.setCosto(Double.parseDouble(rs.getString("costo")));
-                hotel.setid(Integer.parseInt(rs.getString("id")));
+                promo.setNumreferencia(Integer.parseInt(rs.getString("numReferencia")));
+                promo.setNombre(rs.getString("nombre"));
+                promo.setDescripcion(rs.getString("descripcion"));
+                promo.setVigencia(rs.getString("vigencia"));
+                promo.setId(Integer.parseInt(rs.getString("id")));
                 return true;
             }
             
@@ -150,6 +147,4 @@ public class Relacion_hoteles extends ConexionBD  {
         
         
     }
-        
-       
 }

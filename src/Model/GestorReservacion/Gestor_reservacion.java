@@ -56,13 +56,13 @@ public class Gestor_reservacion {
             }
             case 3:{
                 //Reservacion de un hotel
-                Hotel hotel_res = seleccion_hotel.buscarHotelRes(num_ref);
-                Datos_hotel hotel = new Datos_hotel(hotel_res);
-                Datos_pago pago = new Datos_pago(hotel_res.getCosto());
+                //Hotel hotel_res = seleccion_hotel.buscarHotelRes(num_ref);
+                //Datos_hotel hotel = new Datos_hotel(hotel_res);
+                //Datos_pago pago = new Datos_pago(hotel_res.getCosto());
                 int idReservacion = (int)(Math.random()*999+1); //Numero de referencia aleatorio (de entre 1 a 999)
-                Reservacion nueva_reservacion = new Reservacion(hotel_res, pasajero, pago, hotel, idReservacion);
-                Comprobante_reservacion comprobante_res = new Comprobante_reservacion(idReservacion, pasajero, pago, hotel);
-                comprobante.agregarComprobante(comprobante_res);
+                //Reservacion nueva_reservacion = new Reservacion(hotel_res, pasajero, pago, hotel, idReservacion);
+                //Comprobante_reservacion comprobante_res = new Comprobante_reservacion(idReservacion, pasajero, pago, hotel);
+                //comprobante.agregarComprobante(comprobante_res);
                 break;
             }
             default:

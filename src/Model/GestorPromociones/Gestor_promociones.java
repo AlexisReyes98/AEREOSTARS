@@ -10,17 +10,17 @@ package Model.GestorPromociones;
  * @author equipo aereostars
  */
 public class Gestor_promociones {
-    public Relacion_promociones listaPromos = new Relacion_promociones();
+    public Relacion_promocion listaPromos = new Relacion_promocion();
     
-    public void agregarPromocion(String nombre, String descripcion, String vigencia, int numReferencia){
-        Promocion nuevo = new Promocion(nombre, descripcion, vigencia, numReferencia);
-        listaPromos.agregarPromocion(nuevo);
+    public void agregarPromocion(int id, int numreferencia, String nombre, String descripcion, String vigencia){
+        Promocion nuevo = new Promocion(id, numreferencia, nombre, descripcion, vigencia);
+        listaPromos.registrar(nuevo);
     }
     
     public void eliminarPromocion(int numReferencia){
-        if(listaPromos.eliminarPromocion(numReferencia) == false){
+        /*if(listaPromos.eliminarPromocion(numReferencia) == false){
             System.out.println("No se encontro el vuelo con el número de referencia dado.");
-        }
+        }*/
     }
     
     public void modificarPromocion(){
@@ -28,6 +28,6 @@ public class Gestor_promociones {
     }
     
     public void solicitarPromocion(String nombre){
-        listaPromos.solicitarPromocion(nombre);
+        //listaPromos.solicitarPromocion(nombre);
     }
 }

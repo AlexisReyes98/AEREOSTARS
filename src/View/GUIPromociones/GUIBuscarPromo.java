@@ -9,12 +9,12 @@ package View.GUIPromociones;
  *
  * @author jovan
  */
-public class GUIEliminarPromo extends javax.swing.JFrame {
+public class GUIBuscarPromo extends javax.swing.JFrame {
 
     /**
-     * Creates new form GUIEliminarPromo
+     * Creates new form GUIBuscarPromo
      */
-    public GUIEliminarPromo() {
+    public GUIBuscarPromo() {
         initComponents();
     }
 
@@ -27,8 +27,7 @@ public class GUIEliminarPromo extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        btn_buscar4 = new javax.swing.JButton();
-        btn_eliminar = new javax.swing.JButton();
+        btn_buscar2 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
@@ -39,50 +38,41 @@ public class GUIEliminarPromo extends javax.swing.JFrame {
         txtdesc = new javax.swing.JTextField();
         txtvigencia = new javax.swing.JTextField();
         jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        btn_buscar4.setText("BUSCAR");
-        getContentPane().add(btn_buscar4, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 280, -1, -1));
+        btn_buscar2.setText("BUSCAR");
+        getContentPane().add(btn_buscar2, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 280, -1, -1));
 
-        btn_eliminar.setText("ELIMINAR");
-        getContentPane().add(btn_eliminar, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 280, -1, -1));
+        jLabel1.setText("Número de referencia");
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(27, 62, -1, -1));
 
-        jLabel1.setText("ELIMINAR UNA PROMOCIÓN");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 10, -1, 20));
+        jLabel2.setText("Nombre");
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(94, 113, -1, -1));
 
-        jLabel2.setText("Número de referencia");
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 40, -1, -1));
+        jLabel3.setText("Descripcion");
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(77, 163, -1, -1));
 
-        jLabel3.setText("Nombre");
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 80, -1, -1));
+        jLabel4.setText("Vigencia");
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(92, 209, -1, -1));
 
-        jLabel4.setText("Descripción");
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 130, -1, -1));
+        jLabel5.setText("BUSCAR UNA PROMOCION");
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(172, 27, -1, -1));
+        getContentPane().add(txtnumref, new org.netbeans.lib.awtextra.AbsoluteConstraints(172, 59, 59, -1));
+        getContentPane().add(txtnombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(178, 110, 140, -1));
+        getContentPane().add(txtdesc, new org.netbeans.lib.awtextra.AbsoluteConstraints(178, 160, 140, 28));
+        getContentPane().add(txtvigencia, new org.netbeans.lib.awtextra.AbsoluteConstraints(178, 206, 140, -1));
 
-        jLabel5.setText("Vigencia");
-        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 170, -1, -1));
-        getContentPane().add(txtnumref, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 40, 40, -1));
-        getContentPane().add(txtnombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 70, 160, -1));
-        getContentPane().add(txtdesc, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 120, 230, 30));
+        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vista/images/home_wallpaper_0.jpg"))); // NOI18N
+        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(158, 49, 210, 200));
 
-        txtvigencia.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtvigenciaActionPerformed(evt);
-            }
-        });
-        getContentPane().add(txtvigencia, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 180, 230, -1));
-
-        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vista/images/home_wallpaper_0.png"))); // NOI18N
-        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(-400, 0, 1060, 360));
+        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vista/images/home_wallpaper_0.png"))); // NOI18N
+        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 530, 360));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void txtvigenciaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtvigenciaActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtvigenciaActionPerformed
 
     /**
      * @param args the command line arguments
@@ -101,33 +91,33 @@ public class GUIEliminarPromo extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(GUIEliminarPromo.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(GUIBuscarPromo.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(GUIEliminarPromo.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(GUIBuscarPromo.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(GUIEliminarPromo.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(GUIBuscarPromo.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(GUIEliminarPromo.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(GUIBuscarPromo.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new GUIEliminarPromo().setVisible(true);
+                new GUIBuscarPromo().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    public javax.swing.JButton btn_buscar4;
-    public javax.swing.JButton btn_eliminar;
+    public javax.swing.JButton btn_buscar2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
     public javax.swing.JTextField txtdesc;
     public javax.swing.JTextField txtnombre;
     public javax.swing.JTextField txtnumref;
