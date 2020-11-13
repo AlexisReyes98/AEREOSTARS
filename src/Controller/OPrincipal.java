@@ -143,7 +143,7 @@ public class OPrincipal implements ActionListener{
             op.iniciar();
             op.frm.setVisible(true);
         }else if(ae.getSource().equals(frm.btn_adminAddPromo)){         //Creo hay info repetida
-            /*Promocion h = new Promocion();
+            Promocion h = new Promocion();
             Relacion_promocion modC = new Relacion_promocion();
             GUIAgregarPromo frm = new GUIAgregarPromo();
             GUIBuscarPromo frm3 = new GUIBuscarPromo();
@@ -151,7 +151,7 @@ public class OPrincipal implements ActionListener{
             GUIEliminarPromo frm5 = new GUIEliminarPromo();
             OyentePromo op = new OyentePromo(h,modC,frm,frm3,frm4,frm5);
             op.iniciar();
-            op.frm.setVisible(true);*/
+            op.frm.setVisible(true);
         }else if(ae.getSource().equals(frm.btn_adminAddVuelo)){
             OVuelos ov = new OVuelos();
             ov.iniciar();
@@ -177,7 +177,7 @@ public class OPrincipal implements ActionListener{
             op.iniciar();
             op.frm2.setVisible(true);
         }else if(ae.getSource().equals(frm.btn_adminDelPromo)){
-            /*Promocion h = new Promocion();
+            Promocion h = new Promocion();
             Relacion_promocion modC = new Relacion_promocion();
             GUIAgregarPromo frm = new GUIAgregarPromo();
             GUIBuscarPromo frm3 = new GUIBuscarPromo();
@@ -185,7 +185,7 @@ public class OPrincipal implements ActionListener{
             GUIEliminarPromo frm5 = new GUIEliminarPromo();
             OyentePromo op = new OyentePromo(h,modC,frm,frm3,frm4,frm5);
             op.iniciar();
-            op.frm5.setVisible(true);*/
+            op.frm5.setVisible(true);
         }else if(ae.getSource().equals(frm.btn_adminDelVuelo)){
             OVuelos ov = new OVuelos();
             ov.iniciar();
@@ -211,7 +211,7 @@ public class OPrincipal implements ActionListener{
             op.iniciar();
             op.frm3.setVisible(true);
         }else if(ae.getSource().equals(frm.btn_adminModPromo)){
-            /*Promocion h = new Promocion();
+            Promocion h = new Promocion();
             Relacion_promocion modC = new Relacion_promocion();
             GUIAgregarPromo frm = new GUIAgregarPromo();
             GUIBuscarPromo frm3 = new GUIBuscarPromo();
@@ -219,7 +219,7 @@ public class OPrincipal implements ActionListener{
             GUIEliminarPromo frm5 = new GUIEliminarPromo();
             OyentePromo op = new OyentePromo(h,modC,frm,frm3,frm4,frm5);
             op.iniciar();
-            op.frm4.setVisible(true);*/ 
+            op.frm4.setVisible(true);
         }else if(ae.getSource().equals(frm.btn_adminModVuelo)){
             OVuelos ov = new OVuelos();
             ov.iniciar();
