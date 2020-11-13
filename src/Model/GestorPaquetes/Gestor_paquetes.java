@@ -7,6 +7,7 @@ package Model.GestorPaquetes;
 
 import Model.GestorEventos.*;
 import Model.GestorHoteles.*;
+import java.text.ParseException;
 
 /**
  *
@@ -20,14 +21,12 @@ public class Gestor_paquetes {
         listaPaquetes.agregarPaquete(nuevo);
     }
     
-    public void eliminarPaquete(int numReferencia){
-        if(listaPaquetes.eliminarPaquete(numReferencia) == false){
-            System.out.println("No se encontro el vuelo con el número de referencia dado.");
-        }
+    public boolean eliminarPaquete(int numReferencia){
+        return listaPaquetes.eliminarPaquete(numReferencia);
     }
     
-    public void modificarpaquete(){
-        
+    public void modificarpaquete(int numReferencia,int campo, String nuevoValor) throws ParseException{
+        listaPaquetes.modificarPaquete(numReferencia, campo, nuevoValor);      
     }
     
     public void solicitarVuelo(String origen, String destino, String fecha_ida){

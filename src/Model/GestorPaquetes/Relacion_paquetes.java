@@ -10,6 +10,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 
@@ -76,7 +77,65 @@ public class Relacion_paquetes {
         return encontrar;
     }
     
-    public void modificarPaquete(){
+    public void modificarPaquete(int numReferencia,int campo, String nuevoValor) throws ParseException{
+        ConexionBD conn = new ConexionBD(); 
+        Connection conexion = conn.getCon();
+        PreparedStatement ps;
+        String sql;
+        try{
+            switch(campo){
+                case 4:
+                    sql = "UPDATE paquetes SET origen = ? WHERE numReferencia = ?";
+                    ps = conexion.prepareStatement(sql);
+                    ps.setString(1, nuevoValor);
+                    ps.setInt(2, numReferencia);
+                    ps.executeUpdate();
+                    break;
+                case 1:
+                    sql = "UPDATE paquetes SET destino = ? WHERE numReferencia = ?";
+                    ps = conexion.prepareStatement(sql);
+                    ps.setString(1, nuevoValor);
+                    ps.setInt(2, numReferencia);
+                    ps.execute();
+                    break;
+                case 5:
+                    sql = "UPDATE paquetes SET tipo = ? WHERE numReferencia = ?";
+                    ps = conexion.prepareStatement(sql);
+                    ps.setString(1, nuevoValor);
+                    ps.setInt(2, numReferencia);
+                    ps.execute();
+                    break;
+                case 2:
+                    sql = "UPDATE paquetes SET fechasalida = ? WHERE numReferencia = ?";
+                    SimpleDateFormat formatter = new SimpleDateFormat("dd/mm/yyyy"); // your template here
+                    java.util.Date dateStr = formatter.parse(nuevoValor);
+                    java.sql.Date dateDB = new java.sql.Date(dateStr.getTime());
+                    ps = conexion.prepareStatement(sql);
+                    ps.setDate(1, dateDB);
+                    ps.setInt(2, numReferencia);
+                    ps.execute();
+                    break;
+                case 3:
+                    sql = "UPDATE paquetes SET horaSalida = ? WHERE numReferencia = ?";
+                    ps = conexion.prepareStatement(sql);
+                    ps.setString(1, nuevoValor);
+                    ps.setInt(2, numReferencia);
+                    ps.execute();
+                    break;
+                case 0:
+                    sql = "UPDATE paquetes SET costo = ? WHERE numReferencia = ?";
+                    ps = conexion.prepareStatement(sql);
+                    ps.setDouble(1, Double.parseDouble(nuevoValor));
+                    ps.setInt(2, numReferencia);
+                    ps.execute();
+                    break;    
+                default:
+                    break;
+            }
+            conn.close();
+        }catch (SQLException ex) {
+            System.out.println("Error al modificar el paquete "+ex);
+        }  
         
     }
     
