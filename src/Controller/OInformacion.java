@@ -11,7 +11,7 @@ import Model.GestorVuelos.Vuelo;
 import View.GUIInformacion.GUIBuscarEventos;
 import View.GUIInformacion.GUIBuscarHoteles;
 import View.GUIInformacion.GUIBuscarPaquetes;
-import View.GUIInformacion.GUIBuscarPromo;
+import View.GUIInformacion.GUIBuscarPromos;
 import View.GUIInformacion.GUIBuscarVuelos;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -30,7 +30,7 @@ public class OInformacion implements ActionListener, ListSelectionListener{
     public GUIBuscarEventos frm;
     public GUIBuscarHoteles frm1;
     public GUIBuscarPaquetes frm2;
-    public GUIBuscarPromo frm3;
+    public GUIBuscarPromos frm3;
     public GUIBuscarVuelos frm4;
     ArrayList<Integer> vuelosIndex;
     ArrayList<Integer> paquetesIndex;
@@ -41,7 +41,7 @@ public class OInformacion implements ActionListener, ListSelectionListener{
         frm = new GUIBuscarEventos();
         frm1 = new GUIBuscarHoteles();
         frm2 = new GUIBuscarPaquetes();
-        frm3 = new GUIBuscarPromo();
+        frm3 = new GUIBuscarPromos();
         frm4 = new GUIBuscarVuelos();
         
         frm2.btn_paqBuscar.addActionListener(this);

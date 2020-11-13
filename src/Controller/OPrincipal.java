@@ -21,6 +21,7 @@ import View.GUIVuelos.*;
 import View.GUIPaquetes.*;
 import View.GUIPago.*;
 import View.GUICheck_in.*;
+import View.GUIInformacion.*;
 
 /**
  *
@@ -81,7 +82,19 @@ public class OPrincipal implements ActionListener{
         this.jButton6 = jButton6;
     }
     
-    
+    public OPrincipal(JTextField jTextField1, JTextField jTextField2, JComboBox<String> jComboBox1,
+            JComboBox<String> jComboBox2, JButton jButton1, JButton jButton2, JButton jButton3,
+            JButton jButton4, JButton jButton5) {
+        this.jTextField1 = jTextField1;
+        this.jTextField2 = jTextField2;
+        this.jComboBox1 = jComboBox1;
+        this.jComboBox2 = jComboBox2;
+        this.jButton1 = jButton1;
+        this.jButton2 = jButton2;
+        this.jButton3 = jButton3;
+        this.jButton4 = jButton4;
+        this.jButton5 = jButton5;
+    }
 
     public OPrincipal() {
         frm = new GUIPrincipalAdmin();
@@ -214,11 +227,11 @@ public class OPrincipal implements ActionListener{
         }
         //Socio
         Object boton = ae.getSource();
-        GUIDetallesVuelo vu = new GUIDetallesVuelo();
-        GUIDetallesPaquete pa = new GUIDetallesPaquete();
-        GUIBuscarHotel h = new GUIBuscarHotel();
-        GUIBuscarPromo pr = new GUIBuscarPromo();
-        GUIDetallesEvento e = new GUIDetallesEvento();
+        GUIBuscarVuelos vu = new GUIBuscarVuelos();
+        GUIBuscarPaquetes pa = new GUIBuscarPaquetes();
+        GUIBuscarHoteles h = new GUIBuscarHoteles();
+        GUIBuscarPromos pr = new GUIBuscarPromos();
+        GUIBuscarEventos e = new GUIBuscarEventos();
         GUIReservacion r = new GUIReservacion();
         GUIPago pago = new GUIPago();
         GUICancelarReservacion cr = new GUICancelarReservacion();
