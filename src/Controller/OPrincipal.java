@@ -146,7 +146,7 @@ public class OPrincipal implements ActionListener{
             Promocion h = new Promocion();
             Relacion_promocion modC = new Relacion_promocion();
             GUIAgregarPromo frm = new GUIAgregarPromo();
-            GUIBuscarPromo frm3 = new GUIBuscarPromo();
+            GUIBuscarPromos frm3 = new GUIBuscarPromos();
             GUIModificarPromo frm4 = new GUIModificarPromo();
             GUIEliminarPromo frm5 = new GUIEliminarPromo();
             OyentePromo op = new OyentePromo(h,modC,frm,frm3,frm4,frm5);
@@ -180,7 +180,7 @@ public class OPrincipal implements ActionListener{
             Promocion h = new Promocion();
             Relacion_promocion modC = new Relacion_promocion();
             GUIAgregarPromo frm = new GUIAgregarPromo();
-            GUIBuscarPromo frm3 = new GUIBuscarPromo();
+            GUIBuscarPromos frm3 = new GUIBuscarPromos();
             GUIModificarPromo frm4 = new GUIModificarPromo();
             GUIEliminarPromo frm5 = new GUIEliminarPromo();
             OyentePromo op = new OyentePromo(h,modC,frm,frm3,frm4,frm5);
@@ -214,7 +214,7 @@ public class OPrincipal implements ActionListener{
             Promocion h = new Promocion();
             Relacion_promocion modC = new Relacion_promocion();
             GUIAgregarPromo frm = new GUIAgregarPromo();
-            GUIBuscarPromo frm3 = new GUIBuscarPromo();
+            GUIBuscarPromos frm3 = new GUIBuscarPromos();
             GUIModificarPromo frm4 = new GUIModificarPromo();
             GUIEliminarPromo frm5 = new GUIEliminarPromo();
             OyentePromo op = new OyentePromo(h,modC,frm,frm3,frm4,frm5);

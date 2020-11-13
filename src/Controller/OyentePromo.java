@@ -6,6 +6,7 @@
 package Controller;
 
 import Model.GestorPromociones.*;
+import View.GUIInformacion.GUIBuscarPromos;
 import View.GUIPromociones.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -20,12 +21,12 @@ public class OyentePromo implements ActionListener {
     public Promocion h;
     public Relacion_promocion modC;
     public GUIAgregarPromo frm;
-    public GUIBuscarPromo frm3;
+    public GUIBuscarPromos frm3;
     public GUIModificarPromo frm4;
     public GUIEliminarPromo frm5;
     
     
-    public OyentePromo(Promocion h, Relacion_promocion modC,GUIAgregarPromo frm,GUIBuscarPromo frm3, GUIModificarPromo frm4,GUIEliminarPromo frm5){
+    public OyentePromo(Promocion h, Relacion_promocion modC,GUIAgregarPromo frm,GUIBuscarPromos frm3, GUIModificarPromo frm4,GUIEliminarPromo frm5){
         this.h=h;
         this.modC=modC;
         this.frm=frm;
@@ -37,7 +38,7 @@ public class OyentePromo implements ActionListener {
         //agregar
         this.frm.btn_agregar.addActionListener(this);
         //buscar
-        this.frm3.btn_buscar2.addActionListener(this);
+        //this.frm3.btn_buscar2.addActionListener(this);
         //Modificar
         this.frm4.btn_modificar.addActionListener(this);
         this.frm4.btn_buscar3.addActionListener(this);
@@ -73,7 +74,8 @@ public class OyentePromo implements ActionListener {
         
         
          
-        if(e.getSource()==frm3.btn_buscar2){
+        if(e.getSource()==frm3.btn_paqBuscar1){
+            /*
             h.setNumreferencia(Integer.parseInt(frm3.txtnumref.getText()));
             
              if(modC.buscar(h)){
@@ -92,7 +94,7 @@ public class OyentePromo implements ActionListener {
         
              }
         
-        }
+        */}
         
         if(e.getSource()==frm4.btn_buscar3){
             
