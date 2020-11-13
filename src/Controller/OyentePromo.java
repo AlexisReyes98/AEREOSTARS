@@ -17,7 +17,7 @@ import javax.swing.JOptionPane;
  */
 public class OyentePromo implements ActionListener {
     
-     public Promocion h;
+    public Promocion h;
     public Relacion_promocion modC;
     public GUIAgregarPromo frm;
     public GUIBuscarPromo frm3;
