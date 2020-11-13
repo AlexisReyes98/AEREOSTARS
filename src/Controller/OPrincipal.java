@@ -32,24 +32,35 @@ public class OPrincipal implements ActionListener{
     JComboBox<String> jComboBox1;
     JComboBox<String> jComboBox2;
     JComboBox<String> jComboBox3;
-    JButton jButton1, jButton2, jButton3, jButton4, jButton5, jButton6;
+    JButton jButton1, jButton2, jButton3, jButton4, jButton5, jButton6,btn_login;
+    public GUIPrincipalSocio frm1;
+    public GUIPrincipalInvitado frm2;
     
     //Admin
     public GUIPrincipalAdmin frm;
     
     //SOCIO
-    public OPrincipal(JTextField jTextField1, JTextField jTextField2, JComboBox<String> jComboBox1,
-            JComboBox<String> jComboBox2, JButton jButton1, JButton jButton2, JButton jButton3,
-            JButton jButton4, JButton jButton5,JTextField jTextField3, JComboBox<String> jComboBox3, JButton jButton6) {
+    public OPrincipal() {
+        frm1 = new GUIPrincipalSocio();
+        jComboBox2 = frm1.jComboBox2;
+        //frm1.jComboBox2.
+        /*frm1.jTextField1
         this.jTextField1 = jTextField1;
         this.jTextField2 = jTextField2;
-        this.jComboBox1 = jComboBox1;
+        
         this.jComboBox2 = jComboBox2;
         this.jButton1 = jButton1;
         this.jButton2 = jButton2;
         this.jButton3 = jButton3;
         this.jButton4 = jButton4;
-        this.jButton5 = jButton5;
+        this.jButton5 = jButton5;*/
+        
+        
+        frm2 = new GUIPrincipalInvitado();
+        frm2.btn_invitadoLogin.addActionListener(this);
+        btn_login=frm2.btn_invitadoLogin;
+        frm2.jButton1.addActionListener(this);
+        jComboBox1 = frm2.jComboBox1;
         
         //invitado
         this.jTextField3 = jTextField3;
@@ -76,10 +87,11 @@ public class OPrincipal implements ActionListener{
     }
     
     //INVITADO
-    public OPrincipal(JTextField jTextField3, JComboBox<String> jComboBox3, JButton jButton6) {
+    public OPrincipal(JTextField jTextField3, JComboBox<String> jComboBox3, JButton jButton6,JButton btn_login) {
         this.jTextField3 = jTextField3;
         this.jComboBox3 = jComboBox3;
         this.jButton6 = jButton6;
+        this.btn_login = btn_login;
     }
     
     public OPrincipal(JTextField jTextField1, JTextField jTextField2, JComboBox<String> jComboBox1,
@@ -96,24 +108,7 @@ public class OPrincipal implements ActionListener{
         this.jButton5 = jButton5;
     }
 
-    public OPrincipal() {
-        frm = new GUIPrincipalAdmin();
-        frm.btn_adminAddEvento.addActionListener(this);
-        frm.btn_adminAddHotel.addActionListener(this);
-        frm.btn_adminAddPaquete.addActionListener(this);
-        frm.btn_adminAddPromo.addActionListener(this);
-        frm.btn_adminAddVuelo.addActionListener(this);
-        frm.btn_adminDelEvento.addActionListener(this);
-        frm.btn_adminDelHotel.addActionListener(this);
-        frm.btn_adminDelPaquete.addActionListener(this);
-        frm.btn_adminDelPromo.addActionListener(this);
-        frm.btn_adminDelVuelo.addActionListener(this);
-        frm.btn_adminModEvento.addActionListener(this);
-        frm.btn_adminModHotel.addActionListener(this);
-        frm.btn_adminModPaquete.addActionListener(this);
-        frm.btn_adminModPromo.addActionListener(this);
-        frm.btn_adminModVuelo.addActionListener(this);
-    }
+   
     
     public void iniciar(){
         frm.setTitle("Administrador");
@@ -123,11 +118,12 @@ public class OPrincipal implements ActionListener{
     @Override
     public void actionPerformed(ActionEvent ae) {
         if(ae.getSource().equals(frm.btn_adminAddEvento)){
+            
             GUIAgregarEvento ge = new GUIAgregarEvento ();
             ge.setLocationRelativeTo(null);
             ge.setTitle("Agregar evento");
             ge.setVisible(true);
-        }else if(ae.getSource().equals(frm.btn_adminAddHotel)){
+        }if(ae.getSource().equals(frm.btn_adminAddHotel)){
             Hotel h = new Hotel();
             Relacion_hoteles modC = new Relacion_hoteles();
             GUIAgregarHotel frm = new GUIAgregarHotel();
@@ -138,7 +134,7 @@ public class OPrincipal implements ActionListener{
             OyenteHoteles oh = new OyenteHoteles(h,modC,frm,frm1,frm2,frm3,frm4);
             oh.iniciar();
             oh.frm.setVisible(true);
-        }else if(ae.getSource().equals(frm.btn_adminAddPaquete)){
+        }if(ae.getSource().equals(frm.btn_adminAddPaquete)){
             OPaquetes op = new OPaquetes();
             op.iniciar();
             op.frm.setVisible(true);
@@ -240,6 +236,12 @@ public class OPrincipal implements ActionListener{
         String s1 = (String) jComboBox1.getSelectedItem();
         if(boton == jComboBox1){
             jTextField1.setText("Buscando -> "+s1+"... ");
+        }
+        if(boton == btn_login){
+            OAutenticacion oa = new OAutenticacion();
+            oa.iniciar();
+            oa.frm.setVisible(true);
+            
         }
         if(boton == jButton1 && "Vuelos".equals(s1)){
             vu.setVisible(true);

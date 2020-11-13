@@ -30,8 +30,9 @@ public class GUIPrincipalInvitado extends javax.swing.JFrame {
         jComboBox1.setEditable(false);
         jTextField1.setEditable(false);
         
-        op = new OPrincipal(jTextField1, jComboBox1, jButton1);
-        jButton1.addActionListener(op);
+        //op = new OPrincipal(jTextField1, jComboBox1, jButton1,btn_invitadoLogin);
+        //jButton1.addActionListener(op);
+        //btn_invitadoLogin.addActionListener(op);
     }
 
     /**
@@ -50,6 +51,7 @@ public class GUIPrincipalInvitado extends javax.swing.JFrame {
         jComboBox1 = new javax.swing.JComboBox<>();
         jTextField1 = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
+        btn_invitadoLogin = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -62,6 +64,8 @@ public class GUIPrincipalInvitado extends javax.swing.JFrame {
         jButton1.setText("Busqueda");
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/Images/aereostars.png"))); // NOI18N
+
+        btn_invitadoLogin.setText("Iniciar Sesión");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -76,7 +80,10 @@ public class GUIPrincipalInvitado extends javax.swing.JFrame {
                         .addContainerGap()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel2)
-                            .addComponent(jButton1)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(jButton1)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(btn_invitadoLogin))
                             .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 228, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 31, Short.MAX_VALUE)
@@ -98,7 +105,9 @@ public class GUIPrincipalInvitado extends javax.swing.JFrame {
                         .addGap(20, 20, 20)
                         .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(27, 27, 27)
-                        .addComponent(jButton1)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jButton1)
+                            .addComponent(btn_invitadoLogin))
                         .addGap(0, 9, Short.MAX_VALUE)))
                 .addContainerGap())
         );
@@ -144,12 +153,13 @@ public class GUIPrincipalInvitado extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JComboBox<String> jComboBox1;
+    public javax.swing.JButton btn_invitadoLogin;
+    public javax.swing.JButton jButton1;
+    public javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JTextField jTextField1;
+    public javax.swing.JTextField jTextField1;
     // End of variables declaration//GEN-END:variables
 }

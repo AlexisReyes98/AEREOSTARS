@@ -40,16 +40,16 @@ public class aereostars {
         //r.setVisible(true);
         //GUIPrincipalAdmin ad = new GUIPrincipalAdmin();
         //ad.setVisible(true);
-        //GUIPrincipalSocio so = new GUIPrincipalSocio();
-        //so.setVisible(true);
+        /*GUIPrincipalSocio so = new GUIPrincipalSocio();
+        so.setVisible(true);*/
         //GUIPrincipalInvitado in = new GUIPrincipalInvitado();
         //in.setVisible(true);
         
         //Abrir GUIAutenticacion
-        OAutenticacion oa = new OAutenticacion();
+        /*OAutenticacion oa = new OAutenticacion();
         oa.iniciar();
         oa.frm.setVisible(true);
-        
+        */
         //Abrir OPrincipalAdmin
         JTextField jTextField1 = new JTextField();
         JTextField jTextField2 = new JTextField();
@@ -65,8 +65,12 @@ public class aereostars {
         JComboBox<String> jComboBox3= new JComboBox<String>();
         JButton jButton6= new JButton();
         
-        OPrincipal op = new OPrincipal(jTextField1,jTextField2,jComboBox1,jComboBox2,jButton1,jButton2,jButton3,jButton4,jButton5,jTextField3,jComboBox3,jButton6);
+        OPrincipal op = new OPrincipal();
         op.iniciar();
-        op.frm.setVisible(true);
+        //op.frm.setVisible(true);
+        //GUIPrincipalInvitado gpi = new GUIPrincipalInvitado();
+        //gpi.setVisible(true);
+        op.frm2.setVisible(true);
+        //in.setVisible(true);
     }
 }
