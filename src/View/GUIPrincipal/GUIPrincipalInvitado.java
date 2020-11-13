@@ -6,9 +6,6 @@
 package View.GUIPrincipal;
 
 import Controller.OPrincipal;
-import java.awt.Image;
-import javax.swing.Icon;
-import javax.swing.ImageIcon;
 
 /**
  *

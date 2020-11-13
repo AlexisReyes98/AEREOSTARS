@@ -233,15 +233,16 @@ public class OPrincipal implements ActionListener{
             OAutenticacion oa = new OAutenticacion();
             oa.iniciar();
             oa.frm.setVisible(true);
-            
         }
+        
         //Socio
         String s1 = (String) jComboBox1.getSelectedItem();
         if(boton == jComboBox1){
             jTextField1.setText("Buscando -> "+s1+"... ");
         }
         if(boton == jButton1 && "Vuelos".equals(s1)){
-            vu.setVisible(true);
+            GUIBuscarVuelos vu2 = new GUIBuscarVuelos();
+            vu2.setVisible(true);
         }
         if(boton == jButton1 && "Paquetes".equals(s1)){
             pa.setVisible(true);

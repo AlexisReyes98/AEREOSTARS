@@ -6,9 +6,6 @@
 package View.GUIPrincipal;
 
 import Controller.OPrincipal;
-import java.awt.Image;
-import javax.swing.Icon;
-import javax.swing.ImageIcon;
 
 /**
  *
@@ -27,12 +24,12 @@ public class GUIPrincipalSocio extends javax.swing.JFrame {
         list_so.addItem("Hoteles");
         list_so.addItem("Promociones");
         list_so.addItem("Eventos");
-        list_so.setEditable(false);
-        jTextField1.setEditable(false);
         
         list2_so.addItem("Vuelo");
         list2_so.addItem("Paquete");
         list2_so.addItem("Hotel");
+        list_so.setEditable(false);
+        jTextField1.setEditable(false);
         list_so.setEditable(false);
         jTextField2.setEditable(false);
         
