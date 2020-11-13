@@ -14,6 +14,9 @@ public class Datos_pasajero {
     private String numTelefono;
     private String correo;
 
+    public Datos_pasajero() {
+    }
+
     public Datos_pasajero(String nombre, String numTelefono, String correo) {
         this.nombre = nombre;
         this.numTelefono = numTelefono;
@@ -42,6 +45,11 @@ public class Datos_pasajero {
 
     public void setCorreo(String correo) {
         this.correo = correo;
+    }
+
+    @Override
+    public String toString() {
+        return "Datos_pasajero{" + "nombre=" + nombre + ", numTelefono=" + numTelefono + ", correo=" + correo + '}';
     }
     
 }

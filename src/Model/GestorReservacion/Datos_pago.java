@@ -12,6 +12,9 @@ package Model.GestorReservacion;
 public class Datos_pago {
     private double pago;
 
+    public Datos_pago() {
+    }
+
     public Datos_pago(double pago) {
         this.pago = pago;
     }
@@ -22,6 +25,11 @@ public class Datos_pago {
 
     public void setPago(double pago) {
         this.pago = pago;
+    }
+
+    @Override
+    public String toString() {
+        return "Datos_pago{" + "pago=" + pago + '}';
     }
     
 }

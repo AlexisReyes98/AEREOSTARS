@@ -30,8 +30,8 @@ public class Relacion_comprobantes {
             consulta = "INSERT INTO comprobantes (idReservacion,pasajero,pago) VALUES (?,?,?)";
             sql = conexion.prepareStatement(consulta);
             sql.setInt(1, comprobante.getIdReservacion());
-            sql.setString(2, comprobante.getPasajero().toString());
-            sql.setString(3, comprobante.getPago().toString());
+            sql.setString(2, comprobante.getPasajero().getNombre());
+            sql.setDouble(3, comprobante.getPago().getPago());
             sql.execute();
             conn.close(); 
         } catch (SQLException e) {

@@ -10,7 +10,7 @@ import Model.GestorVuelos.*;
 import View.GUIAutenticacion.GUIAutenticacion;
 import View.GUIAutenticacion.GUIRegistro;
 import View.GUIVuelos.GUIAgregarVuelo;
-
+import View.GUIReservacion.*;
 /**
  *
  * @author equipo aereostars
@@ -26,10 +26,14 @@ public class aereostars {
         //f.inicializarOyentes();
         //f.setLocationRelativeTo(null);
         //f.setVisible(true);
-        GUIAutenticacion ga = new GUIAutenticacion();
-        GUIRegistro gr = new GUIRegistro();
-        OAutenticacion oa = new OAutenticacion(ga,gr);
-        oa.iniciar();
-        ga.setVisible(true);
+        //GUIAutenticacion ga = new GUIAutenticacion();
+        //GUIRegistro gr = new GUIRegistro();
+        //OAutenticacion oa = new OAutenticacion(ga,gr);
+        //oa.iniciar();
+        //ga.setVisible(true);
+        GUIReservacion gr = new GUIReservacion();
+        gr.setVisible(true);
+        //GUICancelarReservacion r = new GUICancelarReservacion();
+        //r.setVisible(true);
     }
 }

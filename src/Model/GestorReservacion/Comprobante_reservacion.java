@@ -88,5 +88,10 @@ public class Comprobante_reservacion {
     public void setHotel(Datos_hotel hotel) {
         this.hotel = hotel;
     }
+
+    @Override
+    public String toString() {
+        return "Comprobante_reservacion{" + "idReservacion=" + idReservacion + ", pasajero=" + pasajero + ", pago=" + pago + ", vuelo=" + vuelo + ", paquete=" + paquete + ", hotel=" + hotel + '}';
+    }
     
 }

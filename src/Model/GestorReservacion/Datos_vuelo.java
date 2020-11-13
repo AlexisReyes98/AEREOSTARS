@@ -15,6 +15,9 @@ public class Datos_vuelo {
     private Vuelo vuelo;
     private int numAsiento;
 
+    public Datos_vuelo() {
+    }
+
     public Datos_vuelo(Vuelo vuelo) {
         this.vuelo = vuelo;
     }
@@ -27,13 +30,18 @@ public class Datos_vuelo {
         this.vuelo = vuelo;
     }
     
-    public void asiento(){
+    public int asiento(){
         int a = (int)(Math.random()*999+1); //Numero de asiento aleatorio (de entre 1 a 999)
-        numAsiento = a;
+        return numAsiento = a;
     }
 
     public int getNumAsiento() {
         return numAsiento;
+    }
+
+    @Override
+    public String toString() {
+        return "Datos_vuelo{" + "vuelo=" + vuelo + ", numAsiento=" + asiento() + '}';
     }
     
     

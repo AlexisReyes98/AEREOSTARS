@@ -27,13 +27,18 @@ public class Datos_paquete {
         this.paquete = paquete;
     }
     
-    public void asiento(){
+    public int asiento(){
         int a = (int)(Math.random()*999+1); //Numero de asiento aleatorio (de entre 1 a 999)
-        numAsiento = a;
+        return numAsiento = a;
     }
 
     public int getNumAsiento() {
         return numAsiento;
+    }
+
+    @Override
+    public String toString() {
+        return "Datos_paquete{" + "paquete=" + paquete + ", numAsiento=" + asiento() + '}';
     }
     
 }
