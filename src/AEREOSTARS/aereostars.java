@@ -9,6 +9,7 @@ import Controller.OAutenticacion;
 import Model.GestorVuelos.*;
 import View.GUIAutenticacion.GUIAutenticacion;
 import View.GUIAutenticacion.GUIRegistro;
+import View.GUIPrincipal.*;
 import View.GUIVuelos.GUIAgregarVuelo;
 import View.GUIReservacion.*;
 /**

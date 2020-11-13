@@ -24,13 +24,41 @@ import View.GUIPromociones.GUIEliminarPromo;
 import View.GUIPromociones.GUIModificarPromo;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import javax.swing.JButton;
+import javax.swing.JComboBox;
+import javax.swing.JTextField;
 
 /**
  *
  * @author equipo aereostars
  */
 public class OPrincipal implements ActionListener{
+    JTextField jTextField1, jTextField2, jTextField3;
+    JComboBox<String> jComboBox1;
+    JComboBox<String> jComboBox2;
+    JComboBox<String> jComboBox3;
+    JButton jButton1, jButton2, jButton3, jButton4, jButton5;
     
+    //SOCIO
+    public OPrincipal(JTextField jTextField1, JTextField jTextField2, JComboBox<String> jComboBox1, JComboBox<String> jComboBox2, JButton jButton1, JButton jButton2, JButton jButton3, JButton jButton4) {
+        this.jTextField1 = jTextField1;
+        this.jTextField2 = jTextField2;
+        this.jComboBox1 = jComboBox1;
+        this.jComboBox2 = jComboBox2;
+        this.jButton1 = jButton1;
+        this.jButton2 = jButton2;
+        this.jButton3 = jButton3;
+        this.jButton4 = jButton4;
+    }
+    
+    //INVITADO
+    public OPrincipal(JTextField jTextField3, JComboBox<String> jComboBox3, JButton jButton5) {
+        this.jTextField3 = jTextField3;
+        this.jComboBox3 = jComboBox3;
+        this.jButton5 = jButton5;
+    }
+    
+    //Admin
     public GUIPrincipalAdmin frm;
 
     public OPrincipal() {
