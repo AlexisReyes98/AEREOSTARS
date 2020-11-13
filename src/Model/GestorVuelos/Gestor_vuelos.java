@@ -27,8 +27,8 @@ public class Gestor_vuelos {
         listaVuelos.modificarVuelo(numReferencia, campo, nuevoValor);      
     }
     
-    public void solicitarVuelo(String origen, String destino/*, String fecha_ida*/){
-        listaVuelos.solicitarVuelo(origen,destino/*,fecha_ida*/);
+    public void solicitarVuelo(/*String origen, String destino/*, String fecha_ida*/){
+        listaVuelos.solicitarVuelo(/*origen,destino/*,fecha_ida*/);
     }
     
 }

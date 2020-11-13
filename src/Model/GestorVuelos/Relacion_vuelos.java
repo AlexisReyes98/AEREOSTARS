@@ -19,7 +19,7 @@ import java.text.SimpleDateFormat;
  * @author equipo aereostars
  */
 public class Relacion_vuelos {
-    private final ArrayList<Vuelo> listaVuelos = new ArrayList<>();
+    public final ArrayList<Vuelo> listaVuelos = new ArrayList<>();
     
     public void agregarVuelo(Vuelo vuelo) {
         //listaVuelos.add(vuelo);
@@ -138,7 +138,7 @@ public class Relacion_vuelos {
         }    
     }
     
-    public void solicitarVuelo(String origen, String destino/*, String fechaSalida*/){
+    public void solicitarVuelo(/*String origen, String destino, String fechaSalida*/){
         ArrayList<Vuelo> listaRequisitos = new ArrayList<>();
         Vuelo vuelo = new Vuelo();
         int i=0;
@@ -152,10 +152,11 @@ public class Relacion_vuelos {
             Connection conexion = conn.getCon();
             PreparedStatement ps;
             ResultSet rs;
-            String sql = "SELECT * FROM vuelos WHERE destino = ? AND origen = ?";
+            //String sql = "SELECT * FROM vuelos WHERE destino = ? AND origen = ?";
+            String sql = "SELECT * FROM vuelos";
             ps = conexion.prepareStatement(sql);
-            ps.setString(1, origen);
-            ps.setString(2, destino);
+            //ps.setString(1, origen);
+            //ps.setString(2, destino);
             rs = ps.executeQuery();
         while( rs.next() ) {
             vuelo.setNumReferencia(rs.getInt(1));

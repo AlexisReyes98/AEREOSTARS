@@ -16,14 +16,14 @@ import Model.GestorVuelos.Gestor_vuelos;
  * @author equipo aereostars
  */
 public class Gestor_info {
-    Gestor_vuelos vuelos = new Gestor_vuelos();
-    Gestor_hoteles hoteles = new Gestor_hoteles();
-    Gestor_paquetes paquetes = new Gestor_paquetes();
-    Gestor_promociones promos = new Gestor_promociones();
-    Gestor_eventos eventos = new Gestor_eventos();
+    public Gestor_vuelos vuelos = new Gestor_vuelos();
+    public Gestor_hoteles hoteles = new Gestor_hoteles();
+    public Gestor_paquetes paquetes = new Gestor_paquetes();
+    public Gestor_promociones promos = new Gestor_promociones();
+    public Gestor_eventos eventos = new Gestor_eventos();
     
-    public void solicitarVuelos(String origen, String destino, String fecha_ida){
-        vuelos.solicitarVuelo(origen, destino/*, fecha_ida*/);
+    public void solicitarVuelos(/*String origen, String destino, String fecha_ida*/){
+        vuelos.solicitarVuelo(/*origen, destino/*, fecha_ida*/);
     }
     
     public void solicitarHoteles(String origen, String destino){

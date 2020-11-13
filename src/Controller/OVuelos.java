@@ -31,30 +31,27 @@ public class OVuelos implements ActionListener{
     String seleccionado="";
 
     public OVuelos() {
-    }
-
-    public OVuelos(GUIAgregarVuelo frm, GUIDetallesVuelo frm1, GUIEliminarVuelo frm2, GUIModificarVuelo frm3) {
-        this.frm = frm;
-        this.frm1 = frm1;
-        this.frm2 = frm2;
-        this.frm3 = frm3;
+        frm = new GUIAgregarVuelo(); 
+        frm1 = new GUIDetallesVuelo();
+        frm2 = new GUIEliminarVuelo();
+        frm3 = new GUIModificarVuelo();
         
-        this.frm.btn_agregarVuelo.addActionListener(this);
-        this.frm.btn_cancelarAgregarVuelo.addActionListener(this);
+        frm.btn_agregarVuelo.addActionListener(this);
+        frm.btn_cancelarAgregarVuelo.addActionListener(this);
         
-        this.frm1.btn_vueloDetBack.addActionListener(this);
+        frm1.btn_vueloDetBack.addActionListener(this);
         
-        this.frm2.btn_vueloDel.addActionListener(this);
-        this.frm2.btn_vueloDelClose.addActionListener(this);
+        frm2.btn_vueloDel.addActionListener(this);
+        frm2.btn_vueloDelClose.addActionListener(this);
         
-        this.frm3.btn_vueloModClose.addActionListener(this);
-        this.frm3.btn_vueloModSubmit.addActionListener(this);
-        this.frm3.rad_vueloCosto.addActionListener(this);
-        this.frm3.rad_vueloDestino.addActionListener(this);
-        this.frm3.rad_vueloFecha.addActionListener(this);
-        this.frm3.rad_vueloHora.addActionListener(this);
-        this.frm3.rad_vueloOrigen.addActionListener(this);
-        this.frm3.rad_vueloTipo.addActionListener(this);
+        frm3.btn_vueloModClose.addActionListener(this);
+        frm3.btn_vueloModSubmit.addActionListener(this);
+        frm3.rad_vueloCosto.addActionListener(this);
+        frm3.rad_vueloDestino.addActionListener(this);
+        frm3.rad_vueloFecha.addActionListener(this);
+        frm3.rad_vueloHora.addActionListener(this);
+        frm3.rad_vueloOrigen.addActionListener(this);
+        frm3.rad_vueloTipo.addActionListener(this);
     }
     
     public void iniciar(){
