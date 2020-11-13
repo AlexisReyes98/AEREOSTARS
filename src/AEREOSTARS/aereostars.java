@@ -10,6 +10,9 @@ import Controller.*;
 import Model.GestorVuelos.*;
 import View.GUIPrincipal.*;
 import View.GUIReservacion.*;
+import javax.swing.JButton;
+import javax.swing.JComboBox;
+import javax.swing.JTextField;
 /**
  *
  * @author equipo aereostars
@@ -41,5 +44,29 @@ public class aereostars {
         //so.setVisible(true);
         //GUIPrincipalInvitado in = new GUIPrincipalInvitado();
         //in.setVisible(true);
+        
+        //Abrir GUIAutenticacion
+        OAutenticacion oa = new OAutenticacion();
+        oa.iniciar();
+        oa.frm.setVisible(true);
+        
+        //Abrir OPrincipalAdmin
+        JTextField jTextField1 = new JTextField();
+        JTextField jTextField2 = new JTextField();
+        JComboBox<String> jComboBox1 = new JComboBox<String>();
+        JComboBox<String> jComboBox2 = new JComboBox<String>();
+        JButton jButton1 = new JButton();
+        JButton jButton2 = new JButton();
+        JButton jButton3 = new JButton();
+        JButton jButton4 = new JButton();
+        JButton jButton5 = new JButton();
+        
+        JTextField jTextField3 = new JTextField();
+        JComboBox<String> jComboBox3= new JComboBox<String>();
+        JButton jButton6= new JButton();
+        
+        OPrincipal op = new OPrincipal(jTextField1,jTextField2,jComboBox1,jComboBox2,jButton1,jButton2,jButton3,jButton4,jButton5,jTextField3,jComboBox3,jButton6);
+        op.iniciar();
+        op.frm.setVisible(true);
     }
 }

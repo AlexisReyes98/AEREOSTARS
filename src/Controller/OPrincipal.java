@@ -33,10 +33,13 @@ public class OPrincipal implements ActionListener{
     JComboBox<String> jComboBox3;
     JButton jButton1, jButton2, jButton3, jButton4, jButton5, jButton6;
     
+    //Admin
+    public GUIPrincipalAdmin frm;
+    
     //SOCIO
     public OPrincipal(JTextField jTextField1, JTextField jTextField2, JComboBox<String> jComboBox1,
             JComboBox<String> jComboBox2, JButton jButton1, JButton jButton2, JButton jButton3,
-            JButton jButton4, JButton jButton5) {
+            JButton jButton4, JButton jButton5,JTextField jTextField3, JComboBox<String> jComboBox3, JButton jButton6) {
         this.jTextField1 = jTextField1;
         this.jTextField2 = jTextField2;
         this.jComboBox1 = jComboBox1;
@@ -46,6 +49,29 @@ public class OPrincipal implements ActionListener{
         this.jButton3 = jButton3;
         this.jButton4 = jButton4;
         this.jButton5 = jButton5;
+        
+        //invitado
+        this.jTextField3 = jTextField3;
+        this.jComboBox3 = jComboBox3;
+        this.jButton6 = jButton6;
+        
+        //admin
+        frm = new GUIPrincipalAdmin();
+        frm.btn_adminAddEvento.addActionListener(this);
+        frm.btn_adminAddHotel.addActionListener(this);
+        frm.btn_adminAddPaquete.addActionListener(this);
+        frm.btn_adminAddPromo.addActionListener(this);
+        frm.btn_adminAddVuelo.addActionListener(this);
+        frm.btn_adminDelEvento.addActionListener(this);
+        frm.btn_adminDelHotel.addActionListener(this);
+        frm.btn_adminDelPaquete.addActionListener(this);
+        frm.btn_adminDelPromo.addActionListener(this);
+        frm.btn_adminDelVuelo.addActionListener(this);
+        frm.btn_adminModEvento.addActionListener(this);
+        frm.btn_adminModHotel.addActionListener(this);
+        frm.btn_adminModPaquete.addActionListener(this);
+        frm.btn_adminModPromo.addActionListener(this);
+        frm.btn_adminModVuelo.addActionListener(this);
     }
     
     //INVITADO
@@ -55,8 +81,7 @@ public class OPrincipal implements ActionListener{
         this.jButton6 = jButton6;
     }
     
-    //Admin
-    public GUIPrincipalAdmin frm;
+    
 
     public OPrincipal() {
         frm = new GUIPrincipalAdmin();

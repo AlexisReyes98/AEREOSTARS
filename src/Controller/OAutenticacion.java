@@ -23,18 +23,15 @@ public class OAutenticacion implements ActionListener{
     public GUIAutenticacion frm;
     public GUIRegistro frm1;
     
-    public OAutenticacion(){
-        
-    }
     
-    public OAutenticacion(GUIAutenticacion frm,GUIRegistro frm1){
-        this.frm=frm;
-        this.frm1=frm1;    
-        this.frm.btn_authLogin.addActionListener(this);
-        this.frm.btn_authReg.addActionListener(this);
+    public OAutenticacion(){
+        frm = new GUIAutenticacion();
+        frm1=new GUIRegistro();    
+        frm.btn_authLogin.addActionListener(this);
+        frm.btn_authReg.addActionListener(this);
         
-        this.frm1.btn_regExit.addActionListener(this);
-        this.frm1.btn_register.addActionListener(this);
+        frm1.btn_regExit.addActionListener(this);
+        frm1.btn_register.addActionListener(this);
     }
    
     public void iniciar(){

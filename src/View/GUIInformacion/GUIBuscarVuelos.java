@@ -27,78 +27,32 @@ public class GUIBuscarVuelos extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jScrollPane2 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
-        cmb_vuelosOrigen1 = new javax.swing.JComboBox<>();
-        jLabel5 = new javax.swing.JLabel();
-        cmb_vuelosDestino1 = new javax.swing.JComboBox<>();
-        btn_vuelosBuscar1 = new javax.swing.JButton();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
-        jScrollPane3 = new javax.swing.JScrollPane();
-        jTextArea2 = new javax.swing.JTextArea();
-        cmb_vuelosOrigen2 = new javax.swing.JComboBox<>();
-        jLabel8 = new javax.swing.JLabel();
-        cmb_vuelosDestino2 = new javax.swing.JComboBox<>();
-        btn_vuelosBuscar2 = new javax.swing.JButton();
-
-        jLabel3.setText("Origen");
-
-        jLabel4.setText("Destino");
-
-        jTextArea1.setColumns(20);
-        jTextArea1.setRows(5);
-        jTextArea1.setText("Vuelo 1\nVuelo 2\nVuelo 3\n...");
-        jScrollPane2.setViewportView(jTextArea1);
-
-        cmb_vuelosOrigen1.setEditable(true);
-        cmb_vuelosOrigen1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-
-        jLabel5.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel5.setText("BUSCAR VUELOS");
-
-        cmb_vuelosDestino1.setEditable(true);
-        cmb_vuelosDestino1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        cmb_vuelosDestino1.setToolTipText("Destino");
-        cmb_vuelosDestino1.setName("Destino"); // NOI18N
-        cmb_vuelosDestino1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cmb_vuelosDestino1ActionPerformed(evt);
-            }
-        });
-
-        btn_vuelosBuscar1.setText("Buscar");
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        cmb_vuelosOrigen = new javax.swing.JComboBox<>();
+        cmb_vuelosDestino = new javax.swing.JComboBox<>();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        lst_vuelosLista = new javax.swing.JList<>();
+        btn_vuelosBuscar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel6.setText("Origen");
+        jLabel1.setText("Origen");
 
-        jLabel7.setText("Destino");
+        jLabel2.setText("Destino");
 
-        jTextArea2.setColumns(20);
-        jTextArea2.setRows(5);
-        jTextArea2.setText("Vuelo 1\nVuelo 2\nVuelo 3\n...");
-        jScrollPane3.setViewportView(jTextArea2);
+        cmb_vuelosOrigen.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
-        cmb_vuelosOrigen2.setEditable(true);
-        cmb_vuelosOrigen2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        cmb_vuelosDestino.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
-        jLabel8.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel8.setText("BUSCAR VUELOS");
-
-        cmb_vuelosDestino2.setEditable(true);
-        cmb_vuelosDestino2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        cmb_vuelosDestino2.setToolTipText("Destino");
-        cmb_vuelosDestino2.setName("Destino"); // NOI18N
-        cmb_vuelosDestino2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cmb_vuelosDestino2ActionPerformed(evt);
-            }
+        lst_vuelosLista.setModel(new javax.swing.AbstractListModel<String>() {
+            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
+            public int getSize() { return strings.length; }
+            public String getElementAt(int i) { return strings[i]; }
         });
+        jScrollPane1.setViewportView(lst_vuelosLista);
 
-        btn_vuelosBuscar2.setText("Buscar");
+        btn_vuelosBuscar.setText("Buscar");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -108,51 +62,43 @@ public class GUIBuscarVuelos extends javax.swing.JFrame {
                 .addGap(31, 31, 31)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(jScrollPane3)
-                        .addComponent(btn_vuelosBuscar2)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 422, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGroup(layout.createSequentialGroup()
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jLabel6)
-                                .addComponent(cmb_vuelosOrigen2, javax.swing.GroupLayout.PREFERRED_SIZE, 211, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGap(6, 6, 6)
+                                .addGroup(layout.createSequentialGroup()
+                                    .addComponent(jLabel1)
+                                    .addGap(0, 0, Short.MAX_VALUE))
+                                .addComponent(cmb_vuelosOrigen, javax.swing.GroupLayout.PREFERRED_SIZE, 211, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(cmb_vuelosDestino2, javax.swing.GroupLayout.PREFERRED_SIZE, 205, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jLabel7))))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(146, 146, 146)
-                        .addComponent(jLabel8)))
+                                .addComponent(cmb_vuelosDestino, javax.swing.GroupLayout.PREFERRED_SIZE, 205, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jLabel2))))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btn_vuelosBuscar)
+                        .addGap(175, 175, 175)))
                 .addContainerGap(31, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(12, 12, 12)
-                .addComponent(jLabel8)
-                .addGap(18, 18, 18)
+                .addGap(19, 19, 19)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel6)
-                    .addComponent(jLabel7))
+                    .addComponent(jLabel1)
+                    .addComponent(jLabel2))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(cmb_vuelosDestino2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(cmb_vuelosOrigen2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(cmb_vuelosDestino, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cmb_vuelosOrigen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(btn_vuelosBuscar2)
-                .addGap(18, 18, 18)
-                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 176, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(12, Short.MAX_VALUE))
+                .addComponent(btn_vuelosBuscar)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 172, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(56, 56, 56))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void cmb_vuelosDestino1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmb_vuelosDestino1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cmb_vuelosDestino1ActionPerformed
-
-    private void cmb_vuelosDestino2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmb_vuelosDestino2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cmb_vuelosDestino2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -190,21 +136,12 @@ public class GUIBuscarVuelos extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    public javax.swing.JButton btn_vuelosBuscar1;
-    public javax.swing.JButton btn_vuelosBuscar2;
-    public javax.swing.JComboBox<String> cmb_vuelosDestino1;
-    public javax.swing.JComboBox<String> cmb_vuelosDestino2;
-    public javax.swing.JComboBox<String> cmb_vuelosOrigen1;
-    public javax.swing.JComboBox<String> cmb_vuelosOrigen2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JScrollPane jScrollPane3;
-    private javax.swing.JTextArea jTextArea1;
-    private javax.swing.JTextArea jTextArea2;
+    public javax.swing.JButton btn_vuelosBuscar;
+    public javax.swing.JComboBox<String> cmb_vuelosDestino;
+    public javax.swing.JComboBox<String> cmb_vuelosOrigen;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JScrollPane jScrollPane1;
+    public javax.swing.JList<String> lst_vuelosLista;
     // End of variables declaration//GEN-END:variables
 }
