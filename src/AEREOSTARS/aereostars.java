@@ -6,18 +6,18 @@
 package AEREOSTARS;
 
 import View.GUIAutenticacion.*;
-/*import Controller.*;
+import Controller.*;
 import Model.GestorVuelos.*;
 import View.GUIPrincipal.*;
-import View.GUIReservacion.*;*/
+import View.GUIReservacion.*;
 /**
  *
  * @author equipo aereostars
  */
 public class aereostars {
     public static void main(String[] args) {
-        GUIAutenticacion ga = new GUIAutenticacion();
-        ga.setVisible(true);
+        //GUIAutenticacion ga = new GUIAutenticacion();
+        //ga.setVisible(true);
         //Gestor_vuelos g = new Gestor_vuelos();
         //g.agregarVuelo("querataro", "mexico", "doble", "22/11/2020", "10:20", 1250, 63);
         //g.solicitarVuelo("querataro", "mexico");
@@ -35,5 +35,11 @@ public class aereostars {
         //gr.setVisible(true);
         //GUICancelarReservacion r = new GUICancelarReservacion();
         //r.setVisible(true);
+        //GUIPrincipalAdmin ad = new GUIPrincipalAdmin();
+        //ad.setVisible(true);
+        //GUIPrincipalSocio so = new GUIPrincipalSocio();
+        //so.setVisible(true);
+        //GUIPrincipalInvitado in = new GUIPrincipalInvitado();
+        //in.setVisible(true);
     }
 }

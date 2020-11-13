@@ -22,10 +22,6 @@ public class GUIPrincipalSocio extends javax.swing.JFrame {
     OPrincipal op;
     public GUIPrincipalSocio() {
         initComponents();
-        ImageIcon image1 = new ImageIcon(getClass().getResource("/ViewImages/aereostars.png"));
-        Icon fondo = new ImageIcon(image1.getImage().getScaledInstance(jLabel3.getWidth(), jLabel3.getHeight(), Image.SCALE_DEFAULT));
-        jLabel3.setIcon(fondo);
-        
         jComboBox1.addItem("Vuelos");
         jComboBox1.addItem("Paquetes");
         jComboBox1.addItem("Hoteles");

@@ -21,6 +21,7 @@ public class GUIPrincipalInvitado extends javax.swing.JFrame {
      */
     OPrincipal op;
     public GUIPrincipalInvitado() {
+        initComponents();
         jComboBox1.addItem("Vuelos");
         jComboBox1.addItem("Paquetes");
         jComboBox1.addItem("Hoteles");
