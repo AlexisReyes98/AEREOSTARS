@@ -73,8 +73,6 @@ public class GUIEliminarPromo extends javax.swing.JFrame {
             }
         });
         getContentPane().add(txtvigencia, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 180, 230, -1));
-
-        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vista/images/home_wallpaper_0.png"))); // NOI18N
         getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(-400, 0, 1060, 360));
 
         pack();

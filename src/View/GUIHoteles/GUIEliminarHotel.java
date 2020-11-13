@@ -98,8 +98,6 @@ public class GUIEliminarHotel extends javax.swing.JFrame {
 
         jLabel9.setText("LA INFORMACION PRESIONE ELIMINAR");
         getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(281, 109, -1, -1));
-
-        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vista/images/home_wallpaper_0.jpg"))); // NOI18N
         getContentPane().add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(-330, -50, 930, 360));
 
         pack();

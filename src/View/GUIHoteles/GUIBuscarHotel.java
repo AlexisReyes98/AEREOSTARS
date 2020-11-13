@@ -94,8 +94,6 @@ public class GUIBuscarHotel extends javax.swing.JFrame {
             }
         });
         getContentPane().add(btnlimpiar, new org.netbeans.lib.awtextra.AbsoluteConstraints(348, 236, -1, -1));
-
-        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vista/images/home_wallpaper_0.png"))); // NOI18N
         getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(-7, -4, 590, 330));
 
         pack();

@@ -86,14 +86,8 @@ public class GUIModificarPromo extends javax.swing.JFrame {
         });
         getContentPane().add(txtdesc, new org.netbeans.lib.awtextra.AbsoluteConstraints(187, 163, 270, -1));
         getContentPane().add(txtvigencia, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 200, 190, -1));
-
-        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vista/images/home_wallpaper_0.png"))); // NOI18N
         getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 241, 250, 40));
-
-        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vista/images/home_wallpaper_0.png"))); // NOI18N
         getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, 430, 290));
-
-        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vista/images/home_wallpaper_0.jpg"))); // NOI18N
         getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 0, 510, 330));
 
         pack();

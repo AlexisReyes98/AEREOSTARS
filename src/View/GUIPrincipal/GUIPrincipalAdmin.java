@@ -5,6 +5,8 @@
  */
 package View.GUIPrincipal;
 
+import java.awt.Color;
+
 /**
  *
  * @author equipo aereostars
@@ -16,6 +18,7 @@ public class GUIPrincipalAdmin extends javax.swing.JFrame {
      */
     public GUIPrincipalAdmin() {
         initComponents();
+        this.getContentPane().setBackground(new Color(204, 205, 253));
     }
 
     /**
@@ -27,21 +30,176 @@ public class GUIPrincipalAdmin extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        btn_adminModVuelo = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
+        btn_adminAddVuelo = new javax.swing.JButton();
+        btn_adminDelVuelo = new javax.swing.JButton();
+        btn_adminModHotel = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
+        btn_adminAddHotel = new javax.swing.JButton();
+        btn_adminDelHotel = new javax.swing.JButton();
+        btn_adminModEvento = new javax.swing.JButton();
+        jLabel3 = new javax.swing.JLabel();
+        btn_adminAddEvento = new javax.swing.JButton();
+        btn_adminDelEvento = new javax.swing.JButton();
+        btn_adminAddPaquete = new javax.swing.JButton();
+        btn_adminDelPaquete = new javax.swing.JButton();
+        btn_adminModPaquete = new javax.swing.JButton();
+        jLabel4 = new javax.swing.JLabel();
+        btn_adminAddPromo = new javax.swing.JButton();
+        btn_adminDelPromo = new javax.swing.JButton();
+        btn_adminModPromo = new javax.swing.JButton();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        btn_adminModVuelo.setText("Modificar Vuelo");
+
+        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel1.setText("Vuelos");
+
+        btn_adminAddVuelo.setText("Agregar Vuelo");
+
+        btn_adminDelVuelo.setText("Eliminar Vuelo");
+
+        btn_adminModHotel.setText("Modificar Hotel");
+        btn_adminModHotel.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_adminModHotelActionPerformed(evt);
+            }
+        });
+
+        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel2.setText("Hoteles");
+
+        btn_adminAddHotel.setText("Agregar Hotel");
+
+        btn_adminDelHotel.setText("Eliminar Hotel");
+
+        btn_adminModEvento.setText("Modificar Evento");
+
+        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel3.setText("Eventos");
+
+        btn_adminAddEvento.setText("Agregar Evento");
+
+        btn_adminDelEvento.setText("Eliminar Evento");
+
+        btn_adminAddPaquete.setText("Agregar Paquete");
+
+        btn_adminDelPaquete.setText("Eliminar Paquete");
+
+        btn_adminModPaquete.setText("Modificar Paquete");
+
+        jLabel4.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel4.setText("Paquetes");
+
+        btn_adminAddPromo.setText("Agregar Promociones");
+
+        btn_adminDelPromo.setText("Eliminar Promociones");
+
+        btn_adminModPromo.setText("Modificar Promociones");
+
+        jLabel5.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel5.setText("Promociones");
+
+        jLabel6.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel6.setText("SISTEMA AEREO-STARS");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(24, 24, 24)
+                .addComponent(jLabel6)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 141, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel5)
+                    .addComponent(jLabel4)
+                    .addComponent(jLabel3)
+                    .addComponent(jLabel2)
+                    .addComponent(jLabel1)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(btn_adminDelPaquete, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(btn_adminAddPromo, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(btn_adminAddPaquete, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(btn_adminDelPromo, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(btn_adminModPromo)
+                            .addComponent(btn_adminModPaquete, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(btn_adminDelVuelo, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(btn_adminDelHotel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(btn_adminAddEvento, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(btn_adminDelEvento, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(btn_adminAddHotel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(btn_adminAddVuelo, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(btn_adminModHotel, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btn_adminModEvento, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btn_adminModVuelo, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addGap(25, 25, 25))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(13, 13, 13)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel1)
+                    .addComponent(jLabel6))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btn_adminModVuelo)
+                    .addComponent(btn_adminAddVuelo))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btn_adminDelVuelo)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel2)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btn_adminModHotel)
+                    .addComponent(btn_adminAddHotel))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btn_adminDelHotel)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel3)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btn_adminModEvento)
+                    .addComponent(btn_adminAddEvento))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btn_adminDelEvento)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jLabel4)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btn_adminModPaquete)
+                    .addComponent(btn_adminAddPaquete))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btn_adminDelPaquete)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel5)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btn_adminModPromo)
+                    .addComponent(btn_adminAddPromo))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btn_adminDelPromo)
+                .addContainerGap(35, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btn_adminModHotelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_adminModHotelActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn_adminModHotelActionPerformed
 
     /**
      * @param args the command line arguments
@@ -79,5 +237,26 @@ public class GUIPrincipalAdmin extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    public javax.swing.JButton btn_adminAddEvento;
+    public javax.swing.JButton btn_adminAddHotel;
+    public javax.swing.JButton btn_adminAddPaquete;
+    public javax.swing.JButton btn_adminAddPromo;
+    public javax.swing.JButton btn_adminAddVuelo;
+    public javax.swing.JButton btn_adminDelEvento;
+    public javax.swing.JButton btn_adminDelHotel;
+    public javax.swing.JButton btn_adminDelPaquete;
+    public javax.swing.JButton btn_adminDelPromo;
+    public javax.swing.JButton btn_adminDelVuelo;
+    public javax.swing.JButton btn_adminModEvento;
+    public javax.swing.JButton btn_adminModHotel;
+    public javax.swing.JButton btn_adminModPaquete;
+    public javax.swing.JButton btn_adminModPromo;
+    public javax.swing.JButton btn_adminModVuelo;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
     // End of variables declaration//GEN-END:variables
 }

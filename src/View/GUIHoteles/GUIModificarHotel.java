@@ -95,11 +95,7 @@ public class GUIModificarHotel extends javax.swing.JFrame {
 
         jLabel8.setText("FINALMENTE PRESIONE MODIFICAR");
         getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 80, -1, -1));
-
-        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vista/images/home_wallpaper_0.jpg"))); // NOI18N
         getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 270, 780, 170));
-
-        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vista/images/home_wallpaper_0.png"))); // NOI18N
         getContentPane().add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -10, 780, 280));
 
         pack();

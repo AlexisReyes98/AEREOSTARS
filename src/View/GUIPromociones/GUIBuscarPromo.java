@@ -64,11 +64,7 @@ public class GUIBuscarPromo extends javax.swing.JFrame {
         getContentPane().add(txtnombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(178, 110, 140, -1));
         getContentPane().add(txtdesc, new org.netbeans.lib.awtextra.AbsoluteConstraints(178, 160, 140, 28));
         getContentPane().add(txtvigencia, new org.netbeans.lib.awtextra.AbsoluteConstraints(178, 206, 140, -1));
-
-        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vista/images/home_wallpaper_0.jpg"))); // NOI18N
         getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(158, 49, 210, 200));
-
-        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vista/images/home_wallpaper_0.png"))); // NOI18N
         getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 530, 360));
 
         pack();

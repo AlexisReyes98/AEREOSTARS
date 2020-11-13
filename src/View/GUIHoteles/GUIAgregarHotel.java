@@ -16,8 +16,8 @@ public class GUIAgregarHotel extends javax.swing.JFrame {
      */
     public GUIAgregarHotel() {
         initComponents();
-        this.setTitle("AGREGAR HOTEL");
-        this.setLocation(400,220);
+        //this.setTitle("AGREGAR HOTEL");
+        //this.setLocation(400,220);
     }
 
     /**
@@ -83,8 +83,6 @@ public class GUIAgregarHotel extends javax.swing.JFrame {
         getContentPane().add(txtnumestre, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 150, 40, -1));
         getContentPane().add(txtcosto, new org.netbeans.lib.awtextra.AbsoluteConstraints(121, 190, 60, -1));
         getContentPane().add(txt_id, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 119, 390, 0));
-
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vista/images/home_wallpaper_0.png"))); // NOI18N
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 550, 340));
 
         pack();
