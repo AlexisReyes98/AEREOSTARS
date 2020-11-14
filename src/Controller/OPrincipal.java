@@ -109,6 +109,10 @@ public class OPrincipal implements ActionListener{
     public void iniciar(){
         frm.setTitle("Administrador");
         frm.setLocationRelativeTo(null);
+        frm1.setTitle("Socio");
+        frm1.setLocationRelativeTo(null);
+        frm2.setTitle("Invitado");
+        frm2.setLocationRelativeTo(null);
     }
 
     @Override
