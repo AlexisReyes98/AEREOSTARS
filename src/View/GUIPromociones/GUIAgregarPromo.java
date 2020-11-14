@@ -90,6 +90,8 @@ public class GUIAgregarPromo extends javax.swing.JFrame {
         getContentPane().add(txtdesc, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 100, 220, 30));
         getContentPane().add(txtvigencia, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 150, 110, -1));
         getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 20, 250, 180));
+
+        color.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/Images/home_wallpaper_0.png"))); // NOI18N
         getContentPane().add(color, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 400, 300));
 
         txtid.setText("jTextField1");

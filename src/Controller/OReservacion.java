@@ -21,6 +21,8 @@ public class OReservacion implements ActionListener{
     JComboBox<String> jComboBox1;
     JButton jButton1, jButton2, jButton3, jButton4;
     JTextArea jTextArea1;
+    public GUIComprobanteRes cr;
+    public GUICancelarReservacion car;
 
     public OReservacion(JTextField jTextField1, JTextField jTextField2, JTextField jTextField3, JTextField jTextField4,
             JTextField jTextField5, JComboBox<String> jComboBox1, JButton jButton1) {
@@ -76,7 +78,11 @@ public class OReservacion implements ActionListener{
             new GUIComprobanteRes().setVisible(true);
         }
         if(bot==jButton2){
-            new GUIPrincipalSocio().setVisible(true);
+            cr.dispose();
+            OPrincipal op = new OPrincipal();
+            op.iniciar();
+
+            op.frm1.setVisible(true);
         }
         if(bot==jButton3){
             int numr = Integer.parseInt(jTextField6.getText());
@@ -90,7 +96,11 @@ public class OReservacion implements ActionListener{
             }
         }
         if(bot==jButton4){
-            new GUIPrincipalSocio().setVisible(true);
+            car.dispose();
+            OPrincipal op = new OPrincipal();
+            op.iniciar();
+
+            op.frm1.setVisible(true);
         }
     }
     

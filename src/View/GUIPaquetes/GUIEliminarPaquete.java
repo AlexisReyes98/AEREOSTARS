@@ -48,7 +48,7 @@ public class GUIEliminarPaquete extends javax.swing.JFrame {
         getContentPane().add(btn_paqDel, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 110, -1, -1));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/Images/home_wallpaper_0.png"))); // NOI18N
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -10, 400, 180));
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 400, 170));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

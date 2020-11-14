@@ -16,6 +16,9 @@ public class GUIPago extends javax.swing.JFrame {
      */
     public GUIPago() {
         initComponents();
+        jTextArea1.setEditable(false);
+        jTextField3.setEditable(false);
+        jTextField4.setEditable(false);
     }
 
     /**
@@ -80,7 +83,7 @@ public class GUIPago extends javax.swing.JFrame {
         jTextArea1.setRows(5);
         jScrollPane1.setViewportView(jTextArea1);
 
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 139, 356, -1));
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 139, 356, 80));
 
         jLabel4.setText("Presiona Ok para verificar el comprobante ");
         getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 226, -1, -1));

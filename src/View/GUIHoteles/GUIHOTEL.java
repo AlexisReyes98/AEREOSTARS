@@ -41,6 +41,7 @@ public class GUIHOTEL extends javax.swing.JFrame {
         btn_eliminar = new javax.swing.JButton();
         btn_modifica = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -82,6 +83,9 @@ public class GUIHOTEL extends javax.swing.JFrame {
 
         jLabel2.setText("SELECCIONE LA OPCION DESEADA");
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(281, 96, -1, -1));
+
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/Images/home_wallpaper_0.png"))); // NOI18N
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 750, 360));
 
         getAccessibleContext().setAccessibleParent(btn_agregarhotel);
 
@@ -154,5 +158,6 @@ public class GUIHOTEL extends javax.swing.JFrame {
     public javax.swing.JButton btn_ver;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     // End of variables declaration//GEN-END:variables
 }

@@ -16,6 +16,13 @@ public class GUICheck_in extends javax.swing.JFrame {
      */
     public GUICheck_in() {
         initComponents();
+        jTextField2.setEditable(false);
+        jTextField3.setEditable(false);
+        jTextField4.setEditable(false);
+        jTextField5.setEditable(false);
+        jTextField6.setEditable(false);
+        jTextField7.setEditable(false);
+        jTextField8.setEditable(false);
     }
 
     /**

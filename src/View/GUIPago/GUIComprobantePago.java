@@ -16,6 +16,7 @@ public class GUIComprobantePago extends javax.swing.JFrame {
      */
     public GUIComprobantePago() {
         initComponents();
+        jTextArea1.setEditable(false);
     }
 
     /**
