@@ -49,96 +49,46 @@ public class GUIModificarVuelo extends javax.swing.JFrame {
         rad_vueloFecha = new javax.swing.JRadioButton();
         rad_vueloHora = new javax.swing.JRadioButton();
         rad_vueloCosto = new javax.swing.JRadioButton();
+        jLabel3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabel1.setText("NUMERO DE REFERENCIA DE VUELO");
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(26, 30, -1, -1));
 
         jLabel8.setText("Nuevo valor");
+        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(169, 135, -1, -1));
+        getContentPane().add(txt_vueloModValue, new org.netbeans.lib.awtextra.AbsoluteConstraints(169, 155, 147, -1));
 
         btn_vueloModSubmit.setText("Realizar cambios");
+        getContentPane().add(btn_vueloModSubmit, new org.netbeans.lib.awtextra.AbsoluteConstraints(148, 250, -1, -1));
 
         btn_vueloModClose.setText("Cancelar");
+        getContentPane().add(btn_vueloModClose, new org.netbeans.lib.awtextra.AbsoluteConstraints(269, 250, -1, -1));
 
         rad_vueloOrigen.setText("Origen");
+        getContentPane().add(rad_vueloOrigen, new org.netbeans.lib.awtextra.AbsoluteConstraints(26, 88, -1, -1));
+        getContentPane().add(txt_vueloModRef, new org.netbeans.lib.awtextra.AbsoluteConstraints(26, 50, 138, -1));
 
         rad_vueloDestino.setText("Destino");
+        getContentPane().add(rad_vueloDestino, new org.netbeans.lib.awtextra.AbsoluteConstraints(26, 111, -1, -1));
 
         rad_vueloTipo.setText("Tipo");
+        getContentPane().add(rad_vueloTipo, new org.netbeans.lib.awtextra.AbsoluteConstraints(26, 135, -1, -1));
 
         rad_vueloFecha.setText("Fecha de salida");
+        getContentPane().add(rad_vueloFecha, new org.netbeans.lib.awtextra.AbsoluteConstraints(26, 158, -1, -1));
 
         rad_vueloHora.setText("Hora de salida");
+        getContentPane().add(rad_vueloHora, new org.netbeans.lib.awtextra.AbsoluteConstraints(26, 184, -1, -1));
 
         rad_vueloCosto.setText("Costo");
+        getContentPane().add(rad_vueloCosto, new org.netbeans.lib.awtextra.AbsoluteConstraints(26, 210, -1, -1));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(btn_vueloModSubmit)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(btn_vueloModClose)
-                .addGap(28, 28, 28))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(26, 26, 26)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(rad_vueloTipo)
-                            .addComponent(rad_vueloFecha))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 44, Short.MAX_VALUE)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel8)
-                            .addComponent(txt_vueloModValue, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(56, 56, 56))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel1)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(rad_vueloCosto)
-                            .addComponent(rad_vueloHora)
-                            .addComponent(rad_vueloOrigen)
-                            .addComponent(txt_vueloModRef, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(rad_vueloDestino))
-                        .addGap(0, 0, Short.MAX_VALUE))))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(30, 30, 30)
-                .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(txt_vueloModRef, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(rad_vueloOrigen)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(rad_vueloDestino)
-                .addGap(1, 1, 1)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel8)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(txt_vueloModValue, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(btn_vueloModSubmit)
-                            .addComponent(btn_vueloModClose))
-                        .addGap(27, 27, 27))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(rad_vueloTipo)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(rad_vueloFecha)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(rad_vueloHora)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(rad_vueloCosto)
-                        .addContainerGap(67, Short.MAX_VALUE))))
-        );
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/Images/home_wallpaper_0.png"))); // NOI18N
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 380, 300));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -182,6 +132,7 @@ public class GUIModificarVuelo extends javax.swing.JFrame {
     public javax.swing.JButton btn_vueloModClose;
     public javax.swing.JButton btn_vueloModSubmit;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel8;
     public javax.swing.JRadioButton rad_vueloCosto;
     public javax.swing.JRadioButton rad_vueloDestino;

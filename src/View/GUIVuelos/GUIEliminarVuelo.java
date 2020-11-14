@@ -31,48 +31,24 @@ public class GUIEliminarVuelo extends javax.swing.JFrame {
         txt_inputDelVueloNum = new javax.swing.JTextField();
         btn_vueloDelClose = new javax.swing.JButton();
         btn_vueloDel = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabel1.setText("ESCRIBIR NUMERO DE REFERENCIA");
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(99, 36, -1, -1));
+        getContentPane().add(txt_inputDelVueloNum, new org.netbeans.lib.awtextra.AbsoluteConstraints(109, 61, 173, -1));
 
         btn_vueloDelClose.setText("Cancelar");
+        getContentPane().add(btn_vueloDelClose, new org.netbeans.lib.awtextra.AbsoluteConstraints(299, 110, -1, -1));
 
         btn_vueloDel.setText("Eliminar");
+        getContentPane().add(btn_vueloDel, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 110, -1, -1));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(99, 99, 99)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(10, 10, 10)
-                        .addComponent(txt_inputDelVueloNum, javax.swing.GroupLayout.PREFERRED_SIZE, 173, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jLabel1))
-                .addContainerGap(111, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(btn_vueloDel)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(btn_vueloDelClose)
-                .addGap(26, 26, 26))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(36, 36, 36)
-                .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(txt_inputDelVueloNum, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(29, 29, 29)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btn_vueloDelClose)
-                    .addComponent(btn_vueloDel))
-                .addContainerGap(34, Short.MAX_VALUE))
-        );
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/Images/home_wallpaper_0.png"))); // NOI18N
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 400, 170));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -116,6 +92,7 @@ public class GUIEliminarVuelo extends javax.swing.JFrame {
     public javax.swing.JButton btn_vueloDel;
     public javax.swing.JButton btn_vueloDelClose;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     public javax.swing.JTextField txt_inputDelVueloNum;
     // End of variables declaration//GEN-END:variables
 }

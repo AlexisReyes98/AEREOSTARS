@@ -39,86 +39,46 @@ public class GUIModificarPaquete extends javax.swing.JFrame {
         txt_paqModRef = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         btn_paqModSubmit.setText("Realizar cambios");
+        getContentPane().add(btn_paqModSubmit, new org.netbeans.lib.awtextra.AbsoluteConstraints(176, 250, -1, -1));
 
         btn_paqModExit.setText("Cancelar");
+        getContentPane().add(btn_paqModExit, new org.netbeans.lib.awtextra.AbsoluteConstraints(297, 250, -1, -1));
+        getContentPane().add(txt_paqModValue, new org.netbeans.lib.awtextra.AbsoluteConstraints(192, 156, 147, -1));
 
         rad_paqCosto.setText("Costo");
+        getContentPane().add(rad_paqCosto, new org.netbeans.lib.awtextra.AbsoluteConstraints(24, 209, -1, -1));
 
         rad_paqHora.setText("Hora de salida");
+        getContentPane().add(rad_paqHora, new org.netbeans.lib.awtextra.AbsoluteConstraints(24, 183, -1, -1));
 
         rad_paqFecha.setText("Fecha de salida");
+        getContentPane().add(rad_paqFecha, new org.netbeans.lib.awtextra.AbsoluteConstraints(24, 155, -1, -1));
 
         rad_paqTipo.setText("Tipo");
+        getContentPane().add(rad_paqTipo, new org.netbeans.lib.awtextra.AbsoluteConstraints(24, 131, -1, -1));
 
         rad_paqDestino.setText("Destino");
+        getContentPane().add(rad_paqDestino, new org.netbeans.lib.awtextra.AbsoluteConstraints(24, 107, -1, -1));
 
         rad_paqOrigen.setText("Origen");
+        getContentPane().add(rad_paqOrigen, new org.netbeans.lib.awtextra.AbsoluteConstraints(24, 84, -1, -1));
+        getContentPane().add(txt_paqModRef, new org.netbeans.lib.awtextra.AbsoluteConstraints(24, 46, 138, -1));
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabel1.setText("ID PAQUETE");
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(24, 26, -1, -1));
 
         jLabel8.setText("Nuevo valor");
+        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(192, 135, -1, -1));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(176, Short.MAX_VALUE)
-                .addComponent(btn_paqModSubmit)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(btn_paqModExit)
-                .addGap(28, 28, 28))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(24, 24, 24)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(rad_paqFecha)
-                    .addComponent(jLabel1)
-                    .addComponent(rad_paqCosto)
-                    .addComponent(rad_paqHora)
-                    .addComponent(rad_paqOrigen)
-                    .addComponent(txt_paqModRef, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(rad_paqDestino)
-                    .addComponent(rad_paqTipo))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(txt_paqModValue, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel8))
-                .addGap(61, 61, 61))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap(26, Short.MAX_VALUE)
-                .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(txt_paqModRef, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(rad_paqOrigen)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(rad_paqDestino)
-                .addGap(1, 1, 1)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(rad_paqTipo)
-                    .addComponent(jLabel8))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(rad_paqFecha)
-                    .addComponent(txt_paqModValue, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(rad_paqHora)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(rad_paqCosto)
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btn_paqModSubmit)
-                    .addComponent(btn_paqModExit))
-                .addGap(27, 27, 27))
-        );
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/Images/home_wallpaper_0.png"))); // NOI18N
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 400, 300));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -162,6 +122,7 @@ public class GUIModificarPaquete extends javax.swing.JFrame {
     public javax.swing.JButton btn_paqModExit;
     public javax.swing.JButton btn_paqModSubmit;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel8;
     public javax.swing.JRadioButton rad_paqCosto;
     public javax.swing.JRadioButton rad_paqDestino;

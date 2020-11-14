@@ -45,8 +45,10 @@ public class GUIAgregarPaquete extends javax.swing.JFrame {
         txt_inputAddNumRef = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
         txt_inputAddCosto = new javax.swing.JTextField();
+        jLabel7 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         chk_hotel.setText("Hotel");
         chk_hotel.addActionListener(new java.awt.event.ActionListener() {
@@ -54,107 +56,49 @@ public class GUIAgregarPaquete extends javax.swing.JFrame {
                 chk_hotelActionPerformed(evt);
             }
         });
+        getContentPane().add(chk_hotel, new org.netbeans.lib.awtextra.AbsoluteConstraints(23, 217, -1, -1));
 
         chk_evento.setText("Evento");
+        getContentPane().add(chk_evento, new org.netbeans.lib.awtextra.AbsoluteConstraints(92, 217, -1, -1));
 
         jLabel4.setText("Ingresa el costo:");
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(23, 156, -1, -1));
 
         jLabel5.setText("Ingresa la hora de salida:");
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(197, 68, -1, -1));
+        getContentPane().add(txt_inputAddFecha, new org.netbeans.lib.awtextra.AbsoluteConstraints(197, 42, 156, -1));
 
         jLabel6.setText("Ingresa la fecha:");
+        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(197, 23, -1, -1));
 
         jLabel1.setText("Ingresa el origen:");
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(23, 22, -1, -1));
+        getContentPane().add(txt_inputAddHoraSalida, new org.netbeans.lib.awtextra.AbsoluteConstraints(197, 88, 156, -1));
+        getContentPane().add(txt_inputAddOrigen, new org.netbeans.lib.awtextra.AbsoluteConstraints(23, 42, 156, -1));
 
         btn_agregarPaquete.setForeground(new java.awt.Color(0, 204, 51));
         btn_agregarPaquete.setText("Agregar");
+        getContentPane().add(btn_agregarPaquete, new org.netbeans.lib.awtextra.AbsoluteConstraints(197, 176, -1, -1));
+        getContentPane().add(txt_inputAddDestino, new org.netbeans.lib.awtextra.AbsoluteConstraints(23, 88, 156, -1));
 
         btn_cancelarAgregarPaquete.setForeground(new java.awt.Color(204, 51, 0));
         btn_cancelarAgregarPaquete.setText("Cancelar");
+        getContentPane().add(btn_cancelarAgregarPaquete, new org.netbeans.lib.awtextra.AbsoluteConstraints(274, 176, -1, -1));
 
         jLabel2.setText("Ingresa el destino:");
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(23, 68, -1, -1));
 
         txt_inputReferencia.setText("Ingresa núm. referencia:");
+        getContentPane().add(txt_inputReferencia, new org.netbeans.lib.awtextra.AbsoluteConstraints(197, 108, -1, -1));
+        getContentPane().add(txt_inputAddTipo, new org.netbeans.lib.awtextra.AbsoluteConstraints(23, 128, 156, -1));
+        getContentPane().add(txt_inputAddNumRef, new org.netbeans.lib.awtextra.AbsoluteConstraints(197, 128, 156, -1));
 
         jLabel3.setText("Ingresa el tipo:");
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(23, 108, -1, -1));
+        getContentPane().add(txt_inputAddCosto, new org.netbeans.lib.awtextra.AbsoluteConstraints(23, 179, 156, -1));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(23, 23, 23)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(chk_hotel)
-                        .addGap(18, 18, 18)
-                        .addComponent(chk_evento))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel1)
-                            .addComponent(txt_inputAddOrigen, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel4)
-                            .addComponent(txt_inputAddCosto, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel3)
-                            .addComponent(txt_inputAddTipo, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel2)
-                            .addComponent(txt_inputAddDestino, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel5)
-                            .addComponent(jLabel6)
-                            .addComponent(txt_inputAddHoraSalida, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txt_inputAddFecha, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(btn_agregarPaquete)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(btn_cancelarAgregarPaquete))
-                            .addComponent(txt_inputReferencia)
-                            .addComponent(txt_inputAddNumRef, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(38, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(22, 22, 22)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel1)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(txt_inputAddOrigen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel2)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(txt_inputAddDestino, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, 0)
-                        .addComponent(jLabel3)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(txt_inputAddTipo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(8, 8, 8)
-                        .addComponent(jLabel4)
-                        .addGap(9, 9, 9)
-                        .addComponent(txt_inputAddCosto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel6)
-                        .addGap(5, 5, 5)
-                        .addComponent(txt_inputAddFecha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel5)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(txt_inputAddHoraSalida, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, 0)
-                        .addComponent(txt_inputReferencia)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(txt_inputAddNumRef, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(28, 28, 28)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(btn_agregarPaquete)
-                            .addComponent(btn_cancelarAgregarPaquete))))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(chk_hotel)
-                    .addComponent(chk_evento))
-                .addContainerGap(18, Short.MAX_VALUE))
-        );
+        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/Images/home_wallpaper_0.png"))); // NOI18N
+        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(-450, 0, 840, 260));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -209,6 +153,7 @@ public class GUIAgregarPaquete extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
     public javax.swing.JTextField txt_inputAddCosto;
     public javax.swing.JTextField txt_inputAddDestino;
     public javax.swing.JTextField txt_inputAddFecha;
