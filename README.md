@@ -1,5 +1,5 @@
 # AEREOSTARS
-Proyecto
+Proyecto UEA: Análisis y Diseño Orentado a Objetos.
 
 SISTEMA PARA LA AGENCIA DE VIAJES AÉREO-STARS
 
