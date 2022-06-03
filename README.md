@@ -1,7 +1,7 @@
 # AEREOSTARS
 Proyecto UEA: Análisis y Diseño Orentado a Objetos.
 
-SISTEMA PARA LA AGENCIA DE VIAJES AÉREO-STARS
+SISTEMA PARA LA AGENCIA DE VIAJES AÉREO-STARS.
 
 Actualmente la agencia de viajes Aéreo-Stars presenta deficiencias en cuanto a las
 funcionalidades de pago y reservación ya que la información no se actualiza en tiempo y
